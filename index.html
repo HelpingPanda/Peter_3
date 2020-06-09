@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Deerhost Template">
+    <meta name="keywords" content="Deerhost, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Helping Panda</title>
+    <link rel="icon" href="img/top.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="./login/app.js"></script>
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas__menu__overlay"></div>
+    <div class="offcanvas__menu__wrapper">
+        <div class="canvas__close">
+            <span class="fa fa-times-circle-o"></span>
+        </div>
+        <div class="offcanvas__logo">
+            <a href="#"><img src="img/logo.jpg" alt=""></a>
+        </div>
+        <nav class="offcanvas__menu mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <!-- <li><a href="./hosting.html">How it works</a></li>
+                 --><li><a href="#">Categories</a>
+                    <ul class="dropdown">
+                        <li><a href="./404.html">Charity</a></li>
+                        <li><a href="./404.html">Drawing</a></li>
+                        <li><a href="./404.html">Food</a></li>
+                        <li><a href="./404.html">Controller</a></li>
+                        <li><a href="./404.html">Film</a></li>
+                        <li><a href="./404.html">Music</a></li>
+                        <li><a href="./404.html">Books</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blog.html">Campaigns</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+            <ul>
+                <li><a href="./login/index.html" target="_blank"><span class="fa fa-user"></span>Login / Signup</a>
+                <li><button class="button1" onclick="signOut()" id="signOut">Sign Out</button></li></li>
+            </ul>
+        </div>
+        <div class="offcanvas__info">
+            <ul>
+                <li><span class="icon_phone"></span><a class="mail" href=”tel:1-877-538-5888″> +91 1234567890</a></li>
+                <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="header__info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__info-left">
+                            <ul>
+                                <li><span class="icon_phone"></span><a class="mail" href=”tel:1-877-538-5888″> +91 1234567890</a></li>
+                                <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__info-right">
+                            <ul>
+                            	<!-- <li><a class="topnav"><input type="text" placeholder="Search for Projects...."></a></li>-->
+                                 <li><a href="./login/index.html" target="_blank"><span class="fa fa-user"></span>Login / Signup</a>
+                                <li><button class="button1" onclick="signOut()" id="signOut">Sign Out</button></li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+    
+    </script>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><br><br><br><img src="img/logobar.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><li><a href="./index.html">Home</a></li>
+                			<li><a href="./about.html">About</a></li>
+                			<!-- <li><a href="./hosting.html">How it works</a></li>
+                			 --><li><a href="#">Categories</a>
+                    		<ul class="dropdown">
+                                <li><a href="./404.html">Charity</a></li>
+                                <li><a href="./404.html">Drawing</a></li>
+                                <li><a href="./404.html">Food</a></li>
+                                <li><a href="./404.html">Controller</a></li>
+                                <li><a href="./404.html">Film</a></li>
+                                <li><a href="./404.html">Music</a></li>
+                                <li><a href="./404.html">Books</a></li>
+                    		</ul>
+                			</li>
+			                <li><a href="./blog.html">Blog</a></li>
+			                <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <span class="fa fa-bars"></span>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
+        <div class="hero__slider owl-carousel">
+            <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <h5>How it works</h5>
+                                <h2>an est iudico sapientem, vocibus<br /> perpetua eum ea, eam </h2>
+                                <a href="#" class="primary-btn">Get started now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hero__img">
+                                <img src="img/hero/hero-right.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item set-bg" data-setbg="img/hero/1.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <h5>Lorem ipsum dolor sit amet</h5>
+                                <h2>an est iudico sapientem, vocibus<br /> perpetua eum ea, eam </h2>
+                                <a href="#" class="primary-btn">Get started now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- <div class="hero__img">
+                                <img src="img/hero/hero-right.png" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item set-bg" data-setbg="img/hero/2.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <h5>Lorem ipsum dolor sit amet</h5>
+                                <h2>an est iudico sapientem, vocibus<br /> perpetua eum ea, eam </h2>
+                                <a href="#" class="primary-btn">Get started now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- <div class="hero__img">
+                                <img src="img/hero/hero-right.png" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item set-bg" data-setbg="img/hero/3.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <h5>Lorem ipsum dolor sit amet</h5>
+                                <h2>an est iudico sapientem, vocibus<br /> perpetua eum ea, eam </h2>
+                                <a href="#" class="primary-btn">Get started now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- <div class="hero__img">
+                                <img src="img/hero/hero-right.png" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item set-bg" data-setbg="img/hero/4.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <h5>Lorem ipsum dolor sit amet</h5>
+                                <h2>an est iudico sapientem, vocibus<br /> perpetua eum ea, eam </h2>
+                                <a href="#" class="primary-btn">Get started now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- <div class="hero__img">
+                                <img src="img/hero/hero-right.png" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Register Domain Section Begin -->
+    <section class="register-domain spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="register__text">
+                        <div class="section-title">
+                            <h3>How it works.....</h3>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                            <br><br><br><br>
+                            <a href="#" class="primary-btn text" class="btn" align="center">Go</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Register Domain Section End -->
+
+    <!-- Services Section Begin -->
+    <section class="services-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>Latest Campaigns</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="./img/campaign/1.jpg" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+                         <a class="share-icon paw" href="#"><span class="fa fa-paw"></span></a>
+                        <a class="share-icon link" href="#"><span class="fa fa-linkedin"></span></a>
+                        <a class="share-icon instagram" href="#"><span class="fa fa-instagram"></span></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Campaign #1</a>
+                        <time><br>15th June 2020</time>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+                    <progress id="file" value="90" max="100"> 75% </progress>
+                    <h5>900/1000 Rs</h5><br>
+                    </div>
+                     <article class="card__article">
+                        <h2><a href="#">Solar panel</a></h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                    <button class="buttonD" style="vertical-align:middle"><span>Donate </span></button>
+                </div>
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="http://lorempixel.com/40/40/sports/" alt="user">
+                        <div class="card__author-content">
+                            By <a href="#">Alan Turing</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="./img/campaign/2.jpg" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+                         <a class="share-icon paw" href="#"><span class="fa fa-paw"></span></a>
+                        <a class="share-icon link" href="#"><span class="fa fa-linkedin"></span></a>
+                        <a class="share-icon instagram" href="#"><span class="fa fa-instagram"></span></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Campaign #2</a>
+                        <time><br>10th August 2020</time>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+                    <progress id="file" value="15" max="100"> 75% </progress>
+                    <h5>2250/15000 Rs</h5><br>
+                    </div>
+                     <article class="card__article">
+                        <h2><a href="#">Art Show</a></h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                    <button class="buttonD" style="vertical-align:middle"><span>Donate </span></button>
+                </div>
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="http://lorempixel.com/40/40/sports/" alt="user">
+                        <div class="card__author-content">
+                            By <a href="#">Nikola Tesla</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="./img/campaign/3.jpg" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+                         <a class="share-icon paw" href="#"><span class="fa fa-paw"></span></a>
+                        <a class="share-icon link" href="#"><span class="fa fa-linkedin"></span></a>
+                        <a class="share-icon instagram" href="#"><span class="fa fa-instagram"></span></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Campaign #3</a>
+                        <time><br>5th June 2020</time>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+                    <progress id="file" value="25" max="100"> 75% </progress>
+                    <h5>2500/10000 Rs</h5><br>
+                    </div>
+                     <article class="card__article">
+                        <h2><a href="#">Space Station</a></h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                    <button class="buttonD" style="vertical-align:middle"><span>Donate </span></button>
+                </div>
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="http://lorempixel.com/40/40/sports/" alt="user">
+                        <div class="card__author-content">
+                            By <a href="#">Elon Musk</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+
+                <!-- <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+                         <a class="share-icon paw" href="#"><span class="fa fa-paw"></span></a>
+                        <a class="share-icon link" href="#"><span class="fa fa-linkedin"></span></a>
+                        <a class="share-icon instagram" href="#"><span class="fa fa-instagram"></span></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Campaign #4</a>
+                        <time><br>15th June 2020</time>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+                    <progress id="file" value="50" max="100"> 75% </progress>
+                    </div>
+                     <article class="card__article">
+                        <h2><a href="#">Solar panel</a></h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                    <button class="buttonD" style="vertical-align:middle"><span>Donate </span></button>
+                </div>
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="http://lorempixel.com/40/40/sports/" alt="user">
+                        <div class="card__author-content">
+                            By <a href="#">Alan Turing</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+                         <a class="share-icon paw" href="#"><span class="fa fa-paw"></span></a>
+                        <a class="share-icon link" href="#"><span class="fa fa-linkedin"></span></a>
+                        <a class="share-icon instagram" href="#"><span class="fa fa-instagram"></span></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Campaign #5</a>
+                        <time><br>15th June 2020</time>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+                    <progress id="file" value="75" max="100"> 75% </progress>
+                    </div>
+                     <article class="card__article">
+                        <h2><a href="#">Solar panel</a></h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                    <button class="buttonD" style="vertical-align:middle"><span>Donate </span></button>
+                </div>
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="http://lorempixel.com/40/40/sports/" alt="user">
+                        <div class="card__author-content">
+                            By <a href="#">Alan Turing</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+                         <a class="share-icon paw" href="#"><span class="fa fa-paw"></span></a>
+                        <a class="share-icon link" href="#"><span class="fa fa-linkedin"></span></a>
+                        <a class="share-icon instagram" href="#"><span class="fa fa-instagram"></span></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Campaign #6</a>
+                        <time><br>15th June 2020</time>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+                    <progress id="file" value="110" max="100"> 75% </progress>
+                    </div>
+                     <article class="card__article">
+                        <h2><a href="#">Solar panel</a></h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                    <button class="buttonD" style="vertical-align:middle"><span>Donate </span></button>
+                </div>
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="http://lorempixel.com/40/40/sports/" alt="user">
+                        <div class="card__author-content">
+                            By <a href="#">Alan Turing</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+<!-- Pricing Section Begin
+    <section class="pricing-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-7">
+                    <div class="section-title normal-title">
+                        <h3>Choose your plan</h3>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5">
+                    <div class="pricing__swipe-btn">
+                        <label for="month" class="active">Monthly
+                            <input type="radio" id="month">
+                        </label>
+                        <label for="yearly">Yearly
+                            <input type="radio" id="yearly">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row monthly__plans active">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="pricing__item">
+                        <h4>Started</h4>
+                        <h3>$15.90 <span>/ month</span></h3>
+                        <ul>
+                            <li>2,5 GB web space</li>
+                            <li>Free site buiding tools</li>
+                            <li>Free domain registar</li>
+                            <li>24/7 Support</li>
+                            <li>Free marketing tool</li>
+                            <li>99,9% Services uptime</li>
+                            <li>30 day money back</li>
+                        </ul>
+                        <a href="#" class="primary-btn">Choose plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="pricing__item">
+                        <h4>Business</h4>
+                        <h3>$25.90 <span>/ month</span></h3>
+                        <ul>
+                            <li>90 GB web space</li>
+                            <li>Free site buiding tools</li>
+                            <li>Free domain registar</li>
+                            <li>24/7 Support</li>
+                            <li>Free marketing tool</li>
+                            <li>99,9% Services uptime</li>
+                            <li>30 day money back</li>
+                        </ul>
+                        <a href="#" class="primary-btn">Choose plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="pricing__item">
+                        <h4>Premium</h4>
+                        <h3>$35.90 <span>/ month</span></h3>
+                        <ul>
+                            <li>150 GB web space</li>
+                            <li>Free site buiding tools</li>
+                            <li>Free domain registar</li>
+                            <li>24/7 Support</li>
+                            <li>Free marketing tool</li>
+                            <li>99,9% Services uptime</li>
+                            <li>30 day money back</li>
+                        </ul>
+                        <a href="#" class="primary-btn">Choose plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="pricing__item">
+                        <h4>Dedicated</h4>
+                        <h3>$45.90 <span>/ month</span></h3>
+                        <ul>
+                            <li>Unlimited web space</li>
+                            <li>Free site buiding tools</li>
+                            <li>Free domain registar</li>
+                            <li>24/7 Support</li>
+                            <li>Free marketing tool</li>
+                            <li>99,9% Services uptime</li>
+                            <li>30 day money back</li>
+                        </ul>
+                        <a href="#" class="primary-btn">Choose plan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row yearly__plans">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="pricing__item">
+                        <h4>Started</h4>
+                        <h3>$150 <span>/ month</span></h3>
+                        <ul>
+                            <li>2,5 GB web space</li>
+                            <li>Free site buiding tools</li>
+                            <li>Free domain registar</li>
+                            <li>24/7 Support</li>
+                            <li>Free marketing tool</li>
+                            <li>99,9% Services uptime</li>
+                            <li>30 day money back</li>
+                        </ul>
+                        <a href="#" class="primary-btn">Choose plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="pricing__item">
+                        <h4>Business</h4>
+                        <h3>$250 <span>/ month</span></h3>
+                        <ul>
+                            <li>90 GB web space</li>
+                            <li>Free site buiding tools</li>
+                            <li>Free domain registar</li>
+                            <li>24/7 Support</li>
+                            <li>Free marketing tool</li>
+                            <li>99,9% Services uptime</li>
+                            <li>30 day money back</li>
+                        </ul>
+                        <a href="#" class="primary-btn">Choose plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="pricing__item">
+                        <h4>Premium</h4>
+                        <h3>$350 <span>/ month</span></h3>
+                        <ul>
+                            <li>150 GB web space</li>
+                            <li>Free site buiding tools</li>
+                            <li>Free domain registar</li>
+                            <li>24/7 Support</li>
+                            <li>Free marketing tool</li>
+                            <li>99,9% Services uptime</li>
+                            <li>30 day money back</li>
+                        </ul>
+                        <a href="#" class="primary-btn">Choose plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="pricing__item">
+                        <h4>Dedicated</h4>
+                        <h3>$450 <span>/ month</span></h3>
+                        <ul>
+                            <li>Unlimited web space</li>
+                            <li>Free site buiding tools</li>
+                            <li>Free domain registar</li>
+                            <li>24/7 Support</li>
+                            <li>Free marketing tool</li>
+                            <li>99,9% Services uptime</li>
+                            <li>30 day money back</li>
+                        </ul>
+                        <a href="#" class="primary-btn">Choose plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     Pricing Section End -->
+    <!-- Achievement Section Begin -->
+    <section class="achievement-section set-bg spad" data-setbg="img/achievement-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="achievement__item">
+                        <span class="fa fa-user-o"></span>
+                        <h2 class="achieve-counter">2468</h2>
+                        <p>Clients</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="achievement__item">
+                        <span class="fa fa-edit"></span>
+                        <h2 class="achieve-counter">2468</h2>
+                        <p>Domains</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="achievement__item">
+                        <span class="fa fa-clone"></span>
+                        <h2 class="achieve-counter">2468</h2>
+                        <p>Server</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="achievement__item">
+                        <span class="fa fa-cog"></span>
+                        <h2 class="achieve-counter">2468</h2>
+                        <p>Installs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievement Section End -->
+    <!-- Work Section Begin -->
+<div class="footer__text set-bg" data-setbg="img/footer-bg.png"> 
+    <section class="work-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <br><br><br><br><br><br><br>
+                        <h3>Categories</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- <div class="container">   
+ -->
+ <br><br>
+
+ <div class="row" >
+  <div class="column "><a href="./404.html">
+    <img src="img/icons/charity.png"></a>
+    <div class="icons">
+    <br><span >Charity</span>
+    </div>
+  </div>
+
+  <div class="column"><a href="./404.html">
+    <img src="img/icons/drawing.png"></a>
+    <div class="icons">
+    <br><span>Drawing</span>
+    </div>
+  </div>
+  <div class="column"><a href="./404.html">
+    <img src="img/icons/food.png"></a>
+    <div class="icons">
+    <br><span>Food</span>
+    </div>
+  </div>
+  <div class="column"><a href="./404.html">
+    <img src="img/icons/controller.png"></a>
+    <div class="icons">
+    <br><span>Controller</span>
+    </div>
+  </div>
+  <div class="column"><a href="./404.html">
+    <img src="img/icons/movie.png"></a>
+    <div class="icons">
+    <br><span>Movie</span>
+    </div>
+  </div>
+  <div class="column"><a href="./404.html">
+    <img src="img/icons/music.png"></a>
+    <div class="icons">
+    <br><span>Music</span>
+    </div>
+  </div>
+  <div class="column"><a href="./404.html">
+    <img src="img/icons/book.png" ></a>
+    <div class="icons">
+    <br><span>Book</span>
+    </div>
+  </div>
+</div>
+
+<br><br
+
+><br><br><br><br>
+    <!-- Work Section End -->
+
+    <!-- Choose Plan Section Begin
+    <section class="choose-plan-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <img src="img/choose-plan.png" alt="">
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="plan__text">
+                        <h3>up to 70% discount with free domain name registration included!</h3>
+                        <ul>
+                            <li><span class="fa fa-check"></span> FREE Domain Name</li>
+                            <li><span class="fa fa-check"></span> FREE Email Address</li>
+                            <li><span class="fa fa-check"></span> Plently of disk space</li>
+                            <li><span class="fa fa-check"></span> FREE Website Bullder</li>
+                            <li><span class="fa fa-check"></span> FREE Marketing Tools</li>
+                            <li><span class="fa fa-check"></span> 1-Click WordPress Install</li>
+                        </ul>
+                        <a href="#" class="primary-btn">Get start now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  Choose Plan Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="footer__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top-call">
+                            <h5>Need Help? Call us</h5>
+                            <h2>+91 1234567890</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top-auth">
+                            <h5>Lorem ipsum dos es it</h5>
+                            <a href="./login/index.html" target="_blank" class="primary-btn">Log in/Sign Up</a>
+                            <button class=" primary-btn sign-up" onclick="signOut()" id="signOut">Sign Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__text set-bg" data-setbg="img/footer-bg.png">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer__text-about">
+                            <div class="footer__logo">
+                                <a href="./index.html"><img src="img/logobar.png" alt=""></a>
+                            </div>
+                            <p>Helping Panda campaigns make ideas into reality by giving creators a platform to launch game-changing and creative products, along with other creators and investors. We help surface innovations all before they go mainstream.</p>
+                            <div class="footer__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer__text-widget">
+                            <h5>Company</h5>
+                            <ul>
+                               <!--  <li><a href="#">Company</a></li> -->
+                                <li><a href="./about.html">About Us</a></li>                                
+                                <li><a href="#">Campaigns</a></li>
+                                <!-- <li><a href="#">Press & Media</a></li> -->
+                                <li><a href="#">News / Blogs</a></li>
+                                <li><a href="#">Campaigns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer__text-widget">
+                            <h5>Categories</h5>
+                            <ul>
+                            <li><a href="./404.html">Charity</a></li>
+                            <li><a href="./404.html">Drawing</a></li>
+                            <li><a href="./404.html">Food</a></li>
+                            <li><a href="./404.html">Controller</a></li>
+                            <li><a href="./404.html">Film</a></li>
+                            <li><a href="./404.html">Music</a></li>
+                            <li><a href="./404.html">Books</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer__text-widget">
+                            <h5>CONTACT US</h5>
+                            <ul class="footer__widget-info">
+                                <li><span class="fa fa-map-marker"></span><a href="https://goo.gl/maps/SUqdDkDGzvSU1tXm6" target="_blank"> Doddaballapur Main Road, Avalahalli, Yelahanka,
+                                     Bengaluru, Karnataka 560064</li>
+                                <li><span class="icon_phone"></span><a class="mail" href=”tel:1-877-538-5888″> +91 1234567890</a></li>
+                                <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
