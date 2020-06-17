@@ -7,13 +7,8 @@
     <meta name="keywords" content="Deerhost, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>Helping Panda</title>
+    <title>Helping Panda</title>
     <link rel="icon" href="img/top.png">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
-
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -22,12 +17,122 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap"
         rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
-    <script src="./login/app.js"></script>
 </head>
+
+<script type="text/javascript">
+function validateForm() {
+// if (isEmpty(document.getElementById('data_2').value.trim())) {
+// alert('NAME is required!');
+// return false;
+// }
+if (isEmpty(document.getElementById('data_4').value.trim())) {
+alert('EMAIL is required!');
+return false;
+}
+if (!validateEmail(document.getElementById('data_4').value.trim())) {
+alert('EMAIL must be a valid email address!');
+return false;
+}
+return true;
+}
+function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+function validateEmail(email) {
+var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+return isEmpty(email) || re.test(email);
+}
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCdKtyy9sBsJ9rgatNMv_g_oEFkrmhMXNQ",
+    authDomain: "peter-1-9b137.firebaseapp.com",
+    databaseURL: "https://peter-1-9b137.firebaseio.com",
+    projectId: "peter-1-9b137",
+    storageBucket: "peter-1-9b137.appspot.com",
+    messagingSenderId: "595599457775",
+    appId: "1:595599457775:web:9e1a6d5113c83541058a1a",
+    measurementId: "G-K7T63613K4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  //firebase.analytics();
+  var base_provider = new firebase.auth.GoogleAuthProvider();
+  base_provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  firebase.auth().languageCode = 'pt';
+  GoogleSignIn=()=>{
+    //base_provider = new firebase.auth.GoogleAuthProvider()
+firebase.auth().signInWithPopup(base_provider).then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+    
+      console.log(token)
+      console.log(user)
+      //printe();
+      alert("Sign in successful");
+   }).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    
+      console.log(error.code)
+      console.log(error.message)
+   });
+  }
+
+function signout()
+{
+  firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+  alert("You have signed out");
+  //text = "Sign in";
+  //document.getElementById("signout").innerHTML = "Sign In";
+      }).catch(function(error) {
+        // An error happened.
+      });
+}
+
+// var text = "Sign in";
+// function printe() {
+
+//     document.getElementById("signout").innerHTML = text;
+
+//     if(document.getElementById("signout").innerHTML === "Sign In")
+//     {
+//       //GoogleSignIn();
+//       alert("You are Signed In !");
+//       text = "Sign Out";
+//       document.getElementById("signout").innerHTML = text;
+//     }
+//     else
+//     {
+//       firebase.auth().signOut().then(function() {
+//         // Sign-out successful.
+//   alert("You have signed out");
+//   text = "Sign in";
+//   //document.getElementById("signout").innerHTML = "Sign In";
+//       }).catch(function(error) {
+//         // An error happened.
+//       });
+//     }
+// }
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+</script>
+
+
 
 <body>
     <!-- Page Preloder -->
@@ -46,30 +151,29 @@
         </div>
         <nav class="offcanvas__menu mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
+                <li class="active"><a href="./hiw.html">How it works</a></li>
                 <!-- <li><a href="./hosting.html">How it works</a></li>
                  --><li><a href="#">Categories</a>
                     <ul class="dropdown">
                         <li><a href="./404.html">Charity</a></li>
                         <li><a href="./404.html">Drawing</a></li>
-                        <li><a href="./404.html">Food</a></li>
-                        <li><a href="./404.html">Controller</a></li>
+                        <li><a href="./404.html">Food & Drink</a></li>
+                        <li><a href="./404.html">Gaming</a></li>
                         <li><a href="./404.html">Film</a></li>
                         <li><a href="./404.html">Music</a></li>
                         <li><a href="./404.html">Books</a></li>
                     </ul>
                 </li>
-                <li><a href="./blog.html">Campaigns</a></li>
-                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href=".https://helpingpandablog.wordpress.com/">Blog</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__auth">
             <ul>
-                <li><a href="./login/index.html" target="_blank"><span class="fa fa-user"></span>Login / Signup</a>
-                <li><button class="button1" onclick="signOut()" id="signOut">Sign Out</button></li></li>
+                <li><button class="button1" onclick="GoogleSignIn()"><span class="fa fa-user"></span>Sign In</button></li>
+                <li><button class="button1" onclick="signout()" id="signOut">Sign Out</button></li>
             </ul>
         </div>
         <div class="offcanvas__info">
@@ -97,9 +201,8 @@
                     <div class="col-lg-6">
                         <div class="header__info-right">
                             <ul>
-                                <!-- <li><a class="topnav"><input type="text" placeholder="Search for Projects...."></a></li>-->
-                                 <li><a href="./login/index.html" target="_blank"><span class="fa fa-user"></span>Login / Signup</a>
-                                <li><button class="button1" onclick="signOut()" id="signOut">Sign Out</button></li></li>
+                                <li><button class="button1" onclick="GoogleSignIn()"><span class="fa fa-user"></span>Sign In</button></li>
+                            <li><button class="button1" onclick="signout()" id="signOut">Sign Out</button></li>  
                             </ul>
                         </div>
                     </div>
@@ -116,22 +219,22 @@
                 <div class="col-lg-9">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><li><a href="./index.html">Home</a></li>
-                            <li><a href="./about.html">About</a></li>
-                            <!-- <li><a href="./hosting.html">How it works</a></li>
-                             --><li><a href="#">Categories</a>
-                            <ul class="dropdown">
+                            <li class="active"><li><a href="./hiw.html">How it works</a></li>
+                      <!-- <li><a href="./hosting.html">How it works</a></li>
+                       --><li><a href="#">Categories</a>
+                        <ul class="dropdown">
                                 <li><a href="./404.html">Charity</a></li>
                                 <li><a href="./404.html">Drawing</a></li>
-                                <li><a href="./404.html">Food</a></li>
-                                <li><a href="./404.html">Controller</a></li>
+                                <li><a href="./404.html">Food & Drink</a></li>
+                                <li><a href="./404.html">Gaming</a></li>
                                 <li><a href="./404.html">Film</a></li>
                                 <li><a href="./404.html">Music</a></li>
                                 <li><a href="./404.html">Books</a></li>
-                            </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="./about.html">About us</a></li>
+                      <li><a href="https://helpingpandablog.wordpress.com/">Blog</a></li>
+                      <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -299,15 +402,15 @@ No matter what, creators always control how the work comes together. When backer
                             <img src="img/team/3.png" alt="">
                         </div>
                         <div class="team__text">
-                            <h5>Sabrina Carpenter</h5>
+                            <h5>Tanya Ravi</h5>
                             <span>Chief executive officer</span>
                             <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                 aliqua.</p>
                             <div class="team__social">
-                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/tanya.ravi.5" class="facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="mailto:tanyanallur@gmail.com" class="twitter"><i class="fa fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/tanya-ravi-b594b0194" class="facebook"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/tanya__ravi/" class="instagram"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -318,15 +421,15 @@ No matter what, creators always control how the work comes together. When backer
                             <img src="img/team/3.png" alt="">
                         </div>
                         <div class="team__text">
-                            <h5>Sabrina Carpenter</h5>
-                            <span>Chief executive officer</span>
+                            <h5>Mir Mohammad Abbas</h5>
+                            <span>Product Manager</span>
                             <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                 aliqua.</p>
                             <div class="team__social">
-                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/mir.m.abbas.1" class="facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="mailto:mirmohammed14@gmail.com" class="twitter"><i class="fa fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/mir-mohammed-abbas-a55b3657/" class="facebook"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/moabbas7/" class="instagram"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -337,15 +440,15 @@ No matter what, creators always control how the work comes together. When backer
                             <img src="img/team/3.png" alt="">
                         </div>
                         <div class="team__text">
-                            <h5>Sabrina Carpenter</h5>
-                            <span>Software engineer</span>
+                            <h5>Arun Josephraj</h5>
+                            <span>Senior Software developer</span>
                             <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                 aliqua.</p>
                             <div class="team__social">
-                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                 <a href="https://www.facebook.com/david.luxembourg.73" class="facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="mailto:arunjoseph.business@gmail.com" class="twitter"><i class="fa fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/arun-joseph-0064a7157" class="facebook"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/arun_josef/" class="instagram"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -356,15 +459,15 @@ No matter what, creators always control how the work comes together. When backer
                             <img src="img/team/3.png" alt="">
                         </div>
                         <div class="team__text">
-                            <h5>Sabrina Carpenter</h5>
-                            <span>Support representative</span>
+                            <h5>Sadanand Venkatraman</h5>
+                            <span>Sales Officer</span>
                             <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                 aliqua.</p>
                             <div class="team__social">
-                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/SadanandVenkataraman" class="facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="mailto:saadanandv@gmail.com" class="twitter"><i class="fa fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/sadanand-venkataraman-05a195191/" class="facebook"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/_sadanand.v_/" class="instagram"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -375,14 +478,33 @@ No matter what, creators always control how the work comes together. When backer
                             <img src="img/team/3.png" alt="">
                         </div>
                         <div class="team__text">
-                            <h5>Sabrina Carpenter</h5>
+                            <h5>Jonathan Clyde Dsilva</h5>
+                            <span>Operations Manager</span>
+                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua.</p>
+                            <div class="team__social">
+                                <!-- <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                 --><a href="mailto:dsilva.jonathan.13@gmail.com" class="twitter"><i class="fa fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/jonathan-dsilva-26939a187/" class="facebook"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/jonathan_.dsilva/" class="instagram"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="team__item">
+                        <div class="team__pic">
+                            <img src="img/team/3.png" alt="">
+                        </div>
+                        <div class="team__text">
+                            <h5>Shreyas Sreenivas</h5>
                             <span>Product director</span>
                             <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                 aliqua.</p>
                             <div class="team__social">
                                 <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#" class="twitter"><i class="fa fa-envelope"></i></a>
+                                <a href="#" class="facebook"><i class="fa fa-linkedin"></i></a>
                                 <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
@@ -408,7 +530,7 @@ No matter what, creators always control how the work comes together. When backer
                     <div class="col-lg-4">
                         <div class="testimonial__item">
                             <img src="img/team/2.png" alt="">
-                            <h5>Billie Eilish</h5>
+                            <h5>NGO #</h5>
                             <span>Designer</span>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labuore
                                 et dolore magna aliqua.</p>
@@ -424,7 +546,7 @@ No matter what, creators always control how the work comes together. When backer
                     <div class="col-lg-4">
                         <div class="testimonial__item">
                             <img src="img/team/2.png" alt="">
-                            <h5>Billie Eilish</h5>
+                            <h5>NGO #</h5>
                             <span>Designer</span>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labuore
                                 et dolore magna aliqua.</p>
@@ -440,7 +562,7 @@ No matter what, creators always control how the work comes together. When backer
                     <div class="col-lg-4">
                         <div class="testimonial__item">
                             <img src="img/team/2.png" alt="">
-                            <h5>Billie Eilish</h5>
+                            <h5>NGO #</h5>
                             <span>Designer</span>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labuore
                                 et dolore magna aliqua.</p>
@@ -456,7 +578,7 @@ No matter what, creators always control how the work comes together. When backer
                     <div class="col-lg-4">
                         <div class="testimonial__item">
                             <img src="img/team/2.png" alt="">
-                            <h5>Billie Eilish</h5>
+                            <h5>NGO #</h5>
                             <span>Designer</span>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labuore
                                 et dolore magna aliqua.</p>
@@ -472,7 +594,7 @@ No matter what, creators always control how the work comes together. When backer
                     <div class="col-lg-4">
                         <div class="testimonial__item">
                             <img src="img/team/2.png" alt="">
-                            <h5>Billie Eilish</h5>
+                            <h5>NGO #</h5>
                             <span>Designer</span>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labuore
                                 et dolore magna aliqua.</p>
@@ -504,9 +626,9 @@ No matter what, creators always control how the work comes together. When backer
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="footer__top-auth">
-                            <h5>Lorem ipsum dos es it</h5>
-                            <a href="./login/index.html" target="_blank" class="primary-btn">Log in/Sign Up</a>
-                            <button class=" primary-btn sign-up" onclick="signOut()" id="signOut">Sign Out</button>
+                            <h5>Helping Panda</h5>
+                            <button onclick="GoogleSignIn()" class="primary-btn">Log in/Sign Up</button>
+                            <button class=" primary-btn sign-up" onclick="signout()" id="signOut">Sign Out</button>
                         </div>
                     </div>
                 </div>
@@ -548,8 +670,8 @@ No matter what, creators always control how the work comes together. When backer
                             <ul>
                             <li><a href="./404.html">Charity</a></li>
                             <li><a href="./404.html">Drawing</a></li>
-                            <li><a href="./404.html">Food</a></li>
-                            <li><a href="./404.html">Controller</a></li>
+                            <li><a href="./404.html">Food & drink</a></li>
+                            <li><a href="./404.html">Gaming</a></li>
                             <li><a href="./404.html">Film</a></li>
                             <li><a href="./404.html">Music</a></li>
                             <li><a href="./404.html">Books</a></li>
