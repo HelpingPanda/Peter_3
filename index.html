@@ -74,8 +74,8 @@ return isEmpty(email) || re.test(email);
 firebase.auth().signInWithPopup(base_provider).then(function(result) {
       var token = result.credential.accessToken;
       var user = result.user;
-	FirebaseUser User = FirebaseAuth.getInstance().getCurrentUser();
-      mail = User.getEmail();
+      var User = firebase.auth().currentUser;
+      mail = User.email;
     
       console.log(token)
       console.log(user)
