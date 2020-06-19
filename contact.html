@@ -25,148 +25,14 @@
         crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="web.js"></script>
+
 </head>
-
-<script type="text/javascript">
-
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCdKtyy9sBsJ9rgatNMv_g_oEFkrmhMXNQ",
-    authDomain: "peter-1-9b137.firebaseapp.com",
-    databaseURL: "https://peter-1-9b137.firebaseio.com",
-    projectId: "peter-1-9b137",
-    storageBucket: "peter-1-9b137.appspot.com",
-    messagingSenderId: "595599457775",
-    appId: "1:595599457775:web:9e1a6d5113c83541058a1a",
-    measurementId: "G-K7T63613K4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  //firebase.analytics();
-  var base_provider = new firebase.auth.GoogleAuthProvider();
-  base_provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-  firebase.auth().languageCode = 'pt';
-  GoogleSignIn=()=>{
-    //base_provider = new firebase.auth.GoogleAuthProvider()
-firebase.auth().signInWithPopup(base_provider).then(function(result) {
-      var token = result.credential.accessToken;
-      var user = result.user;
-    
-      console.log(token)
-      console.log(user)
-      //printe();
-      alert("Sign in successful");
-   }).catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-    
-      console.log(error.code)
-      console.log(error.message)
-   });
-  }
-
-function signout()
-{
-  firebase.auth().signOut().then(function() {
-        // Sign-out successful.
-  alert("You have signed out");
-  //text = "Sign in";
-  //document.getElementById("signout").innerHTML = "Sign In";
-      }).catch(function(error) {
-        // An error happened.
-      });
-}
-
-// var text = "Sign in";
-// function printe() {
-
-//     document.getElementById("signout").innerHTML = text;
-
-//     if(document.getElementById("signout").innerHTML === "Sign In")
-//     {
-//       //GoogleSignIn();
-//       alert("You are Signed In !");
-//       text = "Sign Out";
-//       document.getElementById("signout").innerHTML = text;
-//     }
-//     else
-//     {
-//       firebase.auth().signOut().then(function() {
-//         // Sign-out successful.
-//   alert("You have signed out");
-//   text = "Sign in";
-//   //document.getElementById("signout").innerHTML = "Sign In";
-//       }).catch(function(error) {
-//         // An error happened.
-//       });
-//     }
-// }
-
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-function ValidateForm(frm) {
-if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
-if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
-if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
-if (frm.Comments.value == "") { alert('Please enter comments or questions.'); frm.Comments.focus(); return false; }
-return true; }
-</script>
-
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
-    <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas__menu__overlay"></div>
-    <div class="offcanvas__menu__wrapper">
-        <div class="canvas__close">
-            <span class="fa fa-times-circle-o"></span>
-        </div>
-        <div class="offcanvas__logo">
-            <a href="#"><img src="img/logo.jpg" alt=""></a>
-        </div>
-        <nav class="offcanvas__menu mobile-menu">
-            <ul>
-                <li class="active"><a href="./hiw.html">How it works</a></li>
-                <!-- <li><a href="./hosting.html">How it works</a></li>
-                 --><li><a href="#">Categories</a>
-                    <ul class="dropdown">
-                        <li><a href="./404.html">Charity</a></li>
-                        <li><a href="./404.html">Drawing</a></li>
-                        <li><a href="./404.html">Food & Drink</a></li>
-                        <li><a href="./404.html">Gaming</a></li>
-                        <li><a href="./404.html">Film</a></li>
-                        <li><a href="./404.html">Music</a></li>
-                        <li><a href="./404.html">Books</a></li>
-                    </ul>
-                </li>
-                <li><a href="./about.html">About us</a></li>
-                <li><a href=".https://helpingpandablog.wordpress.com/">Blog</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div class="offcanvas__auth">
-            <ul>
-                <li><button class="button1" onclick="GoogleSignIn()"><span class="fa fa-user"></span>Sign In</button></li>
-                <li><button class="button1" onclick="signout()" id="signOut">Sign Out</button></li>
-            </ul>
-        </div>
-        <div class="offcanvas__info">
-            <ul>
-                <li><span class="icon_phone"></span><a class="mail" href=”tel:1-877-538-5888″> +91 1234567890</a></li>
-                <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com</a></li>
-            </ul>
-        </div>
-    </div>
-    <!-- Offcanvas Menu End -->
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas__menu__overlay"></div>
@@ -201,8 +67,8 @@ return true; }
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__auth">
             <ul>
-                <li><button class="button1" onclick="GoogleSignIn()"><span class="fa fa-user"></span>Sign In</button></li>
-                            <li><button class="button1" onclick="signout()" id="signOut">Sign Out</button></li>  
+                <li><button class="button1" onclick="GoogleSignIn()">Sign In</button></li>
+                <li><button class="button1" onclick="signot()" id="signOut"></button></li>
             </ul>
         </div>
         <div class="offcanvas__info">
@@ -230,8 +96,8 @@ return true; }
                     <div class="col-lg-6">
                         <div class="header__info-right">
                             <ul>
-                                <li><button class="button1" onclick="GoogleSignIn()"><span class="fa fa-user"></span>Sign In</button></li>
-                            <li><button class="button1" onclick="signout()" id="signOut">Sign Out</button></li>
+                            <li><button class="button1" onclick="GoogleSignIn()">Sign In</button></li>
+                            <li><button class="button1" onclick="signot()" id="signOut"></button></li>
                             </ul>
                         </div>
                     </div>
@@ -315,9 +181,9 @@ return true; }
                             </li>
                         </ul>
                         <div class="contact__social">
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/Helping-Panda-106846051046470/" class="facebook"><i class="fa fa-facebook"></i></a>
                             <a href="https://www.linkedin.com/company/53192504/admin/" class="twitter"><i class="fa fa-linkedin"></i></a>
-                            <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://youtube.com" class="youtube"><i class="fa fa-youtube-play"></i></a>
                             <a href="https://www.instagram.com/helpingpanda/" class="instagram"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
