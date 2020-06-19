@@ -67,6 +67,7 @@ return isEmpty(email) || re.test(email);
   //firebase.analytics();
   var base_provider = new firebase.auth.GoogleAuthProvider();
   var mail;
+  var flag=1;
   base_provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
   firebase.auth().languageCode = 'pt';
   GoogleSignIn=()=>{
@@ -98,6 +99,7 @@ function signout()
   firebase.auth().signOut().then(function() {
         // Sign-out successful.
   alert("You have signed out");
+  flag=0;
   //text = "Sign in";
   //document.getElementById("signout").innerHTML = "Sign In";
       }).catch(function(error) {
@@ -136,7 +138,10 @@ function active()
     alert("You are already signed in");
   } else {
     // No user is signed in.
+    if(flag===1)
+    {
     GoogleSignIn();
+    }
   }
 });
 }
@@ -191,7 +196,7 @@ function closeForm() {
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__auth">
             <ul>
-                <li><button class="button1" onclick="GoogleSignIn()"><span class="fa fa-user"></span>Sign In</button></li>
+                <li><button class="button1" onclick="printe()"><span class="fa fa-user"></span>Sign In</button></li>
                 <li><button class="button1" onclick="signot()" id="signOut">Sign Out</button></li>
             </ul>
         </div>
