@@ -138,7 +138,9 @@ function active()
   if (user) {
     // User is signed in.
     alert("Sign in successful");
+    document.getElementById("signin").innerHTML = name;
     display();
+    document.getElementById("signout").innerHTML = "Sign Out";
   } else {
     // No user is signed in.
     if(flag===1)
@@ -201,8 +203,8 @@ function closeForm() {
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__auth">
             <ul>
-                <li><button class="button1" onclick="printe()"><span class="fa fa-user"></span>Sign In</button></li>
-                <li><button class="button1" onclick="signot()" id="signOut">Sign Out</button></li>
+                <li><button class="button1" onclick="printe()" id="signin">Sign In</button></li>
+                <li><button class="button1" onclick="signot()" id="signout"></button></li>          
             </ul>
         </div>
         <div class="offcanvas__info">
@@ -230,8 +232,8 @@ function closeForm() {
                     <div class="col-lg-6">
                         <div class="header__info-right">
                             <ul>
-                                <li><button class="button1" onclick="printe()"><span class="fa fa-user"></span>Sign In</button></li>
-                		<li><button class="button1" onclick="signot()" id="signOut">Sign Out</button></li>
+                               <li><button class="button1" onclick="printe()" id="signin">Sign In</button></li>
+                               <li><button class="button1" onclick="signot()" id="signout"></button></li>          
                         </div>
                     </div>
                 </div>
