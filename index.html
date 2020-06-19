@@ -82,6 +82,7 @@ firebase.auth().signInWithPopup(base_provider).then(function(result) {
       //printe();
       alert("Sign in successful");
       document.getElementById("signin").innerHTML = mail;
+      signot();
       
    }).catch(function(error) {
       var errorCode = error.code;
@@ -119,15 +120,27 @@ function printe() {
 
     if(document.getElementById("signin").innerHTML === "Sign In")
     {
-      GoogleSignIn();
-      //text = "Sign Out;
-      signot();
-	   
+      
+    active();
+    //active();
     }
     else
     {
     	document.getElementById("signin").innerHTML = "Sign In";
     }
+}
+
+function active()
+{
+    firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    alert("You are already signed in");
+  } else {
+    // No user is signed in.
+    GoogleSignIn();
+  }
+});
 }
 
 function openForm() {
@@ -181,7 +194,7 @@ function closeForm() {
         <div class="offcanvas__auth">
             <ul>
                 <li><button class="button1" onclick="GoogleSignIn()"><span class="fa fa-user"></span>Sign In</button></li>
-                <li><button class="button1" onclick="signout()" id="signOut">Sign Out</button></li>
+                <li><button class="button1" onclick="signot()" id="signOut">Sign Out</button></li>
             </ul>
         </div>
         <div class="offcanvas__info">
