@@ -140,7 +140,9 @@ function active()
   if (user) {
     // User is signed in.
     alert("Sign in successful");
+    document.getElementById("signin").innerHTML = name;
     display();
+    document.getElementById("signout").innerHTML = "Sign Out";
   } else {
     // No user is signed in.
     if(flag===1)
