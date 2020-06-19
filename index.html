@@ -66,7 +66,7 @@ return isEmpty(email) || re.test(email);
   firebase.initializeApp(firebaseConfig);
   //firebase.analytics();
   var base_provider = new firebase.auth.GoogleAuthProvider();
-  var mail;
+  var name;
   var flag=1;
   base_provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
   firebase.auth().languageCode = 'pt';
@@ -76,15 +76,13 @@ firebase.auth().signInWithPopup(base_provider).then(function(result) {
       var token = result.credential.accessToken;
       var user = result.user;
       var User = firebase.auth().currentUser;
-      mail = User.displayName;
     
       console.log(token)
       console.log(user)
       //printe();
       //alert("Sign in successful");
-      document.getElementById("signin").innerHTML = mail;
       signot();
-      
+      display();
    }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -94,6 +92,12 @@ firebase.auth().signInWithPopup(base_provider).then(function(result) {
    });
   }
 
+function display()
+{
+    var User = firebase.auth().currentUser;
+      name = User.displayName;
+      document.getElementById("signin").innerHTML = name;
+}
 function signout()
 {
   firebase.auth().signOut().then(function() {
@@ -136,6 +140,7 @@ function active()
   if (user) {
     // User is signed in.
     alert("Sign in successful");
+    display();
   } else {
     // No user is signed in.
     if(flag===1)
