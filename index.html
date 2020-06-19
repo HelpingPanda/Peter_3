@@ -81,7 +81,7 @@ firebase.auth().signInWithPopup(base_provider).then(function(result) {
       console.log(token)
       console.log(user)
       //printe();
-      alert("Sign in successful");
+      //alert("Sign in successful");
       document.getElementById("signin").innerHTML = mail;
       signot();
       
@@ -135,7 +135,7 @@ function active()
     firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    alert("You are already signed in");
+    alert("Sign in successful");
   } else {
     // No user is signed in.
     if(flag===1)
