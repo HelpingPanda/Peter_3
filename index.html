@@ -76,7 +76,7 @@ firebase.auth().signInWithPopup(base_provider).then(function(result) {
       var token = result.credential.accessToken;
       var user = result.user;
       var User = firebase.auth().currentUser;
-      mail = User.email;
+      mail = User.displayName;
     
       console.log(token)
       console.log(user)
