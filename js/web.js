@@ -118,8 +118,7 @@ function active1()
     firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    alert("Sign in successful");
-    document.getElementById("signin").innerHTML = name;
+     document.getElementById("signin").innerHTML = name;
     display();
     document.getElementById("signout").innerHTML = "Sign Out";
   }
