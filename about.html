@@ -25,7 +25,6 @@
         crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
-    <script src="./js/web.js"></script>
 </head>
 
 <script type="text/javascript">
@@ -49,6 +48,80 @@ function validateEmail(email) {
 var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
 return isEmpty(email) || re.test(email);
 }
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCdKtyy9sBsJ9rgatNMv_g_oEFkrmhMXNQ",
+    authDomain: "peter-1-9b137.firebaseapp.com",
+    databaseURL: "https://peter-1-9b137.firebaseio.com",
+    projectId: "peter-1-9b137",
+    storageBucket: "peter-1-9b137.appspot.com",
+    messagingSenderId: "595599457775",
+    appId: "1:595599457775:web:9e1a6d5113c83541058a1a",
+    measurementId: "G-K7T63613K4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  //firebase.analytics();
+  var base_provider = new firebase.auth.GoogleAuthProvider();
+  base_provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  firebase.auth().languageCode = 'pt';
+  GoogleSignIn=()=>{
+    //base_provider = new firebase.auth.GoogleAuthProvider()
+firebase.auth().signInWithPopup(base_provider).then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+    
+      console.log(token)
+      console.log(user)
+      //printe();
+      alert("Sign in successful");
+   }).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    
+      console.log(error.code)
+      console.log(error.message)
+   });
+  }
+
+function signout()
+{
+  firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+  alert("You have signed out");
+  //text = "Sign in";
+  //document.getElementById("signout").innerHTML = "Sign In";
+      }).catch(function(error) {
+        // An error happened.
+      });
+}
+
+// var text = "Sign in";
+// function printe() {
+
+//     document.getElementById("signout").innerHTML = text;
+
+//     if(document.getElementById("signout").innerHTML === "Sign In")
+//     {
+//       //GoogleSignIn();
+//       alert("You are Signed In !");
+//       text = "Sign Out";
+//       document.getElementById("signout").innerHTML = text;
+//     }
+//     else
+//     {
+//       firebase.auth().signOut().then(function() {
+//         // Sign-out successful.
+//   alert("You have signed out");
+//   text = "Sign in";
+//   //document.getElementById("signout").innerHTML = "Sign In";
+//       }).catch(function(error) {
+//         // An error happened.
+//       });
+//     }
+// }
+
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -61,7 +134,7 @@ function closeForm() {
 
 
 
-<body onload="printe2()">
+<body>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
