@@ -102,6 +102,28 @@ function printe() {
     
 }
 
+function printe2{
+	if(document.getElementById("signin").innerHTML === "Sign In")
+    {
+      
+    active1();
+    //active();
+    }
+    
+}
+
+function active1()
+{
+	firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    alert("Sign in successful");
+    document.getElementById("signin").innerHTML = name;
+    display();
+    document.getElementById("signout").innerHTML = "Sign Out";
+  } 
+}
+
 function active()
 {
     firebase.auth().onAuthStateChanged(function(user) {
