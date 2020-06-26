@@ -102,7 +102,7 @@ function printe() {
     
 }
 
-function printe2{
+function printe2() {
 	if(document.getElementById("signin").innerHTML === "Sign In")
     {
       
@@ -123,7 +123,7 @@ function active1()
     document.getElementById("signout").innerHTML = "Sign Out";
   } 
 }
-
+}
 function active()
 {
     firebase.auth().onAuthStateChanged(function(user) {
