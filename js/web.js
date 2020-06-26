@@ -19,6 +19,15 @@ var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.
 return isEmpty(email) || re.test(email);
 }
 
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyBCLcEoVKqDfDXxeMxOvPeXAb9A4PA53fw",
@@ -102,28 +111,6 @@ function printe() {
     
 }
 
-function printe2() {
-	if(document.getElementById("signin").innerHTML === "Sign In")
-    {
-      
-    active1();
-    //active();
-    }
-    
-}
-
-function active1()
-{
-	firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    alert("Sign in successful");
-    document.getElementById("signin").innerHTML = name;
-    display();
-    document.getElementById("signout").innerHTML = "Sign Out";
-  } 
-}
-}
 function active()
 {
     firebase.auth().onAuthStateChanged(function(user) {
@@ -145,12 +132,4 @@ function active()
     }
   }
 });
-}
-
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
 }
