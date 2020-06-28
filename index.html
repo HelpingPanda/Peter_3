@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Deerhost Template">
+    <meta name="keywords" content="Deerhost, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Helping Panda</title>
@@ -24,13 +26,149 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
-    <script src="./js/web.js"></script>
     <!-- <script src="./login/app1.js"></script>
  -->
 </head>
-<body onload="printe2()">
+<script type="text/javascript">
+function validateForm() {
+// if (isEmpty(document.getElementById('data_2').value.trim())) {
+// alert('NAME is required!');
+// return false;
+// }
+if (isEmpty(document.getElementById('data_4').value.trim())) {
+alert('EMAIL is required!');
+return false;
+}
+if (!validateEmail(document.getElementById('data_4').value.trim())) {
+alert('EMAIL must be a valid email address!');
+return false;
+}
+return true;
+}
+function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+function validateEmail(email) {
+var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+return isEmpty(email) || re.test(email);
+}
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBCLcEoVKqDfDXxeMxOvPeXAb9A4PA53fw",
+    authDomain: "helping-panda.firebaseapp.com",
+    databaseURL: "https://helping-panda.firebaseio.com",
+    projectId: "helping-panda",
+    storageBucket: "helping-panda.appspot.com",
+    messagingSenderId: "546878085356",
+    appId: "1:546878085356:web:dad9843ec075ac0f41adc9",
+    measurementId: "G-DN8V0MNE82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  //firebase.analytics();
+  var base_provider = new firebase.auth.GoogleAuthProvider();
+  var name;
+  var flag=1;
+  base_provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  firebase.auth().languageCode = 'pt';
+  GoogleSignIn=()=>{
+    //base_provider = new firebase.auth.GoogleAuthProvider()
+firebase.auth().signInWithPopup(base_provider).then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+      var User = firebase.auth().currentUser;
+    
+      console.log(token)
+      console.log(user)
+      //printe();
+      //alert("Sign in successful");
+      signot();
+      display();
+   }).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    
+      console.log(error.code)
+      console.log(error.message)
+   });
+  }
+
+function display()
+{
+    var User = firebase.auth().currentUser;
+      name = User.displayName;
+      document.getElementById("signin").innerHTML = name;
+}
+function signout()
+{
+  firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+  alert("You have signed out");
+  flag=0;
+  //text = "Sign in";
+  //document.getElementById("signout").innerHTML = "Sign In";
+      }).catch(function(error) {
+        // An error happened.
+      });
+}
+function signot() {
+
+	if(document.getElementById("signout").innerHTML === "Sign Out")
+	{
+		document.getElementById("signout").innerHTML = " ";
+		signout();
+        document.getElementById("signin").innerHTML = "Sign In";
+		//printe();
+	}
+	else
+		document.getElementById("signout").innerHTML = "Sign Out";
+
+}
+function printe() {
+
+    if(document.getElementById("signin").innerHTML === "Sign In")
+    {
+      
+    active();
+    //active();
+    }
+    
+}
+
+function active()
+{
+    firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    alert("Sign in successful");
+    document.getElementById("signin").innerHTML = name;
+    display();
+    document.getElementById("signout").innerHTML = "Sign Out";
+  } else {
+    // No user is signed in.
+    if(flag===1)
+    {
+    GoogleSignIn();
+    }
+    else
+    {
+        flag=1;
+    }
+  }
+});
+}
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+</script>
 
 
+<body>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -62,15 +200,15 @@
                     </ul>
                 </li>
                 <li><a href="./about.html">About us</a></li>
-                <li><a href="https://helpingpandablog.wordpress.com/">Blog</a></li>
+                <li><a href=".https://helpingpandablog.wordpress.com/">Blog</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__auth">
-            <ul>                          
-            <li><button class="button1" onclick="printe()" id="signin">Sign In</button></li>
-            <li><button class="button1" onclick="signot()" id="signout"></button></li> 
+            <ul>
+                            <li><button class="button1" onclick="printe()" id="signin">Sign In</button></li>
+                            <li><button class="button1" onclick="signot()" id="signout"></button></li>     
             </ul>
         </div>
         <div class="offcanvas__info">
@@ -90,7 +228,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__info-left">
                             <ul>
-                                <li><span class="icon_phone"></span><a class="mail" href=”tel:1-877-538-5888″> +91 987654321</a></li>
+                                <li><span class="icon_phone"></span><a class="mail" href=”tel:1-877-538-5888″> +91 1234567890</a></li>
                                 <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com</a></li>
                             </ul>
                         </div>
@@ -106,6 +244,9 @@
                 </div>
             </div>
         </div>
+        <script>
+    
+    </script>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3">
@@ -143,37 +284,10 @@
     </header>
     <!-- Header End -->
 
-<div class="mobileShow">
-	<section class="hero-section">
-        <div class="hero__slider owl-carousel">
-            <div class="hero__item set-bg" data-setbg="img/hero/hero1.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="hero__text">
-                                <h2 style="font-size: 20px;">Raise Your Helping Hand</h2>
-                                <a href="https://forms.gle/SY2DSJWvHZnCgarbA" target="_blank" class="primary-btn">Start a campaign</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="hero__img">
-                                <img src="img/hero/panda2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-
-
     <!-- Hero Section Begin -->
-   <div class="desk">
-    <section class="hero-section">
+<section class="hero-section">
         <div class="hero__slider owl-carousel">
-            <div class="hero__item set-bg" data-setbg="img/hero/hero1.jpg">
+            <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
@@ -265,35 +379,9 @@
             </div>
         </div>
     </section>
-    </div>
     <!-- Hero Section End -->
 
-<div class="mobileShow">
-	    <section class="register-domain spad">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-8">
-                    <div class="register__text">
-                        <div class="section-title">
-                            <h3>How it works.....</h3>
-                        </div>
-                        <p style="font-size: 20px;"><b>Crowdfunding</b> is the practice of funding a project or venture by raising small amounts of money from a large number of people, typically via the Internet.</p>
-                            <br><br>
-                            <a href="./hiw.html" class="primary-btn text" class="btn" align="center">Go</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <section>
-        <br><br>
-        <center>
-<iframe width="360" height="202.5" src="https://www.youtube.com/embed/xUkF1nu0bZ4" height frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-    </section>
-    </section>
-</div>
-	
     <!-- Register Domain Section Begin -->
-  <div class="desk">
     <section class="register-domain spad">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -302,7 +390,7 @@
                         <div class="section-title">
                             <h3>How it works.....</h3>
                         </div>
-                        <p style="font-size: 20px;"><b>Crowdfunding</b> is the practice of funding a project or venture by raising small amounts of money from a large number of people, typically via the Internet.</p>
+                        <p><b>Crowdfunding</b> is the practice of funding a project or venture by raising small amounts of money from a large number of people, typically via the Internet.</p>
                             <br><br>
                             <a href="./hiw.html" class="primary-btn text" class="btn" align="center">Go</a>
                     </div>
@@ -310,16 +398,13 @@
             </div>
         </div>
     <section>
-        <br><br>
-        <center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xUkF1nu0bZ4" height frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+        <br>        <center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xUkF1nu0bZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
     </section>
     </section>
-</div>
     <!-- Register Domain Section End -->
 
  
-
     <!-- Services Section Begin -->
     <section class="services-section spad">
         <div class="container">
@@ -360,7 +445,7 @@
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
                     </article>
-                     <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F4ucvUl3HEv37i/view" data-text="Pay Now" data-color="#528FF0" data-size="medium">
+<div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F4ucvUl3HEv37i/view" data-text="Pay Now" data-color="#528FF0" data-size="medium">
   <script>
     (function(){
       var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
@@ -369,6 +454,7 @@
       rzp && rzp.init && rzp.init()}})();
   </script>
 </div>
+    
                 </div>
                 <div class="card__action">
                     
@@ -410,7 +496,7 @@
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
                     </article>
-                    <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F4ucvUl3HEv37i/view" data-text="Pay Now" data-color="#528FF0" data-size="medium">
+<div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F4ucvUl3HEv37i/view" data-text="Pay Now" data-color="#528FF0" data-size="medium">
   <script>
     (function(){
       var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
@@ -419,6 +505,7 @@
       rzp && rzp.init && rzp.init()}})();
   </script>
 </div>
+    
                 </div>
                 <div class="card__action">
                     
@@ -460,7 +547,7 @@
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
                     </article>
-                    <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F4ucvUl3HEv37i/view" data-text="Pay Now" data-color="#528FF0" data-size="medium">
+<div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F4ucvUl3HEv37i/view" data-text="Pay Now" data-color="#528FF0" data-size="medium">
   <script>
     (function(){
       var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
@@ -469,7 +556,6 @@
       rzp && rzp.init && rzp.init()}})();
   </script>
 </div>
-    
     
                 </div>
                 <div class="card__action">
@@ -483,6 +569,7 @@
                 </div>
                 </div>
                 </div>
+
 
 
                 <!-- <div class="col-lg-4 col-md-4 col-sm-6">
@@ -812,6 +899,7 @@
     <br><h4 style="color: white">Charity</h4>
     </div>
   </div>
+
   <div class="column"  style="position: relative;"><a href="./404.html">
     <img src="img/icons/drawing.png"></a>
     <div class="icons">
@@ -930,7 +1018,6 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 </style>
 
 <div class="cards-list">
-
 <a href="./404.html" >
 <div class="card1 4">
   <div class="card_image">
@@ -1016,6 +1103,8 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
  
 </div>
 
+
+ 
 <div class="contact-form spad">
         <div class="container">
             <div class="row">
@@ -1076,8 +1165,8 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
                     <div class="col-lg-6 col-md-6">
                         <div class="footer__top-auth">
                             <h5>Helping Panda</h5>
-                            <button onclick="printe()" class="primary-btn">Log in/Sign Up</button>
-                            <button class=" primary-btn sign-up" onclick="signot()" id="signOut">Sign Out</button>
+                            <button onclick="GoogleSignIn()" class="primary-btn">Log in/Sign Up</button>
+                            <button class=" primary-btn sign-up" onclick="signout()" id="signOut">Sign Out</button>
                         </div>
                     </div>
                 </div>
@@ -1093,10 +1182,10 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
                             </div>
                             <p>Helping Panda campaigns make ideas into reality by giving creators a platform to launch game-changing and creative products, along with other creators and investors. We help surface innovations all before they go mainstream.</p>
                             <div class="footer__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/Helping-Panda-106846051046470/"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.linkedin.com/company/53192504/admin/"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://youtube.com"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://www.instagram.com/helpingpanda/"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1105,11 +1194,12 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
                             <h5>Company</h5>
                             <ul>
                                <!--  <li><a href="#">Company</a></li> -->
-                                <li><a href="./about.html">About Us</a></li>                                
+                                <li><a href="./hiw.html">How it works</a></li>                                
                                 <li><a href="#">Campaigns</a></li>
                                 <!-- <li><a href="#">Press & Media</a></li> -->
-                                <li><a href="#">News / Blogs</a></li>
-                                <li><a href="#">Campaigns</a></li>
+                                <li><a href="./about.html">About Us</a></li>
+                                <li><a href="https://helpingpandablog.wordpress.com/l">Blog</a></li>
+              			<li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1118,12 +1208,13 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
                             <h5>Categories</h5>
                             <ul>
                             <li><a href="./404.html">Charity</a></li>
-                            <li><a href="./404.html">Drawing</a></li>
-                            <li><a href="./404.html">Food & drink</a></li>
-                            <li><a href="./404.html">Gaming</a></li>
-                            <li><a href="./404.html">Film</a></li>
-                            <li><a href="./404.html">Music</a></li>
                             <li><a href="./404.html">Books</a></li>
+                            <li><a href="./404.html">Music</a></li>
+                            <li><a href="./404.html">Gaming</a></li>
+                            <li><a href="./404.html">Art</a></li>
+                            <li><a href="./404.html">Food & Drink</a></li>
+                            <li><a href="./404.html">Movies</a></li>
+			    <li><a href="./404.html">Tech & Design</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1137,10 +1228,10 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
                                 <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com
                     </div>
                 </div>
-                 <div class="footer__text-copyright">
+            <div class="footer__text-copyright">
                     <p>
-  					<a href="./404.html" class="button1">Privacy Policy</a>|<a href="./404.html" class="button1">Terms and Conditions</a>
-  					</p>
+  		<a href="./404.html" class="button1">Privacy Policy</a>|<a href="./404.html" class="button1">Terms and Conditions</a>
+  		    </p>
                 </div>
             </div>
         </div>
