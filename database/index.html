@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Profile Edit</title>
+    <link rel="icon" href="top.png">
+    
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- 	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>	
+	<script type="text/javascript" src="data.js"></script>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="jumbotron">
+			
+			<h1>Profile Form</h1>
+			<a style="color: red">* Required field</a>
+
+			<br><br><br>
+			<div>
+			<form action="/action_page.php">
+
+				<div class="form-group">
+					<label for="fullNameField">Your Full Name: <a style="color: red">*</a> </label>
+					<input type="text" class="form-control" id="fullNameField" required>
+				</div>
+
+				<div class="form-group">
+					<label for="phone">Your Phone No: <a style="color: red">*</a></label>
+					<input type="email" class="form-control" id="phoneNO" required>
+				</div>
+
+				<div class="form-group">
+					<label>Your Email: <a style="color: red">*</a></label>
+					<input type="email" class="form-control" id="email" required>
+				</div>
+
+				<div class="form-group">
+					<label for="emailID">Your IG URL: </label>
+					<input type="url" class="form-control" id="igID">
+				</div>
+
+				<div class="form-group">
+					<label for="emailID">Your LN URL: </label>
+					<input type="url" class="form-control" id="lnID">
+				</div>
+
+				<div class="form-group">
+					<label for="emailID">Your FB URL: </label>
+					<input type="url" class="form-control" id="fbID">
+				</div>
+
+				<!-- todo: we should add a phone and an email field too so we can contact them back!! -->
+				<!-- This would be almost the same as the fullNameField, you have to change a couple things though, can you see what? -->
+
+				<div class="form-group">
+					<label for="bioField">BIO: <a style="color: red">*</a></label>
+					<!-- textarea are like inputs but they're for long text! -->
+					<textarea class="form-control" id="bioField" required></textarea>
+				</div><br>
+				UID:<div id="uid"></div>
+				<!-- it's important NOT to use <button> here because that will do something els (that's why we use <a> and make it look like a button using css -->
+				<a class="btn btn-default" onclick="ProfileEdit()">Submit</a>
+			</form>
+			<div>
+		<ul class="w3-ul w3-hoverable" style="width: 25%">
+
+			<li><div id="fullname"></div></li>
+			<li><div id="phone"></div></li>
+			<li><div id="IG"></div></li>
+			<li><div id="LN"></div></li>
+			<li><div id="FB"></div></li>
+			<li><div id="bio"></div></li>
+
+		</ul>
+			</div>
+		</div>
+		</div>
+
+
+	</div>
+<!-- 
+	<script type="text/javascript">
+		
+		var uploader = document.getElementById("uploader");
+		var fileButton = document.getElementById("fileButton");
+
+		fileButton.addEventListener('change', function(e){
+			var file = e.target.files[0];
+
+			var storageRef = firebase.storage().ref('DP/'+ file.name);
+
+			var task = storageRef.put(file);
+		});
+
+	</script>
+ -->
+</body>
+<script type="text/javascript" src="data.js"></script>
+</html>
