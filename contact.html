@@ -23,8 +23,11 @@
         crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
-    <script src="./js/web.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+    <script src="./database/data.js"></script>
+<!--     <script src="./js/web.js"></script>
+ -->
 </head>
 <body onload="printe2()">
     <!-- Page Preloder -->
@@ -94,8 +97,29 @@
                     <div class="col-lg-6">
                         <div class="header__info-right">
                             <ul>
-                            <li><button class="button1" onclick="GoogleSignIn()">Sign In</button></li>
-                            <li><button class="button1" onclick="signot()" id="signOut"></button></li>
+                            <li><button class="button1" onclick="openForm()" id="321">Sign In</button></li>
+                            <li><button class="button1" onclick="myFunction()" id="123">More</button>
+                                <ul class="dropdown" id="myDIV" style="display: none">
+                                    <li class="active"><a href="404.html" style="color: white" target="_blank">Profile</a></li>
+                                    <li class="active"><a href=" " style="color: white" onclick="signOut()">Sign Out</a></li>
+                                </ul>
+                            </li>
+                            <section class="form-popup" id="myForm">
+                              <form class="form-container">
+                                <h1>Login</h1>
+
+                                <label for="email"><b>Email</b></label>
+                                <input type="text" placeholder="Enter Email" id="email" required>
+
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" id="password" required>
+                                <p style="color: blue" onclick="reset()">Forgot Password?</p>
+
+                               <button type="button" class="btn" onclick="signin()">Sign In</button>
+                                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                                <p>New here ???<a style="color: blue" href="./database/login.html">Click here</a> to Sign Up</p>
+                              </form>
+                            </section>          
                             </ul>
                         </div>
                     </div>
@@ -139,7 +163,7 @@
     </header>
     <!-- Header End -->
 
-    <!-- Breadcrumb Begin -->
+    <!-- Breadcrumb Begin 
     <div class="breadcrumb-section">
         <div class="container">
                 <div class="col-lg-12">
@@ -150,7 +174,7 @@
                 </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
+    Breadcrumb End -->
 
     <!-- Contact Section Begin -->
     <section class="contact-section spad">
@@ -234,8 +258,8 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="footer__top-auth">
                             <h5>Helping Panda</h5>
-                            <button onclick="GoogleSignIn()" class="primary-btn">Log in/Sign Up</button>
-                            <button class=" primary-btn sign-up" onclick="signout()" id="signOut">Sign Out</button>
+                            <button class="primary-btn"><a href="mailto:helpingpandaofficial@gmail.com"> Email us</a></button>
+                            <button class=" primary-btn sign-up" id="signOut"><a href="https://wa.link/jmpkqk"> Chat</a></button>
                         </div>
                     </div>
                 </div>
@@ -294,6 +318,11 @@
                                 <li><span class="icon_phone"></span><a class="mail" href=”tel:1-877-538-5888″> +91 1234567890</a></li>
                                 <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com
                     </div>
+                </div>
+                 <div class="footer__text-copyright">
+                    <p>
+                    <a href="./404.html" class="button1">Privacy Policy</a>|<a href="./404.html" class="button1">Terms and Conditions</a>
+                    </p>
                 </div>
             </div>
         </div>
