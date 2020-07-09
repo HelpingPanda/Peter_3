@@ -59,6 +59,17 @@ firebase.auth().signInWithPopup(base_provider).then(function(result) {
       console.log(error.message)
    });
   }
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+function chumma()
+{
+  alert("Hey Voila !!");
+}
 
 function display()
 {
