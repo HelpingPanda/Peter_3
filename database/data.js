@@ -57,7 +57,8 @@
             user.sendEmailVerification().then(function() {
               // Email sent.
               alert("An Email has been sent. Please confirm your mail.");
-              location.replace("https://helpingpanda.in")
+              auth.signOut();
+              location.replace("https://helpingpanda.in/404.html")
             }).catch(function(error) {
               // An error happened.
             });
