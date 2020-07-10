@@ -39,7 +39,7 @@
             var user = firebase.auth().currentUser;
             var email = document.getElementById("email");
             var password = document.getElementById("password");
-            alert("Signed In !");
+
             const promise = auth.signInWithEmailAndPassword(email.value, password.value);
             promise.catch(e => alert("There is no user with that Email, please Sign Up"))
             //closeCurrentTab();
@@ -56,8 +56,8 @@
             if(user){
             user.sendEmailVerification().then(function() {
               // Email sent.
+              alert("An Email has been sent. Please confirm your mail.");
               auth.signOut();
-              alert("An Email has been sent. Please confirm.");
               location.replace("https://helpingpanda.in/404.html")
             }).catch(function(error) {
               // An error happened.
