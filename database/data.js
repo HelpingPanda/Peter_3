@@ -39,7 +39,7 @@
             var user = firebase.auth().currentUser;
             var email = document.getElementById("email");
             var password = document.getElementById("password");
-
+            alert("Signed In !");
             const promise = auth.signInWithEmailAndPassword(email.value, password.value);
             promise.catch(e => alert("There is no user with that Email, please Sign Up"))
             //closeCurrentTab();
