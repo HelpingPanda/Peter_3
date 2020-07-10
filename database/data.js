@@ -80,7 +80,7 @@
         }
 auth.onAuthStateChanged(function(user){
     
-    if(user){
+    if(user.emailVerified){
       
       email = user.email;
       //alert("Active User " + email);
