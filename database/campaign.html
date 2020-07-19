@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Campaign</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>Campaign Display</title>
     <link rel="icon" href="top.png">
     
 
@@ -19,95 +19,51 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- 	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script> -->
-<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>	
-	<script type="text/javascript" src="data.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>		
+
+
+	<script type="text/javascript" src="app.js"></script>
 </head>
+<body onload="end()">
 
-<body>
-	<div class="container">
+	<div>
+			<h1>Campaign:</h1>
 
-		<div class="jumbotron">
-			
-			<h1>Campaign Form</h1>
-			<a style="color: red">* Required field</a>
+		<ul class="w3-ul w3-hoverable" style="width: 25%">
 
-			<br><br><br>
-			<div>
-			<form action="/action_page.php">
+			<li><div id="CName"></div></li>
+			<li><div id="NGO"></div></li>
+			<li><div id="CGoal"></div></li>
+			<li><div id="CSDate"></div></li>
+			<li><div id="CEDate"></div></li>
+			<li><div id="CAim"></div></li>
+			<li><div id="CSummary"></div></li>
+			<li><div id="CVideo"></div></li>
+			<li><div id="CAuth"></div></li>
 
-				<div class="form-group">
-					<label for="fullNameField">Name of your Campaign <a style="color: red">*</a> </label>
-					<input type="text" class="form-control" id="CampaignName" required>
-				</div>
+		</ul>
 
-				<div class="form-group">
-					<label for="phone">Funding Goal:<a style="color: red">*</a></label>
-					<input type="email" class="form-control" id="CashGoal" required>
-				</div>
+		<!-- <h1>Campaign:</h1>
 
-				<div class="form-group">
-					<label>Campaign Start Date<a style="color: red">*</a></label>
-					<input type="date" class="form-control" id="CampaignStartDate" required>
-				</div>
+		<ul class="w3-ul w3-hoverable" style="width: 25%">
 
-				<div class="form-group">
-					<label>Campaign End Date<a style="color: red">*</a></label>
-					<input type="date" class="form-control" id="CampaignEndDate" required>
-				</div>
-
-				<div class="form-group">
-					<label for="bioField">Campaign Summary: [brief] <a style="color: red">*</a></label>
-					<!-- textarea are like inputs but they're for long text! -->
-					<textarea class="form-control" id="CampaignSummary" required></textarea>
-				</div>
-
-				<div class="form-group">
-					<label for="emailID">Your Youtube Video URL: </label>
-					<input type="url" class="form-control" id="CampaignVideo">
-				</div>
-
-				<div class="form-group">
-					<label for="bioField">Addition Details: <a style="color: red">*</a></label>
-					<!-- textarea are like inputs but they're for long text! -->
-					<textarea class="form-control" id="CampaignSummaryExtra" required></textarea>
-				</div>
-
-				<div class="form-group">
-					<label for="bioField">Aim of Funds: <a style="color: red">*</a></label>
-					<!-- textarea are like inputs but they're for long text! -->
-					<textarea class="form-control" id="CampaignAim" required></textarea>
-				</div>
-
-				<div class="form-group">
-					<label for="emailID">Name of the authorized signatory: <a style="color: red">*</a></label>
-					<input type="name" class="form-control" id="CampaignAuthName">
-				</div>
-				<!-- it's important NOT to use <button> here because that will do something els (that's why we use <a> and make it look like a button using css -->
-				<a class="btn btn-default" href="profile.html" onclick="CampaignNew()">Submit</a>
-			</form>
-		</div>
+			<li><div id="CampaignName"></div></li>
+			<li><div id="CashGoal"></div></li>
+			<li><div id="Start"></div></li>
+			<li><div id="End"></div></li>
+			<li><div id="Summary"></div></li>
+			<li><div id="Vid"></div></li>
+			<li><div id="Summary2"></div></li>
+			<li><div id="Aim"></div></li>
+			<li><div id="Auth"></div></li>
+		</ul> -->
+				<!-- We will use javascript to insert html for the orders list here -->
+				<!-- if you don't want orders to show on the homepage, you can duplicate the page and remove this from here, leave the other one with a werid name so only you can find it -->
+			<a href="edit.html">click to edit DATA</a>
 		</div>
 
-
-	</div>
-<!-- 
-	<script type="text/javascript">
-		
-		var uploader = document.getElementById("uploader");
-		var fileButton = document.getElementById("fileButton");
-
-		fileButton.addEventListener('change', function(e){
-			var file = e.target.files[0];
-
-			var storageRef = firebase.storage().ref('DP/'+ file.name);
-
-			var task = storageRef.put(file);
-		});
-
-	</script>
- -->
 </body>
-<script type="text/javascript" src="data.js"></script>
 </html>
+

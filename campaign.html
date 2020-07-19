@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Deerhost Template">
+    <meta name="keywords" content="Deerhost, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Helping Panda</title>
+    <link rel="icon" href="./img/top.png">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+<!--     <script src="./js/web.js"></script>
+ -->    <script src="./database/app.js"></script>
+</head>
+
+<body  onload="check()">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas__menu__overlay"></div>
+    <div class="offcanvas__menu__wrapper">
+        <div class="canvas__close">
+            <span class="fa fa-times-circle-o"></span>
+        </div>
+        <div class="offcanvas__logo">
+            <a href="#"><img src="img/logo.jpg" alt=""></a>
+        </div>
+        <nav class="offcanvas__menu mobile-menu">
+            <ul>
+                <li class="active"><a href="./hiw.html">How it works</a></li>
+                <!-- <li><a href="./hosting.html">How it works</a></li>
+                 --><li><a href="#">Categories</a>
+                    <ul class="dropdown">
+                        <li><a href="./404.html">Charity</a></li>
+                        <li><a href="./404.html">Drawing</a></li>
+                        <li><a href="./404.html">Food & Drink</a></li>
+                        <li><a href="./404.html">Gaming</a></li>
+                        <li><a href="./404.html">Film</a></li>
+                        <li><a href="./404.html">Music</a></li>
+                        <li><a href="./404.html">Books</a></li>
+                    </ul>
+                </li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href=".https://helpingpandablog.wordpress.com/">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+<!--             <ul>
+                            <li><button class="button1" onclick="openForm()" id="abc">Sign In</button></li>
+                            <li><button class="button1" onclick="myFunction()" id="cba">More</button>
+                                <ul class="dropdown" id="myDIV" style="display: none">
+                                    <li class="active"><a href="404.html" style="color: white" target="_blank">Profile</a></li>
+                                    <li class="active"><a href=" " style="color: white" onclick="signOut()">Sign Out</a></li>
+                                </ul>
+                            </li>
+                            <section class="form-popup" id="myForm">
+                              <form class="form-container">
+                                <h1>Login</h1>
+
+                                <label for="email"><b>Email</b></label>
+                                <input type="text" placeholder="Enter Email" id="email" required>
+
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" id="password" required>
+                                <p style="color: blue" onclick="reset()">Forgot Password?</p>
+
+                               <button type="button" class="btn" onclick="signin()">Sign In</button>
+                                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                                <p>New here ???<a style="color: blue" href="./database/login.html">Click here</a> to Sign Up</p>
+                              </form>
+                            </section>          
+                            </ul> -->
+        </div>
+        <div class="offcanvas__info">
+            <ul>
+                <li><span class="icon_phone"></span><a class="mail" href=”tel:1-877-538-5888″> +91 1234567890</a></li>
+                <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section header-normal">
+        <div class="header__info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header__info-left">
+                            <ul>
+                                <li><span class="icon_phone"></span><a class="mail" href=”tel:1-877-538-5888″> +91 1234567890</a></li>
+                                <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header__info-right">
+                            <!-- <ul>
+                            <li><button class="button1" onclick="openForm()" id="321">Sign In</button></li>
+                            <li><button class="button1" onclick="myFunction()" id="123">More</button>
+                                <ul class="dropdown" id="myDIV" style="display: none">
+                                    <li class="active"><a href="404.html" style="color: white" target="_blank">Profile</a></li>
+                                    <li class="active"><a href=" " style="color: white" onclick="signOut()">Sign Out</a></li>
+                                </ul>
+                            </li>
+                            <section class="form-popup" id="myForm">
+                              <form class="form-container">
+                                <h1>Login</h1>
+
+                                <label for="email"><b>Email</b></label>
+                                <input type="text" placeholder="Enter Email" id="email" required>
+
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" id="password" required>
+                                <p style="color: blue" onclick="reset()">Forgot Password?</p>
+
+                               <button type="button" class="btn" onclick="signin()">Sign In</button>
+                                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                                <p>New here ???<a style="color: blue" href="./database/login.html">Click here</a> to Sign Up</p>
+                              </form>
+                            </section>          
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logobar.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><li><a href="./hiw.html">How it works</a></li>
+                      <!-- <li><a href="./hosting.html">How it works</a></li>
+                       --><li><a href="#">Categories</a>
+                        <ul class="dropdown">
+                                <li><a href="./404.html">Charity</a></li>
+                                <li><a href="./404.html">Drawing</a></li>
+                                <li><a href="./404.html">Food & Drink</a></li>
+                                <li><a href="./404.html">Gaming</a></li>
+                                <li><a href="./404.html">Film</a></li>
+                                <li><a href="./404.html">Music</a></li>
+                                <li><a href="./404.html">Books</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="./about.html">About us</a></li>
+                      <li><a href="https://helpingpandablog.wordpress.com/">Blog</a></li>
+                      <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <span class="fa fa-bars"></span>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__option">
+                        <a href="./index.html"><span class="fa fa-home"></span> Home</a>
+                        <span>Contact</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     Breadcrumb End -->
+<style type="text/css">
+    check-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.check-list li {
+  position: relative;
+  list-style-type: none;
+  padding-left: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.check-list li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 5px;
+    height: 11px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: #00a8a8;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+}
+
+section {
+  height: 100%;
+}
+
+section {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+h1 {
+    align-items: center;
+}
+
+</style>
+<div style="padding: 70px 0;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border: 10px solid #12851;
+  text-align: center;">
+            <h1>Campaign:</h1>
+
+<section>
+        <ul class="check-list">
+
+            <li><div id="CName"></div></li>
+            <li><div id="NGO"></div></li>
+            <li><div id="CGoal"></div></li>
+            <li><div id="CSDate"></div></li>
+            <li><div id="CEDate"></div></li>
+            <li><div id="CAim"></div></li>
+            <li><div id="CSummary"></div></li>
+            <li><div id="CWeb"></div></li>
+            <li><div id="CVideo"></div></li>
+            <li><div id="CAuth"></div></li>
+
+        </ul>
+</section>
+        <!-- <h1>Campaign:</h1>
+
+        <ul class="w3-ul w3-hoverable" style="width: 25%">
+
+            <li><div id="CampaignName"></div></li>
+            <li><div id="CashGoal"></div></li>
+            <li><div id="Start"></div></li>
+            <li><div id="End"></div></li>
+            <li><div id="Summary"></div></li>
+            <li><div id="Vid"></div></li>
+            <li><div id="Summary2"></div></li>
+            <li><div id="Aim"></div></li>
+            <li><div id="Auth"></div></li>
+        </ul> -->
+                <!-- We will use javascript to insert html for the orders list here -->
+                <!-- if you don't want orders to show on the homepage, you can duplicate the page and remove this from here, leave the other one with a werid name so only you can find it -->
+            <br><br><a href="edit.html">click to edit DATA</a>
+        </div>
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="footer__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top-call">
+                            <h5>Need Help? Call us</h5>
+                            <h2>+91 1234567890</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top-auth">
+                            <h5>Helping Panda</h5>
+                            <button class="primary-btn"><a href="mailto:helpingpandaofficial@gmail.com"> Email us</a></button>
+                            <button class=" primary-btn sign-up" id="signOut"><a href="https://wa.link/jmpkqk"> Chat</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__text set-bg" data-setbg="img/footer-bg.png">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer__text-about">
+                            <div class="footer__logo">
+                                <a href="./index.html"><img src="img/logobar.png" alt=""></a>
+                            </div>
+                            <p>Helping Panda campaigns make ideas into reality by giving creators a platform to launch game-changing and creative products, along with other creators and investors. We help surface innovations all before they go mainstream.</p>
+                            <div class="footer__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer__text-widget">
+                            <h5>Company</h5>
+                            <ul>
+                               <!--  <li><a href="#">Company</a></li> -->
+                                <li><a href="./about.html">About Us</a></li>                                
+                                <li><a href="#">Campaigns</a></li>
+                                <!-- <li><a href="#">Press & Media</a></li> -->
+                                <li><a href="#">News / Blogs</a></li>
+                                <li><a href="#">Campaigns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer__text-widget">
+                            <h5>Categories</h5>
+                            <ul>
+                            <li><a href="./404.html">Charity</a></li>
+                            <li><a href="./404.html">Drawing</a></li>
+                            <li><a href="./404.html">Food & drink</a></li>
+                            <li><a href="./404.html">Gaming</a></li>
+                            <li><a href="./404.html">Film</a></li>
+                            <li><a href="./404.html">Music</a></li>
+                            <li><a href="./404.html">Books</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer__text-widget">
+                            <h5>CONTACT US</h5>
+                            <ul class="footer__widget-info">
+                                <li><span class="fa fa-map-marker"></span><a href="https://goo.gl/maps/SUqdDkDGzvSU1tXm6" target="_blank"> Doddaballapur Main Road, Avalahalli, Yelahanka,
+                                     Bengaluru, Karnataka 560064</li>
+                                <li><span class="icon_phone"></span><a class="mail" href=”tel:1-877-538-5888″> +91 1234567890</a></li>
+                                <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com
+                    </div>
+                </div>
+                 <div class="footer__text-copyright">
+                    <p>
+                    <a href="./404.html" class="button1">Privacy Policy</a>|<a href="./404.html" class="button1">Terms and Conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
