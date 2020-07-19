@@ -66,11 +66,9 @@
             
             //this is saying foreach order do the following function...
             orders.forEach(function(firebaseOrderReference){
-                
                 //this gets the actual data (JSON) for the order.
                 var order = firebaseOrderReference.val();
                 console.log(order); //check your console to see it!
-
                  //create html for the individual order
                 //note: this is hard to make look pretty! Be sure to keep your indents nice :-)
                 //IMPORTANT: we use ` here instead of ' (notice the difference?) That allows us to use enters
@@ -80,7 +78,7 @@
                 CSDate =     `Start Date: `+order.CampaignStartDate+``
                 CEDate =     `End Date: `+order.CampaignEndDate+``
                 CAim =     `Aim: `+order.CampaignAim+``
-                CSummary =     `Sumamry: `+order.CampaignSummary+``
+                CSummary =     `Summary: `+order.CampaignSummary+``
                 CVideo =     `URL: `+order.CampaignVideoURL+``
                 CAuth =     `Signatory: `+order.CampaignAuthName+``
                 CWeb = `<a>`+order.CampaignWeb+`</a>`
