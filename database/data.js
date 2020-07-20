@@ -94,7 +94,8 @@ auth.onAuthStateChanged(function(user){
       
     }
     else{
-      document.getElementById("123").innerHTML = "";
+      document.getElementById("authon").innerHTML = "";
+      document.getElementById("authonmob").innerHTML = "";      
      // document.getElementById("abc").innerHTML = "";
 
       //alert("No Active User");
@@ -108,6 +109,7 @@ auth.onAuthStateChanged(function(user){
     auth.signOut();
     alert("Signed Out");
     myFunction1();
+    myFunction3();
     change2();
 //    closeCurrentTab();
     
@@ -137,6 +139,13 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
+function openFormMob() {
+  document.getElementById("myFormMob").style.display = "block";
+}
+
+function closeFormMob() {
+  document.getElementById("myFormMob").style.display = "none";
+}
 function chumma()
 {
   var user = firebase.auth().currentUser;
@@ -146,12 +155,31 @@ function chumma()
             const promise = auth.signInWithEmailAndPassword(email.value, password.value);
             promise.catch(e => alert("There is no user with that Email, please Sign Up"))
 }
+
 function signin(){
     var user = firebase.auth().currentUser;
     var email = document.getElementById("email");
     var password = document.getElementById("password");
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-    promise.catch(e => alert("There is no user with that Email, please Sign Up"))
+    //promise.catch(e => alert("There is no user with that Email, please Sign Up"))
+    promise.catch(e => alert(e.message))
+//closeCurrentTab();
+//window.location.href = "D:/web/peter1/index.html";
+//alert("Signed in as " + email);
+            //closeCurrentTab();
+}
+
+function sign(){
+    var user = firebase.auth().currentUser;
+    var email = document.getElementById("emailweb");
+    var password = document.getElementById("passwordweb");
+    firebase.auth().signInWithEmailAndPassword(email.value, password.value).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(errorMessage);
+      // ...
+    });
 //closeCurrentTab();
 //window.location.href = "D:/web/peter1/index.html";
 //alert("Signed in as " + email);
@@ -159,17 +187,18 @@ function signin(){
 }
 function change(){
    
-    document.getElementById("123").innerHTML = email;   
-    document.getElementById("321").innerHTML = " ";
-   // document.getElementById("abc").innerHTML = email;   
-   // document.getElementById("cba").innerHTML = " ";
+    document.getElementById("authon").innerHTML = email;   
+    document.getElementById("authoff").innerHTML = " ";
+    document.getElementById("authonmob").innerHTML = email;   
+    document.getElementById("authoffmob").innerHTML = " ";
     closeForm();
+    closeFormMob();
 }
 function change2(){
-    document.getElementById("123").innerHTML = "";   
-    document.getElementById("321").innerHTML = "Sign In";
-  //  document.getElementById("abc").innerHTML = "";   
-  //  document.getElementById("cba").innerHTML = "Sign In";
+    document.getElementById("authon").innerHTML = "";   
+    document.getElementById("authoff").innerHTML = "Sign In";
+    document.getElementById("authonmob").innerHTML = "";   
+    document.getElementById("authoffmob").innerHTML = "Sign In";
 
 }
 
@@ -256,5 +285,17 @@ function myFunction() {
 }
 function myFunction1() {
   var x = document.getElementById("myDIV");
+  x.style.display = "none";
+}
+function myFunction2() {
+  var x = document.getElementById("myDIVMob");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFunction3() {
+  var x = document.getElementById("myDIVMob");
   x.style.display = "none";
 }
