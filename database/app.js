@@ -55,6 +55,62 @@
 
         }
 
+    function validateForm() {
+          var ca = document.forms["campaign"]["CampaignName"].value;
+          var cb = document.forms["campaign"]["NGOName"].value;
+          var cc = document.forms["campaign"]["CampaignGoal"].value;
+          var cd = document.forms["campaign"]["CampaignStartDate"].value;
+          var ce = document.forms["campaign"]["CampaignEndDate"].value;
+          var cf = document.forms["campaign"]["CampaignAim"].value;
+          var cg = document.forms["campaign"]["CampaignSummary"].value;                    
+          var ch = document.forms["campaign"]["CampaignAuthName"].value;                                                  
+          if (ca == "") {
+            alert("Please fill in the required fields.");
+            return false;
+          }
+          else
+          if (cb == "") {
+            alert("Please fill in the required fields.");
+            return false;
+          }
+          else
+          if (cc == "") {
+            alert("Please fill in the required fields.");
+            return false;
+          }
+          else
+          if (cd == "") {
+            alert("Please fill in the required fields.");
+            return false;
+          }
+          else
+          if (ce == "") {
+            alert("Please fill in the required fields.");
+            return false;
+          }
+          else
+          if (cf == "") {
+            alert("Please fill in the required fields.");
+            return false;
+          }
+          else
+          if (cg == "") {
+            alert("Please fill in the required fields.");
+            return false;
+          }
+          else
+          if (ch == "") {
+            alert("Please fill in the required fields.");
+            return false;
+          }
+          else
+          {
+            ProfileEdit();
+            location.replace("https://helpingpanda.in/");
+          }
+    }
+
+
         function end() {
         var user = firebase.auth().currentUser;
         var firebaseOrdersCollection = database.ref().child('Campaigns/');  
