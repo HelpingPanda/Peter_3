@@ -31,7 +31,8 @@
                 CampaignSummary: $('#CampaignSummary').val(),
                 CampaignVideoURL: $('#CampaignVideoURL').val(),
                 CampaignAuthName: $('#CampaignAuthName').val(),
-                CampaignWeb: $('#CampaignWeb').val(),                
+                CampaignWeb: $('#CampaignWeb').val(),
+                CampaignAddn: $('#CampaignAddnDetails').val()                
             };
             
             //'push' (aka add) your order to the existing list
@@ -118,7 +119,7 @@
         firebaseOrdersCollection.on('value',function(orders){
             
             //create an empty string that will hold our new HTML
-            var CName, NGO, CGoal, CSDate, CEDate, CAim, CSummary, CVideo, CAuth;
+            var CName, NGO, CGoal, CSDate, CEDate, CAim, CSummary, CVideo, CAuth, CAddn;
             
             //this is saying foreach order do the following function...
             orders.forEach(function(firebaseOrderReference){
@@ -128,16 +129,17 @@
                  //create html for the individual order
                 //note: this is hard to make look pretty! Be sure to keep your indents nice :-)
                 //IMPORTANT: we use ` here instead of ' (notice the difference?) That allows us to use enters
-                CName =   `Campaign Name: `+order.CampaignName+``
-                NGO =  `NGO: `+order.NGOName+``
-                CGoal =    `Goal: `+order.CampaignGoal+``
-                CSDate =     `Start Date: `+order.CampaignStartDate+``
-                CEDate =     `End Date: `+order.CampaignEndDate+``
-                CAim =     `Aim: `+order.CampaignAim+``
-                CSummary =     `Summary: `+order.CampaignSummary+``
-                CVideo =     `URL: `+order.CampaignVideoURL+``
-                CAuth =     `Signatory: `+order.CampaignAuthName+``
-                CWeb = `<a>`+order.CampaignWeb+`</a>`
+                CName =   ``+order.CampaignName+``
+                NGO =  ``+order.NGOName+``
+                CGoal =    ``+order.CampaignGoal+``
+                CSDate =     ``+order.CampaignStartDate+``
+                CEDate =     ``+order.CampaignEndDate+``
+                CAim =     ``+order.CampaignAim+``
+                CSummary =     ``+order.CampaignSummary+``
+                CVideo =     ``+order.CampaignVideoURL+``
+                CAuth =     ``+order.CampaignAuthName+``
+                CWeb = ``+order.CampaignWeb+``
+                CAddn =     ``+order.CampaignAddn+``
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
             });
@@ -152,8 +154,20 @@
             $('#CSummary').html(CSummary);
             $('#CVideo').html(CVideo);
             $('#CAuth').html(CAuth);
-            $('#CWeb').html(CWeb);         
-   
+            $('#CWeb').html(CWeb);
+            $('#CAddn').html(CAddn);     
+
+            document.getElementById('CampaignName').value = CName;
+            document.getElementById('NGOName').value = NGO; 
+            document.getElementById('CampaignGoal').value = CGoal; 
+            document.getElementById('CampaignStartDate').value = CSDate; 
+            document.getElementById('CampaignEndDate').value = CEDate; 
+            document.getElementById('CampaignAim').value = CAim; 
+            document.getElementById('CampaignSummary').value = CSummary; 
+            document.getElementById('CampaignVideoURL').value = CVideo; 
+            document.getElementById('CampaignAuthName').value = CAuth;   
+            document.getElementById('CampaignWeb').value = CWeb;
+            document.getElementById('CampaignAddnDetails').value = CAddn;             
             //note: an alternative approach would be to create a hidden html element for one order on the page, duplicate it in the forEach loop, unhide it, and replace the information, and add it back. 
         });
     }

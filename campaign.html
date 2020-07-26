@@ -247,22 +247,23 @@ h1 {
   border-left-width: 0px;
   border-right-width: 0px;
   border: 10px solid #12851;
-  text-align: center;">
-            <h1>Campaign:</h1>
+  text-align: left;">
+            <h1 style="text-align: center;">Campaign:</h1>
 
 <section>
         <ul class="check-list">
-
-            <li><div id="CName"></div></li>
-            <li><div id="NGO"></div></li>
-            <li><div id="CGoal"></div></li>
-            <li><div id="CSDate"></div></li>
-            <li><div id="CEDate"></div></li>
-            <li><div id="CAim"></div></li>
-            <li><div id="CSummary"></div></li>
-            <li><div id="CWeb"></div></li>
-            <li><div id="CVideo"></div></li>
-            <li><div id="CAuth"></div></li>
+ 
+            <li>Campaign Name: <div id="CName" style="display: inline-block;"></div></li>
+            <li>NGO: <div id="NGO" style="display: inline-block;"></div></li>
+            <li>Goal: <div id="CGoal" style="display: inline-block;"></div></li>
+            <li>Start Date: <div id="CSDate" style="display: inline-block;"></div></li>
+            <li>End Date: <div id="CEDate" style="display: inline-block;"></div></li>
+            <li>Aim: <div id="CAim" style="display: inline-block;"></div></li>
+            <li>Summary: <div id="CSummary" style="display: inline-block;"></div></li>
+            <li>URL: <div id="CWeb" style="display: inline-block;"></div></li>
+            <li>Youtube Video: <div id="CVideo" style="display: inline-block;"></div></li>
+            <li>Signatory: <div id="CAuth" style="display: inline-block;"></div></li>
+            <li>Additional Details: <div id="CAddn"></div></li>
 
         </ul>
 </section>
@@ -282,7 +283,11 @@ h1 {
         </ul> -->
                 <!-- We will use javascript to insert html for the orders list here -->
                 <!-- if you don't want orders to show on the homepage, you can duplicate the page and remove this from here, leave the other one with a werid name so only you can find it -->
-            <br><br><a href="edit.html">click to edit DATA</a>
+            <br><br><div style="text-align: center;"><a href="edit.html" style="background-color: #120851;
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;">click to edit DATA</a></div>
         </div>
 
 
