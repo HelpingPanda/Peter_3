@@ -142,6 +142,11 @@
                 CWeb = ``+order.CampaignWeb+``
                 CAddn =     ``+order.CampaignAddn+``
                 }
+                else
+                {
+                  alert("You have no campaigns yet !!!")
+                  location.replace("https://helpingpanda.in/edit");
+                }
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
             });
