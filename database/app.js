@@ -129,6 +129,7 @@
                  //create html for the individual order
                 //note: this is hard to make look pretty! Be sure to keep your indents nice :-)
                 //IMPORTANT: we use ` here instead of ' (notice the difference?) That allows us to use enters
+                if(order.ID==user.uid){
                 CName =   ``+order.CampaignName+``
                 NGO =  ``+order.NGOName+``
                 CGoal =    ``+order.CampaignGoal+``
@@ -140,6 +141,7 @@
                 CAuth =     ``+order.CampaignAuthName+``
                 CWeb = ``+order.CampaignWeb+``
                 CAddn =     ``+order.CampaignAddn+``
+                }
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
             });
