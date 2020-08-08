@@ -313,9 +313,96 @@ function closeForm() {
         </div>
     </div>
     Breadcrumb End -->
+<style type="text/css">
+.columns {
+  float: center;
+  align-self: center;
+  text-align: center;
+  width: 33%;
+  padding: 50px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.grey h3 {
+    background: #120851;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 24px 0 20px;
+    margin-bottom: 26px;
+    margin-left: -30px;
+    border-radius: 10px;
+    margin-right: -30px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="section-title" style="padding-top: 50px">
+    <h3>Pricing:</h3>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Pro</li>
+    <li class="grey">3% Commission*</li>
+    <li>25GB Storage</li>
+    <li>25 Emails</li>
+    <li>25 Domains</li>
+    <li>2GB Bandwidth</li>
+    <li class="grey"><a href="#" class="button">Start a Campaign</a></li>
+  </ul>
+</div>
+
+
 
     <!-- Pricing Section Begin -->
-    <section class="pricing-section spad">
+<!--     <section class="pricing-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-7">
@@ -340,8 +427,8 @@ function closeForm() {
                         </ul>
 
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="pricing__item">
                         <h4>Business</h4>
                         <h3>3% <span>Commisson</span></h3>
@@ -388,8 +475,8 @@ function closeForm() {
                         </ul>
 
                     </div>
-                </div>
-            </div>
+                </div> -->
+<!--             </div>
             <div class="row yearly__plans">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="pricing__item">
@@ -457,7 +544,7 @@ function closeForm() {
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Pricing Section End -->
 <style type="text/css">
 .bullet{
