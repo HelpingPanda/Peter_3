@@ -32,6 +32,7 @@
                 CampaignVideoURL: $('#CampaignVideoURL').val(),
                 CampaignAuthName: $('#CampaignAuthName').val(),
                 CampaignWeb: $('#CampaignWeb').val(),
+                CampaignPlan: $('#CampaignPlan').val(),
                 CampaignAddn: $('#CampaignAddnDetails').val()                
             };
             
@@ -141,6 +142,7 @@
                 CAuth =     ``+order.CampaignAuthName+``
                 CWeb = ``+order.CampaignWeb+``
                 CAddn =     ``+order.CampaignAddn+``
+                CPlan = ``+order.CampaignPlan+``
                 }
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
@@ -157,7 +159,8 @@
             $('#CVideo').html(CVideo);
             $('#CAuth').html(CAuth);
             $('#CWeb').html(CWeb);
-            $('#CAddn').html(CAddn);     
+            $('#CAddn').html(CAddn);
+            $('#CPlan').html(CPlan);                 
 
             document.getElementById('CampaignName').value = CName;
             document.getElementById('NGOName').value = NGO; 
@@ -169,7 +172,8 @@
             document.getElementById('CampaignVideoURL').value = CVideo; 
             document.getElementById('CampaignAuthName').value = CAuth;   
             document.getElementById('CampaignWeb').value = CWeb;
-            document.getElementById('CampaignAddnDetails').value = CAddn;             
+            document.getElementById('CampaignAddnDetails').value = CAddn;
+            document.getElementById('CampaignPlan').value = CPlan;             
             //note: an alternative approach would be to create a hidden html element for one order on the page, duplicate it in the forEach loop, unhide it, and replace the information, and add it back. 
         });
     }

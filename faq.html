@@ -319,18 +319,20 @@ function closeForm() {
         </div>
     </div>
     Breadcrumb End -->
-<style type="text/css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
 .columns {
-  float: center;
-  align-self: center;
-  text-align: center;
-  width: 33%;
-  padding: 50px;
+  float: left;
+  width: 50%;
+  padding: 100px;
 }
 
 .price {
   list-style-type: none;
-  border: 1px solid #eee;
+  border: 5px solid #eee;
   margin: 0;
   padding: 0;
   -webkit-transition: 0.3s;
@@ -344,7 +346,7 @@ function closeForm() {
 .price .header {
   background-color: #111;
   color: white;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .price li {
@@ -358,19 +360,6 @@ function closeForm() {
   font-size: 20px;
 }
 
-.grey h3 {
-    background: #120851;
-    font-weight: 700;
-    color: #ffffff;
-    padding: 24px 0 20px;
-    margin-bottom: 26px;
-    margin-left: -30px;
-    border-radius: 10px;
-    margin-right: -30px;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
 .button {
   background-color: #4CAF50;
   border: none;
@@ -381,31 +370,46 @@ function closeForm() {
   font-size: 18px;
 }
 
-
 @media only screen and (max-width: 600px) {
   .columns {
     width: 100%;
   }
 }
 </style>
-</head>
-<body>
-<div class="section-title" style="padding-top: 50px">
+<!-- <h2 style="text-align:center">Responsive Pricing Tables</h2>
+<p style="text-align:center">Resize the browser window to see the effect.</p>
+
+ -->
+ <section>
+ <div class="section-title" style="padding-top: 50px">
     <h3>Pricing:</h3>
-</div>
 <div class="columns">
   <ul class="price">
-    <li class="header" style="background-color:#4CAF50">Pro</li>
-    <li class="grey">2.5% Commission*</li>
-    <li>Social Media Ads</li>
-    <li>Expert Guidance</li>
-    <li>Least fee</li>
-    <li class="grey"><a href="edit.html" class="button">Start a Campaign</a></li>
+    <li class="header">Standard</li>
+    <li class="grey">0% Commission</li>
+    <li>Accepting all Payment methods</li>
+    <li>Single Fundraising Campaign</li>
+    <li>Real Time Support</li>
+    <li>Custom URL</li>
+    <li>Promotions and Advertising</li>
+    <li class="grey"><a href="edit.html" class="button">Start a campaign</a></li>
   </ul>
 </div>
 
-
-
+<div class="columns">
+  <ul class="price">
+    <li class="header">Premium</li>
+    <li class="grey">3% Commission</li>
+    <li>All standard features</li>
+    <li>Personal Campaign Manager</li>
+    <li>Content Curation</li>
+    <li>Social Media Outreach</li>
+    <li>Auto issue 80G for NGOs</li>
+    <li class="grey"><a href="edit.html" class="button">Start a campaign</a></li>
+  </ul>
+</div>
+</div>
+</section>
     <!-- Pricing Section Begin -->
 <!--     <section class="pricing-section spad">
         <div class="container">
