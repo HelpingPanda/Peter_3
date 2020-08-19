@@ -31,6 +31,7 @@
                 CampaignSummary: $('#CampaignSummary').val(),
                 CampaignVideoURL: $('#CampaignVideoURL').val(),
                 CampaignAuthName: $('#CampaignAuthName').val(),
+                CampaignAuthPhone: $('#CampaignAuthPhone').val(),
                 CampaignWeb: $('#CampaignWeb').val(),
                 CampaignPlan: $('#CampaignPlan').val(),
                 CampaignAddn: $('#CampaignAddnDetails').val()                
@@ -65,7 +66,8 @@
           var ce = document.forms["campaign"]["CampaignEndDate"].value;
           var cf = document.forms["campaign"]["CampaignAim"].value;
           var cg = document.forms["campaign"]["CampaignSummary"].value;                    
-          var ch = document.forms["campaign"]["CampaignAuthName"].value;                                                  
+          var ch = document.forms["campaign"]["CampaignAuthName"].value;
+          var ci = document.forms["campaign"]["CampaignAuthPhone"].value;                                                  
           if (ca == "") {
             alert("Please fill in the required fields.");
             return false;
@@ -106,6 +108,11 @@
             return false;
           }
           else
+          if (ci == "") {
+            alert("Please fill in the required fields.");
+            return false;
+          }
+          else
           {
             ProfileEdit();
             location.replace("https://helpingpanda.in/");
@@ -120,7 +127,7 @@
         firebaseOrdersCollection.on('value',function(orders){
             
             //create an empty string that will hold our new HTML
-            var CName, NGO, CGoal, CSDate, CEDate, CAim, CSummary, CVideo, CAuth, CAddn;
+            var CName, NGO, CGoal, CSDate, CEDate, CAim, CSummary, CVideo, CAuth, CAddn, CPhone;
             
             //this is saying foreach order do the following function...
             orders.forEach(function(firebaseOrderReference){
@@ -140,6 +147,7 @@
                 CSummary =     ``+order.CampaignSummary+``
                 CVideo =     ``+order.CampaignVideoURL+``
                 CAuth =     ``+order.CampaignAuthName+``
+                CPhone =     ``+order.CampaignAuthPhone+``
                 CWeb = ``+order.CampaignWeb+``
                 CAddn =     ``+order.CampaignAddn+``
                 CPlan = ``+order.CampaignPlan+``
@@ -158,6 +166,7 @@
             $('#CSummary').html(CSummary);
             $('#CVideo').html(CVideo);
             $('#CAuth').html(CAuth);
+            $('#CPhone').html(CPhone);
             $('#CWeb').html(CWeb);
             $('#CAddn').html(CAddn);
             $('#CPlan').html(CPlan);                 
@@ -173,7 +182,8 @@
             document.getElementById('CampaignAuthName').value = CAuth;   
             document.getElementById('CampaignWeb').value = CWeb;
             document.getElementById('CampaignAddnDetails').value = CAddn;
-            document.getElementById('CampaignPlan').value = CPlan;             
+            document.getElementById('CampaignPlan').value = CPlan;         
+            document.getElementById('CampaignAuthPhone').value = CPhone;     
             //note: an alternative approach would be to create a hidden html element for one order on the page, duplicate it in the forEach loop, unhide it, and replace the information, and add it back. 
         });
     }
