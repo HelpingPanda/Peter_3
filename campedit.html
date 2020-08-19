@@ -321,27 +321,27 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 
 				<div class="form-group">
 					<h3><label for="fullNameField">Campaign Name: <a style="color: red">*</a> </label></h3>
-					<input type="text" class="form-control" id="CampaignName" name="CampaignName" value="" required>
+					<output type="text" id="CampaignName" name="CampaignName" value="" required/>
 				</div>
 
 				<div class="form-group">
-					<h3><label for="phone">NGO/Individual Name: <a style="color: red">*</a></label></h3>
-					<input type="text" class="form-control" id="NGOName" name="NGOName" value="" required>
+					<h3><label for="phone">NGO Name: <a style="color: red">*</a></label></h3>
+					<output type="text" id="NGOName" name="NGOName" value="" required/>
 				</div>
 
 				<div class="form-group">
 					<h3><label>Funding Goal: <a style="color: red">*</a></label></h3>
-					<input type="number" class="form-control" id="CampaignGoal" min="2000" max="50000000" name="CampaignGoal" value="" required>
+					<ouput type="number" id="CampaignGoal" min="2000" max="50000000" name="CampaignGoal" value="" required>
 				</div>
 
 				<div class="form-group">
 					<h3><label>Campaign Start Date: <a style="color: red">*</a></label></h3>
-					<input type="date" class="form-control" id="CampaignStartDate" name="CampaignStartDate" value="" required>
+					<output type="date" id="CampaignStartDate" name="CampaignStartDate" value="" required>
 				</div>
 
 				<div class="form-group">
 					<h3><label>Campaign End Date: <a style="color: red">*</a></label></h3>
-					<input type="date" class="form-control" id="CampaignEndDate" name="CampaignEndDate" value="" required>
+					<output type="date" id="CampaignEndDate" name="CampaignEndDate" value="" required>
 				</div>
 
 				<div class="form-group">
@@ -369,28 +369,21 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 
 				<div class="form-group">
 					<h3><label for="emailID">Phone No:<a style="color: red">*</a></label></h3>
-					<input type="number" class="form-control" id="CampaignAuthPhone" name="CampaignAuthPhone" value="" required>
+					<output type="number" id="CampaignAuthPhone" name="CampaignAuthPhone" value="" required>
 				</div>
 
 				<div class="form-group">
 					<h3><label for="name">Name of the authorized signatory: [as mentioned in Aadhar/PAN Card] <a style="color: red">*</a></label></h3>
-					<input type="name" class="form-control" id="CampaignAuthName" name="CampaignAuthName" value="" required>
+					<output type="name" id="CampaignAuthName" name="CampaignAuthName" value="" required>
 				</div>
 				<!-- todo: we should add a phone and an email field too so we can contact them back!! -->
 				<!-- This would be almost the same as the fullNameField, you have to change a couple things though, can you see what? -->
 
                 <div class="form-group">
-                    <h3><label for="plan">Select Plan<a style="color: red">*</a><a href="faq.html" target="_blank" style="color: blue; font-size: 15px;">Learn More</a> </label></h3></label></h3>
+                    <h3><label for="plan">Select Plan<a style="color: red">*</a></label></h3>
 <!--                     <p><input type="radio" id="CampaignPlan" name="CampaignPlan" value="Standard" />  Standard</p>
                     <p><input type="radio" id="CampaignPlan" name="CampaignPlan" value="Premium" />  Premium</p> -->
-                    <input type="name" class="form-control" id="CampaignPlan" name="CampaignPlan" value="Standard/Premium" required>
-                </div>
-
-                <div class="form-group">
-                    <h3><label for="plan">Select Funding Model<a style="color: red">*</a><a href="hiw.html" target="_blank" style="color: blue; font-size: 15px;">Learn More</a> </label></h3>
-<!--                     <p><input type="radio" id="CampaignPlan" name="CampaignPlan" value="Standard" />  Standard</p>
-                    <p><input type="radio" id="CampaignPlan" name="CampaignPlan" value="Premium" />  Premium</p> -->
-                    <input type="name" class="form-control" id="CampaignFund" name="CampaignFund" value="Fixed/Flexible" required>
+                    <output type="name" id="CampaignPlan" name="CampaignPlan" value="Standard/Premium" required>
                 </div>
 
 				<div class="form-group">
@@ -398,9 +391,7 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 					<!-- textarea are like inputs but they're for long text! -->
 					<textarea class="form-control" id="CampaignAddnDetails" value="" ></textarea>
 				</div>
-				<br><br>
-				<p style="font-size: 15px;"><b>I/We hereby confirm that the above information given by me/us is correct and there is no misleading information shared. I know and grant Helping Panda to use to information to help me/us raise money for this noble cause. I/We accept all the Terms and Conditions set by Helping Panda. I/We also accept the pricing and fees set by Helping Panda.</b></p>
-				<input type="submit" value="Submit" class="btn btn1" id="send" style="font-size: 25px; background-color: #120851" onclick="validateForm()"></input>
+				<input type="submit" value="Submit" class="btn btn1" id="send" style="font-size: 25px; background-color: #120851" onclick="ProfileEdit()"></input>
 			</form>
 		</div>
 			<!-- div>

@@ -34,6 +34,7 @@
                 CampaignAuthPhone: $('#CampaignAuthPhone').val(),
                 CampaignWeb: $('#CampaignWeb').val(),
                 CampaignPlan: $('#CampaignPlan').val(),
+                CampaignFund: $('#CampaignFund').val(),
                 CampaignAddn: $('#CampaignAddnDetails').val()                
             };
             
@@ -67,7 +68,8 @@
           var cf = document.forms["campaign"]["CampaignAim"].value;
           var cg = document.forms["campaign"]["CampaignSummary"].value;                    
           var ch = document.forms["campaign"]["CampaignAuthName"].value;
-          var ci = document.forms["campaign"]["CampaignAuthPhone"].value;                                                  
+          var ci = document.forms["campaign"]["CampaignFund"].value;
+          var cj = document.forms["campaign"]["CampaignAuthPhone"].value;                                                  
           if (ca == "") {
             alert("Please fill in the required fields.");
             return false;
@@ -112,6 +114,10 @@
             alert("Please fill in the required fields.");
             return false;
           }
+          if (cj == "") {
+            alert("Please fill in the required fields.");
+            return false;
+          }
           else
           {
             ProfileEdit();
@@ -151,6 +157,7 @@
                 CWeb = ``+order.CampaignWeb+``
                 CAddn =     ``+order.CampaignAddn+``
                 CPlan = ``+order.CampaignPlan+``
+                CFund = ``+order.CampaignFund+``
                 }
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
@@ -169,7 +176,8 @@
             $('#CPhone').html(CPhone);
             $('#CWeb').html(CWeb);
             $('#CAddn').html(CAddn);
-            $('#CPlan').html(CPlan);                 
+            $('#CPlan').html(CPlan);
+            $('#CFund').html(CFund);                 
 
             document.getElementById('CampaignName').value = CName;
             document.getElementById('NGOName').value = NGO; 
@@ -182,7 +190,8 @@
             document.getElementById('CampaignAuthName').value = CAuth;   
             document.getElementById('CampaignWeb').value = CWeb;
             document.getElementById('CampaignAddnDetails').value = CAddn;
-            document.getElementById('CampaignPlan').value = CPlan;         
+            document.getElementById('CampaignPlan').value = CPlan;
+            document.getElementById('CampaignFund').value = CFund;          
             document.getElementById('CampaignAuthPhone').value = CPhone;     
             //note: an alternative approach would be to create a hidden html element for one order on the page, duplicate it in the forEach loop, unhide it, and replace the information, and add it back. 
         });
