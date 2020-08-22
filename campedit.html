@@ -35,7 +35,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>	
-	<script type="text/javascript" src="./database/app.js"></script>
+	<script type="text/javascript" src="./database/edit.js"></script>
 </head>
 <script type="text/javascript">
 	//auto expand textarea
@@ -270,7 +270,7 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logobar.jpg" alt=""></a>
+                        <a href="./index.html"><img src="img/logobar.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -312,7 +312,7 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 
 		<div class="jumbotron">
 			
-			<h1>New Campaign</h1>
+			<h1>Edit your campaign</h1>
 			<a style="color: red">* Required field</a>
 
 			<br>
@@ -320,46 +320,71 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 			<form  name="campaign">
 
 				<div class="form-group">
-					<h3><label for="fullNameField">Campaign Name: <a style="color: red">*</a> </label></h3>
-					<output type="text" id="CampaignName" name="CampaignName" value="" required/>
+					<h3><label for="fullNameField">Campaign Name: </label></h3>
+					<b><output style="font-size: 20px;" type="text" id="CampaignName" name="CampaignNameE" value="" required/></b>
 				</div>
 
 				<div class="form-group">
-					<h3><label for="phone">NGO Name: <a style="color: red">*</a></label></h3>
-					<output type="text" id="NGOName" name="NGOName" value="" required/>
+					<h3><label for="phone">NGO Name:</label></h3>
+					<b><output style="font-size: 20px;" type="text" id="NGOName" name="NGONameE" value="" required/></b>
 				</div>
 
 				<div class="form-group">
-					<h3><label>Funding Goal: <a style="color: red">*</a></label></h3>
-					<ouput type="number" id="CampaignGoal" min="2000" max="50000000" name="CampaignGoal" value="" required>
+                    <h3><label>Funding Goal:</label></h3>
+                    <b><output style="font-size: 20px;" type="number" id="CampaignGoal" min="2000" max="50000000" name="CampaignGoal" value="" required/></b>
+                </div>
+
+				<div class="form-group">
+					<h3><label>Campaign Start Date:</label></h3>
+					<b><output style="font-size: 20px;" type="date" id="CampaignStartDate" name="CampaignStartDateE" value="" required/></b>
 				</div>
 
 				<div class="form-group">
-					<h3><label>Campaign Start Date: <a style="color: red">*</a></label></h3>
-					<output type="date" id="CampaignStartDate" name="CampaignStartDate" value="" required>
+					<h3><label>Campaign End Date:</label></h3>
+					<b><output style="font-size: 20px;" type="date" id="CampaignEndDate" name="CampaignEndDateE" value="" required/></b>
 				</div>
 
-				<div class="form-group">
-					<h3><label>Campaign End Date: <a style="color: red">*</a></label></h3>
-					<output type="date" id="CampaignEndDate" name="CampaignEndDate" value="" required>
-				</div>
+                <div class="form-group">
+                    <h3><label for="plan">Website: </label></h3>
+                    <!-- textarea are like inputs but they're for long text! -->
+                    <b><output style="font-size: 20px;" type="text" id="CampaignWeb" value="" required/></b>
+                </div>
+
+                <div class="form-group">
+                    <h3><label for="plan">Funding Model:</label></h3>
+<!--                     <p><input type="radio" id="CampaignPlan" name="CampaignPlan" value="Standard" />  Standard</p>
+                    <p><input type="radio" id="CampaignPlan" name="CampaignPlan" value="Premium" />  Premium</p> -->
+                    <b><output style="font-size: 20px;" type="name" id="CampaignFund" name="CampaignPlanE" value="Standard/Premium" required/></b>
+                </div>
+
+                <div class="form-group">
+                    <h3><label for="plan">Select Plan:</label></h3>
+<!--                     <p><input type="radio" id="CampaignPlan" name="CampaignPlan" value="Standard" />  Standard</p>
+                    <p><input type="radio" id="CampaignPlan" name="CampaignPlan" value="Premium" />  Premium</p> -->
+                    <b><output style="font-size: 20px;" type="name" id="CampaignPlan" name="CampaignPlanE" value="Standard/Premium" required>
+                </div>
+
+
+                <div class="form-group">
+                    <h3><label for="emailID">Phone No:</label></h3>
+                    <b><output style="font-size: 20px;" type="number" id="CampaignAuthPhone" name="CampaignAuthPhoneE" value="" required/></b>
+                </div>
+
+                <div class="form-group">
+                    <h3><label for="name">Name of the authorized signatory: [as mentioned in Aadhar/PAN Card] <a style="color: red">*</a></label></h3>
+                    <b><output style="font-size: 20px;" type="name" id="CampaignAuthName" name="CampaignAuthNameE" value="" required/></b>
+                </div>
 
 				<div class="form-group">
-					<h3><label for="bioField">Aim of Funds: <a style="color: red">*</a></label></h3>
+					<h3><label for="bioField">Aim of Funds: </label></h3>
 					<!-- textarea are like inputs but they're for long text! -->
 					<textarea class="form-control" id="CampaignAim" name="CampaignAim" value="" required></textarea>
 				</div>
 
 				<div class="form-group">
-					<h3><label for="bioField">Campaign Summary: [brief] <a style="color: red">*</a></label></h3>
+					<h3><label for="bioField">Campaign Summary: </label></h3>
 					<!-- textarea are like inputs but they're for long text! -->
 					<textarea class="form-control" id="CampaignSummary" name="CampaignSummary" value="" required></textarea>
-				</div>
-
-				<div class="form-group">
-					<h3><label for="bioField">Website: </label></h3>
-					<!-- textarea are like inputs but they're for long text! -->
-					<input type="url" class="form-control" id="CampaignWeb" value="">
 				</div>
 
 				<div class="form-group">
@@ -367,31 +392,15 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 					<input type="url" class="form-control" id="CampaignVideoURL" value="">
 				</div>
 
-				<div class="form-group">
-					<h3><label for="emailID">Phone No:<a style="color: red">*</a></label></h3>
-					<output type="number" id="CampaignAuthPhone" name="CampaignAuthPhone" value="" required>
-				</div>
-
-				<div class="form-group">
-					<h3><label for="name">Name of the authorized signatory: [as mentioned in Aadhar/PAN Card] <a style="color: red">*</a></label></h3>
-					<output type="name" id="CampaignAuthName" name="CampaignAuthName" value="" required>
-				</div>
 				<!-- todo: we should add a phone and an email field too so we can contact them back!! -->
 				<!-- This would be almost the same as the fullNameField, you have to change a couple things though, can you see what? -->
-
-                <div class="form-group">
-                    <h3><label for="plan">Select Plan<a style="color: red">*</a></label></h3>
-<!--                     <p><input type="radio" id="CampaignPlan" name="CampaignPlan" value="Standard" />  Standard</p>
-                    <p><input type="radio" id="CampaignPlan" name="CampaignPlan" value="Premium" />  Premium</p> -->
-                    <output type="name" id="CampaignPlan" name="CampaignPlan" value="Standard/Premium" required>
-                </div>
 
 				<div class="form-group">
 					<h3><label for="bioField">Additional Details: </label></h3>
 					<!-- textarea are like inputs but they're for long text! -->
 					<textarea class="form-control" id="CampaignAddnDetails" value="" ></textarea>
 				</div>
-				<input type="submit" value="Submit" class="btn btn1" id="send" style="font-size: 25px; background-color: #120851" onclick="ProfileEdit()"></input>
+				<input type="submit" value="Submit" class="btn btn1" id="send" style="font-size: 25px; background-color: #120851" onclick="Edit()"></input>
 			</form>
 		</div>
 			<!-- div>
@@ -461,10 +470,11 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
                             </div>
                             <p>Helping Panda campaigns make ideas into reality by giving creators a platform to launch game-changing and creative products, along with other creators and investors. We help surface innovations all before they go mainstream.</p>
                             <div class="footer__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/Helping-Panda-106846051046470/"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.linkedin.com/company/53192504/admin/"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.youtube.com/channel/UCzooKsSVcRsqKVJvq4n5OJw/featured"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://www.instagram.com/helpingpanda/"><i class="fa fa-instagram"></i></a>
+                                <a href="https://twitter.com/helping_panda"><i class="fa fa-twitter"></i></a>
                             </div>
                         </div>
                     </div>
@@ -474,10 +484,9 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
                             <ul>
                                <!--  <li><a href="#">Company</a></li> -->
                                 <li><a href="./about.html">About Us</a></li>                                
-                                <li><a href="#">Campaigns</a></li>
+                                <li><a href="./404.html">Campaigns</a></li>
                                 <!-- <li><a href="#">Press & Media</a></li> -->
-                                <li><a href="#">News / Blogs</a></li>
-                                <li><a href="#">Campaigns</a></li>
+                                <li><a href="https://helpingpandablog.wordpress.com/">News / Blogs</a></li>>
                             </ul>
                         </div>
                     </div>

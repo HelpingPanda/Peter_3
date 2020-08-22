@@ -5,16 +5,16 @@
         //IMPORTANT: REPLACE THESE WITH YOUR VALUES (these ones won't work)
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    var config = {
-        apiKey: "AIzaSyCdKtyy9sBsJ9rgatNMv_g_oEFkrmhMXNQ",
-        authDomain: "peter-1-9b137.firebaseapp.com",
-        databaseURL: "https://peter-1-9b137.firebaseio.com",
-        projectId: "peter-1-9b137",
-        storageBucket: "peter-1-9b137.appspot.com",
-        messagingSenderId: "595599457775",
-        appId: "1:595599457775:web:9e1a6d5113c83541058a1a",
-        measurementId: "G-K7T63613K4"
-    };
+  var config = {
+    apiKey: "AIzaSyBCLcEoVKqDfDXxeMxOvPeXAb9A4PA53fw",
+    authDomain: "helping-panda.firebaseapp.com",
+    databaseURL: "https://helping-panda.firebaseio.com",
+    projectId: "helping-panda",
+    storageBucket: "helping-panda.appspot.com",
+    messagingSenderId: "546878085356",
+    appId: "1:546878085356:web:dad9843ec075ac0f41adc9",
+    measurementId: "G-DN8V0MNE82"
+  };
     var email;
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -37,11 +37,17 @@
 
         function signIn(){
             var user = firebase.auth().currentUser;
+            if (user. emailVerified){
             var email = document.getElementById("email");
             var password = document.getElementById("password");
 
             const promise = auth.signInWithEmailAndPassword(email.value, password.value);
             promise.catch(e => alert("There is no user with that Email, please Sign Up"))
+          }
+          else
+          {
+            alert("Verify your EMail !!");
+          }
             //closeCurrentTab();
             //window.location.href = "D:/web/peter1/index.html";
             //alert("Signed in as " + email);
@@ -49,6 +55,16 @@
             
         }
 
+        function ver() {
+          // body...
+         firebase.auth().onAuthStateChanged(authUser => {
+      if(authUser.user.emailVerified){ //This will return true or false
+        console.log('email is verified')
+       }else{
+           console.log('email not verified')
+       }
+    })
+}
         function verify(){
 
         auth.onAuthStateChanged(function(user){
@@ -58,7 +74,7 @@
               // Email sent.
               alert("An Email has been sent. Please confirm your mail.");
               auth.signOut();
-              location.replace("https://helpingpanda.in/404.html")
+              location.replace("https://helpingpanda.in/")
             }).catch(function(error) {
               // An error happened.
             });
@@ -299,3 +315,4 @@ function myFunction3() {
   var x = document.getElementById("myDIVMob");
   x.style.display = "none";
 }
+
