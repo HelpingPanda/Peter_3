@@ -20,19 +20,39 @@
                 CAuth =     ``+order.CampaignAuthName+``
                 CAddn =     ``+order.CampaignAddn+``
                 CInc = ``+order.CampaignIncome+``
-                }
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
+                $('#CampaignAim1').html(CAim);
+                $('#CampaignGoal1').html(CGoal);
+                $('#CampaignIncome1').html(CInc);
+                $('#CampaignName1').html(CName);
+                $('#CampaignAuth1').html(CAuth);
+                var progress = (CInc*100)/CGoal;
+                if(progress>0){
+                document.getElementById('prog1').value = progress;
+                    }
+                }
+                else
+                if(order.ID=='Sb7QRB55GvXucB5q7DjITb2zteN2'){
+                CName =   ``+order.CampaignName+``
+                CGoal =    ``+order.CampaignGoal+``
+                CAim =     ``+order.CampaignAim+``
+                CAuth =     ``+order.CampaignAuthName+``
+                CAddn =     ``+order.CampaignAddn+``
+                CInc = ``+order.CampaignIncome+``
+                //add the individual order html to the end of the allOrdersHtml list
+                //allOrdersHtml = allOrdersHtml + individialOrderHtml;
+                $('#CampaignAim3').html(CAim);
+                $('#CampaignGoal3').html(CGoal);
+                $('#CampaignIncome3').html(CInc);
+                $('#CampaignName3').html(CName);
+                $('#CampaignAuth3').html(CAuth);
+                var progress = (CInc*100)/CGoal;
+                if(progress>0){
+                document.getElementById('prog3').value = progress;
+                    }
+                }
             });
-            $('#CampaignAim1').html(CAim);
-            $('#CampaignGoal1').html(CGoal);
-            $('#CampaignIncome1').html(CInc);
-            $('#CampaignName1').html(CName);
-            $('#CampaignAuth1').html(CAuth);
-            var progress = (CInc*100)/CGoal;
-            if(progress>0){
-            document.getElementById('prog1').value = progress;
-            }
             // $('#CampaignSummaryM').html(CSummary);
             // $('#CampaignAimM').html(CAim);
             // $('#CampaignGoalM').html(CGoal);
