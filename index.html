@@ -27,6 +27,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f13fc6e5806bd00192206db&product=inline-share-buttons' async='async'></script>
     <script src="./database/data.js"></script>
+    <script src="./database/progress.js"></script>
 
 </head>
 
@@ -301,7 +302,7 @@
                             	<li><p style="font-size: 15px;"><b>Need Money ?</b></p><p>Do you want to raise money for a good cause ???Falling short of funds ?</p></li>
                             	<li><p style="font-size: 15px;"><b>Start a campaign</b></p><p>Start a campaign and give us the necessary details.</p></li>
                             	<li><p style="font-size: 15px;"><b>Share</b></p><p>Once the campaign is hosted. Share it with your friends and family !! Raise money !!</p></li>
-                            </ul><!-- 
+                            </ul><!--
                             <a href="./hiw.html" class="primary-btn text" class="btn" align="center">Go</a> -->
                     </div>
                 </div>
@@ -362,35 +363,34 @@
                 </div>
                 <div class="card__content card__padding">
                     <div class="card__share">
-                        <a class="share-icon paw" href="https://wa.me/919343036784/?text=Ration Boxes" data-action="share/whatsapp/share" title="Share on whatsapp"><span class="fa fa-whatsapp"></span></a>
+                        <a class="share-icon paw" href="https://wa.me/917619393334/?text=Ration Box Drive. Visit at www.helpingpanda.in/campaigns/Anjum_2.html" data-action="share/whatsapp/share" title="Share on whatsapp"><span class="fa fa-whatsapp"></span></a>
                         <a class="share-icon link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://helpingpanda.in&title=Check out my campaign and support it !!!&summary=chillyfacts.com&source=Chillyfacts"><span class="fa fa-linkedin"></span></a>
                         <a class="share-icon instagram" href="https://www.instagram.com/helpingpanda"><span class="fa fa-instagram"></span></a>
                     </div>
-
                     <div class="card__meta">
                         <h4>Campaign #1
-                        <time><br>15th August 2020</time> -<time>20th October 2020</time></h4>
+                        <time><br>27th August 2020</time> -<time>27th October 2020</time></h4>
                     </div>
                     <div>
                     <br><label for="file">Campaign progress:</label><br>
                     <div class="w3-light-grey">
-            <div class="w3-container w3-blue" style="width:30%">30%</div>
+            <div class="w3-container w3-blue" id="prog1" style="width:0px">&nbsp;</div>
           </div>
-                    <h5>1800/6000 Rs</h5>
+                    <p style="margin: 0; display: inline;"><b>Goal: &nbsp;&nbsp;&#8377; &nbsp;</b></p><p style="margin: 0; display: inline;" id="CampaignIncome1"></p><p style="font-size: 18px;margin: 0; display: inline;">&nbsp;/&nbsp;</p><p style="margin: 0; display: inline;" id="CampaignGoal1"></p><br>
                     </div>
                      <article class="card__article">
-                        <h2><a href="campaigns/camp.html">Ration Box</a></h2>
+                        <h2><a id="CampaignName1" href="campaigns/Anjum_2.html">Ration Box</a></h2>
 
-                        <p>This campaign is focused on getting the funds to finance for Ration Boxes which will then be sent to people below the poverty line. Your donation will help people in need.</p>
+                        <p id="CampaignAim1">This campaign is focused on getting the funds to finance for Ration Boxes for people below the poverty line.</p>
                     </article>                
-                    <a href="campaigns/camp.html" class="primary-btn w3-blue">Learn More</a>
+                    <a href="campaigns/Anjum_2.html" class="primary-btn w3-blue" style="text-transform: capitalize;">Learn More</a>
     </div>
                 <div class="card__action">
                     
                     <div class="card__author">
                         <img src="img/team/4.png" alt="user">
                         <div class="card__author-content">
-                            By <a href="https://cmca.org">CMCA</a>
+                            By <b><a id="CampaignAuth1">CMCA</p></b>
                         </div>
                     </div>
                 </div>
@@ -418,21 +418,21 @@
                     <div class="w3-light-grey">
             <div class="w3-container w3-blue" style="width:57%">57%</div>
           </div>
-                    <h5>4000/7000 Rs</h5>
+                    <p style="margin: 0; display: inline;"><b>Goal: &nbsp;&nbsp;&#8377; &nbsp;</b></p><p style="margin: 0; display: inline;" id="CampaignIncome2">4000</p><p style="font-size: 18px;margin: 0; display: inline;">&nbsp;/&nbsp;</p><p style="margin: 0; display: inline;" id="CampaignGoal2">7000</p><br>
                     </div>
                      <article class="card__article">
                         <h2><a href="campaigns/camp.html">PPE kit</a></h2>
 
-                        <p>Help us raise funds for those in need. These kits will be sent to wards around the hospital and save a lot of nurses/doctors.In these trying times, let us help those that help others.</p>
+                        <p>These kits will be sent to wards around the hospital and save a lot of nurses/doctors.</p>
                     </article>                
-                    <a href="campaigns/camp.html" class="primary-btn w3-blue">Learn More</a>
+                    <a href="campaigns/camp.html" class="primary-btn w3-blue" style="text-transform: capitalize;">Learn More</a>
     </div>
                 <div class="card__action">
                     
                     <div class="card__author">
                         <img src="img/team/4.png" alt="user">
                         <div class="card__author-content">
-                            By Anonymous
+                            By<b> Anonymous</b>
                         </div>
                     </div>
                 </div>
@@ -460,14 +460,14 @@
                     <div class="w3-light-grey">
             <div class="w3-container w3-blue" style="width:50%">50%</div>
           </div>
-                    <h5>2500/5000 Rs</h5>
+                    <p style="margin: 0; display: inline;"><b>Goal: &nbsp;&nbsp;&#8377; &nbsp;</b></p><p style="margin: 0; display: inline;" id="CampaignIncome3">2500</p><p style="font-size: 18px;margin: 0; display: inline;">&nbsp;/&nbsp;</p><p style="margin: 0; display: inline;" id="CampaignGoal3">5000</p><br>
                     </div>
                      <article class="card__article">
                         <h2><a href="campaigns/camp.html">Food for Stray Dogs</a></h2>
 
-                        <p>This campaign is for the stray dogs who have been hit hard during Corona. The money we receive here will be used to feed them and hopefully even provide shelter.</p>
+                        <p>The money we receive here will be used to feed them and even provide shelter.</p>
                     </article>
-                    <a href="campaigns/camp.html" class="primary-btn w3-blue">Learn More</a>
+                    <a href="campaigns/camp.html" class="primary-btn w3-blue" style="text-transform: capitalize;">Learn More</a>
     
     
                 </div>
@@ -476,7 +476,7 @@
                     <div class="card__author">
                         <img src="img/team/4.png" alt="user">
                         <div class="card__author-content">
-                            By <a href="https://letslivetogether.wordpress.com/">Lets Live Together</a>
+                            By <a href="https://letslivetogether.wordpress.com/"><b>Lets Live Together</b></a>
                         </div>
                     </div>
                 </div>
@@ -766,7 +766,8 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 
 <a href="./404.html" >
 <div class="card1 1">
-  <div class="card_image"> <img src="https://media.giphy.com/media/xUA7biF7n8LcAqh4bK/source.gif" />
+  <div class="card_image"> 
+    <img src="https://media.giphy.com/media/xUA7biF7n8LcAqh4bK/source.gif" />
    </div>
   <div class="card_title title-white">
     <p class="white">Medical</p>
