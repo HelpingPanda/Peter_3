@@ -31,8 +31,7 @@
             $('#CampaignAuth1').html(CAuth);
             var progress = (CInc*100)/CGoal;
             if(progress>0){
-            document.getElementById('prog1').style.width = progress;
-            document.getElementById('prog1').style.value = progress;
+            document.getElementById('prog1').value = progress;
             }
             // $('#CampaignSummaryM').html(CSummary);
             // $('#CampaignAimM').html(CAim);
