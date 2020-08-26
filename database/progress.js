@@ -40,6 +40,7 @@
                 CAuth =     ``+order.CampaignAuthName+``
                 CAddn =     ``+order.CampaignAddn+``
                 CInc = ``+order.CampaignIncome+``
+                
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
                 $('#CampaignAim3').html(CAim);
