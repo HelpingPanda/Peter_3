@@ -40,7 +40,7 @@
                 CAuth =     ``+order.CampaignAuthName+``
                 CAddn =     ``+order.CampaignAddn+``
                 CInc = ``+order.CampaignIncome+``
-                
+
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
                 $('#CampaignAim3').html(CAim);
@@ -51,6 +51,28 @@
                 var progress = (CInc*100)/CGoal;
                 if(progress>0){
                 document.getElementById('prog3').value = progress;
+                    }
+                }
+
+                else
+                if(order.ID=='OikaE0fWx0SJclH5ta3bRDMrREN2'){
+                CName =   ``+order.CampaignName+``
+                CGoal =    ``+order.CampaignGoal+``
+                CAim =     ``+order.CampaignAim+``
+                CAuth =     ``+order.CampaignAuthName+``
+                CAddn =     ``+order.CampaignAddn+``
+                CInc = ``+order.CampaignIncome+``
+                
+                //add the individual order html to the end of the allOrdersHtml list
+                //allOrdersHtml = allOrdersHtml + individialOrderHtml;
+                $('#CampaignAim2').html(CAim);
+                $('#CampaignGoal2').html(CGoal);
+                $('#CampaignIncome2').html(CInc);
+                $('#CampaignName2').html(CName);
+                $('#CampaignAuth2').html(CAuth);
+                var progress = (CInc*100)/CGoal;
+                if(progress>0){
+                document.getElementById('prog2').value = progress;
                     }
                 }
             });
