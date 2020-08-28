@@ -142,9 +142,9 @@ function closeForm() {
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+<!--     <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> -->
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas__menu__overlay"></div>
@@ -526,7 +526,7 @@ function closeForm() {
             orders.forEach(function(firebaseOrderReference){
                 //this gets the actual data (JSON) for the order.
                 order = firebaseOrderReference.val();
-                console.log(order); //check your console to see it!
+                //console.log(order); //check your console to see it!
                  //create html for the individual order
                 //note: this is hard to make look pretty! Be sure to keep your indents nice :-)
                 //IMPORTANT: we use ` here instead of ' (notice the difference?) That allows us to use enters
