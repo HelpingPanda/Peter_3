@@ -32,120 +32,12 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="../database/data.js"></script>
 </head>
-<!-- 
-<script type="text/javascript">
-function validateForm() {
-// if (isEmpty(document.getElementById('data_2').value.trim())) {
-// alert('NAME is required!');
-// return false;
-// }
-if (isEmpty(document.getElementById('data_4').value.trim())) {
-alert('EMAIL is required!');
-return false;
-}
-if (!validateEmail(document.getElementById('data_4').value.trim())) {
-alert('EMAIL must be a valid email address!');
-return false;
-}
-return true;
-}
-function isEmpty(str) { return (str.length === 0 || !str.trim()); }
-function validateEmail(email) {
-var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
-return isEmpty(email) || re.test(email);
-}
-
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCdKtyy9sBsJ9rgatNMv_g_oEFkrmhMXNQ",
-    authDomain: "peter-1-9b137.firebaseapp.com",
-    databaseURL: "https://peter-1-9b137.firebaseio.com",
-    projectId: "peter-1-9b137",
-    storageBucket: "peter-1-9b137.appspot.com",
-    messagingSenderId: "595599457775",
-    appId: "1:595599457775:web:9e1a6d5113c83541058a1a",
-    measurementId: "G-K7T63613K4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  //firebase.analytics();
-  var base_provider = new firebase.auth.GoogleAuthProvider();
-  base_provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-  firebase.auth().languageCode = 'pt';
-  GoogleSignIn=()=>{
-    //base_provider = new firebase.auth.GoogleAuthProvider()
-firebase.auth().signInWithPopup(base_provider).then(function(result) {
-      var token = result.credential.accessToken;
-      var user = result.user;
-    
-      console.log(token)
-      console.log(user)
-      //printe();
-      alert("Sign in successful");
-   }).catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-    
-      console.log(error.code)
-      console.log(error.message)
-   });
-  }
-
-function signout()
-{
-  firebase.auth().signOut().then(function() {
-        // Sign-out successful.
-  alert("You have signed out");
-  //text = "Sign in";
-  //document.getElementById("signout").innerHTML = "Sign In";
-      }).catch(function(error) {
-        // An error happened.
-      });
-}
-
-// var text = "Sign in";
-// function printe() {
-
-//     document.getElementById("signout").innerHTML = text;
-
-//     if(document.getElementById("signout").innerHTML === "Sign In")
-//     {
-//       //GoogleSignIn();
-//       alert("You are Signed In !");
-//       text = "Sign Out";
-//       document.getElementById("signout").innerHTML = text;
-//     }
-//     else
-//     {
-//       firebase.auth().signOut().then(function() {
-//         // Sign-out successful.
-//   alert("You have signed out");
-//   text = "Sign in";
-//   //document.getElementById("signout").innerHTML = "Sign In";
-//       }).catch(function(error) {
-//         // An error happened.
-//       });
-//     }
-// }
-
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-
-</script>
-
- -->
-
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+<!--     <div id="preloder">
         <div class="loader"></div>
     </div>
-
+ -->
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas__menu__overlay"></div>
     <div class="offcanvas__menu__wrapper">
@@ -158,27 +50,27 @@ function closeForm() {
         <nav class="offcanvas__menu mobile-menu">
             <ul>
             <li class="active">
-                <li><a href="../hiw.html">How it works</a></li>
+                <li><a href="../hiw">How it works</a></li>
                 <li><a href="#">Categories</a>
                 <ul class="dropdown">
-                    <li><a href="../404.html">NGO/Charity</a></li>
-                    <li><a href="../404.html">Medical</a></li>
-                    <li><a href="../404.html">Education</a></li>
-                    <li><a href="../404.html">Animals</a></li><!-- 
-                    <li><a href="./404.html">Drawing</a></li>
-                    <li><a href="./404.html">Food & Drink</a></li>
-                    <li><a href="./404.html">Gaming</a></li>
-                    <li><a href="./404.html">Film</a></li>
-                    <li><a href="./404.html">Music</a></li>
-                    <li><a href="./404.html">Books</a></li> -->
+                    <li><a href="../404">NGO/Charity</a></li>
+                    <li><a href="../404">Medical</a></li>
+                    <li><a href="../404">Education</a></li>
+                    <li><a href="../404">Animals</a></li><!-- 
+                    <li><a href="./404">Drawing</a></li>
+                    <li><a href="./404">Food & Drink</a></li>
+                    <li><a href="./404">Gaming</a></li>
+                    <li><a href="./404">Film</a></li>
+                    <li><a href="./404">Music</a></li>
+                    <li><a href="./404">Books</a></li> -->
                 </ul>
             </li>
-            <li><a href="../faq.html">Pricing</a></li>
-            <li><a href="../about.html">About us</a></li>
+            <li><a href="../faq">Pricing</a></li>
+            <li><a href="../about">About us</a></li>
             <li><a href="#">More</a>
                 <ul class="dropdown">
                     <li><a href="https://helpingpandablog.wordpress.com/">Blog</a></li>
-                    <li><a href="../contact.html">Contact Us</a></li>   
+                    <li><a href="../contact">Contact Us</a></li>   
                 </ul>
             </ul>
         </nav>
@@ -188,7 +80,7 @@ function closeForm() {
                     <li><button class="button1" onclick="openFormMob()" id="authoffmob">Sign In</button></li>
                     <li><button class="button1" onclick="myFunction2()" id="authonmob">More</button>
                         <ul class="dropdown" id="myDIVMob" style="display: none">
-                            <li class="active"><a href="../campaign.html" style="color: white">Campaign</a></li>
+                            <li class="active"><a href="../campaign" style="color: white">Campaign</a></li>
                             <li class="active"><a href=" " style="color: white" onclick="signOut()">Sign Out</a></li>
                         </ul>
                     </li>
@@ -205,7 +97,7 @@ function closeForm() {
 
                        <button type="button" class="btn" onclick="signin()">Sign In</button>
                         <button type="button" class="btn cancel" onclick="closeFormMob()">Close</button>
-                        <p>New here ???<a style="color: blue" href="../SignUp/SignUp.html">Click here</a> to Sign Up</p>
+                        <p>New here ???<a style="color: blue" href="../SignUp/SignUp">Click here</a> to Sign Up</p>
                       </form>
                     </section>
             </ul>
@@ -238,7 +130,7 @@ function closeForm() {
                             <li><button class="button1" onclick="openForm()" id="authoff">Sign In</button></li>
                             <li><button class="button1" onclick="myFunction()" id="authon">More</button>
                                 <ul class="dropdown" id="myDIV" style="display: none">
-                                    <li class="active"><a href="../campaign.html" style="color: white">Campaign</a></li>
+                                    <li class="active"><a href="../campaign" style="color: white">Campaign</a></li>
                                     <li class="active"><a href=" " style="color: white" onclick="signOut()">Sign Out</a></li>
                                 </ul>
                             </li>
@@ -255,7 +147,7 @@ function closeForm() {
 
                                <button type="button" class="btn" onclick="sign()">Sign In</button>
                                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                                <p>New here ???<a style="color: blue" href="../SignUp/SignUp.html">Click here</a> to Sign Up</p>
+                                <p>New here ???<a style="color: blue" href="../SignUp/SignUp">Click here</a> to Sign Up</p>
                               </form>
                             </section>          
                             </ul>
@@ -268,35 +160,35 @@ function closeForm() {
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="../index.html"><img src="img/logobar.png" alt=""></a>
+                        <a href="../index"><img src="img/logobar.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <nav class="header__menu">
                         <ul>
                         <li class="active">
-                            <li><a href="../hiw.html">How it works</a></li>
+                            <li><a href="../hiw">How it works</a></li>
                             <li><a href="#">Categories</a>
                             <ul class="dropdown">
-                                <li><a href="../404.html">NGO/Charity</a></li>
-                                <li><a href="../404.html">Medical</a></li>
-                                <li><a href="../404.html">Education</a></li>
-                                <li><a href="../404.html">Animals</a></li><!-- 
-                                <li><a href="./404.html">Charity</a></li>
-                                <li><a href="./404.html">Drawing</a></li>
-                                <li><a href="./404.html">Food & Drink</a></li>
-                                <li><a href="./404.html">Gaming</a></li>
-                                <li><a href="./404.html">Film</a></li>
-                                <li><a href="./404.html">Music</a></li>
-                                <li><a href="./404.html">Books</a></li> -->
+                                <li><a href="../404">NGO/Charity</a></li>
+                                <li><a href="../404">Medical</a></li>
+                                <li><a href="../404">Education</a></li>
+                                <li><a href="../404">Animals</a></li><!-- 
+                                <li><a href="./404">Charity</a></li>
+                                <li><a href="./404">Drawing</a></li>
+                                <li><a href="./404">Food & Drink</a></li>
+                                <li><a href="./404">Gaming</a></li>
+                                <li><a href="./404">Film</a></li>
+                                <li><a href="./404">Music</a></li>
+                                <li><a href="./404">Books</a></li> -->
                             </ul>
                         </li>
-                        <li><a href="../faq.html">Pricing</a></li>
-                        <li><a href="../about.html">About us</a></li>
+                        <li><a href="../faq">Pricing</a></li>
+                        <li><a href="../about">About us</a></li>
                         <li><a href="#">More</a>
                             <ul class="dropdown">
                                 <li><a href="https://helpingpandablog.wordpress.com/">Blog</a></li>
-                                <li><a href="../contact.html">Contact Us</a></li>   
+                                <li><a href="../contact">Contact Us</a></li>   
                             </ul>
                         </ul>
                     </nav>
@@ -550,28 +442,28 @@ function closeForm() {
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
             });
-            $('#CampaignSummary').html(CSummary);
-            $('#CampaignAim').html(CAim);
-            $('#CampaignGoal').html(CGoal);
-            $('#CampaignIncome').html(CInc);
-            $('#CampaignAddn').html(CAddn);
-            $('#CampaignName').html(CName);
-            $('#CampaignEndDate').html(CEDate);
-            $('#CampaignStartDate').html(CSDate);
-            $('#CampaignAuth').html(CAuth);
-            $('#CampaignPhone').html(CPhone);
+            $('#CampaignSummary')(CSummary);
+            $('#CampaignAim')(CAim);
+            $('#CampaignGoal')(CGoal);
+            $('#CampaignIncome')(CInc);
+            $('#CampaignAddn')(CAddn);
+            $('#CampaignName')(CName);
+            $('#CampaignEndDate')(CEDate);
+            $('#CampaignStartDate')(CSDate);
+            $('#CampaignAuth')(CAuth);
+            $('#CampaignPhone')(CPhone);
             var progress = (CInc*100)/CGoal
             document.getElementById('file').value = progress;
 
-            $('#CampaignSummaryM').html(CSummary);
-            $('#CampaignAimM').html(CAim);
-            $('#CampaignGoalM').html(CGoal);
-            $('#CampaignIncomeM').html(CInc);
-            $('#CampaignAddnM').html(CAddn);
-            $('#CampaignNameM').html(CName);
-            $('#CampaignEndDateM').html(CEDate);
-            $('#CampaignStartDateM').html(CSDate);
-            $('#CampaignAuthM').html(CAuth);            
+            $('#CampaignSummaryM')(CSummary);
+            $('#CampaignAimM')(CAim);
+            $('#CampaignGoalM')(CGoal);
+            $('#CampaignIncomeM')(CInc);
+            $('#CampaignAddnM')(CAddn);
+            $('#CampaignNameM')(CName);
+            $('#CampaignEndDateM')(CEDate);
+            $('#CampaignStartDateM')(CSDate);
+            $('#CampaignAuthM')(CAuth);            
             document.getElementById('fileM').value = progress;
         });            
 </script>
@@ -840,7 +732,7 @@ height: 40px;" id="file" value="" max="100"> 32% </progress><br>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer__text-about">
                             <div class="footer__logo">
-                                <a href="../index.html"><img src="img/logobar.png" alt=""></a>
+                                <a href="../index"><img src="img/logobar.png" alt=""></a>
                             </div>
                             <p>Helping Panda campaigns make ideas into reality by giving creators a platform to launch game-changing and creative products, along with other creators and investors. We help surface innovations all before they go mainstream.</p>
                             <div class="footer__social">
@@ -857,8 +749,8 @@ height: 40px;" id="file" value="" max="100"> 32% </progress><br>
                             <h5>Company</h5>
                             <ul>
                                <!--  <li><a href="#">Company</a></li> -->
-                                <li><a href="../about.html">About Us</a></li>                                
-                                <li><a href="./404.html">Campaigns</a></li>
+                                <li><a href="../about">About Us</a></li>                                
+                                <li><a href="./404">Campaigns</a></li>
                                 <!-- <li><a href="#">Press & Media</a></li> -->
                                 <li><a href="https://helpingpandablog.wordpress.com/">News / Blogs</a></li>
                             </ul>
@@ -868,17 +760,17 @@ height: 40px;" id="file" value="" max="100"> 32% </progress><br>
                         <div class="footer__text-widget">
                             <h5>Categories</h5>
                             <ul>
-                            <li><a href="../404.html">NGO/Charity</a></li>
-                            <li><a href="../404.html">Medical</a></li>
-                            <li><a href="../404.html">Education</a></li>
-                            <li><a href="../404.html">Animals</a></li><!-- 
-                            <li><a href="./404.html">Charity</a></li>
-                            <li><a href="./404.html">Drawing</a></li>
-                            <li><a href="./404.html">Food & drink</a></li>
-                            <li><a href="./404.html">Gaming</a></li>
-                            <li><a href="./404.html">Film</a></li>
-                            <li><a href="./404.html">Music</a></li>
-                            <li><a href="./404.html">Books</a></li> -->
+                            <li><a href="../404">NGO/Charity</a></li>
+                            <li><a href="../404">Medical</a></li>
+                            <li><a href="../404">Education</a></li>
+                            <li><a href="../404">Animals</a></li><!-- 
+                            <li><a href="./404">Charity</a></li>
+                            <li><a href="./404">Drawing</a></li>
+                            <li><a href="./404">Food & drink</a></li>
+                            <li><a href="./404">Gaming</a></li>
+                            <li><a href="./404">Film</a></li>
+                            <li><a href="./404">Music</a></li>
+                            <li><a href="./404">Books</a></li> -->
                             </ul>
                         </div>
                     </div>
