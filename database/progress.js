@@ -22,11 +22,16 @@
                 CInc = ``+order.CampaignIncome+``
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
-                $('#CampaignAim1').html(CAim);
-                $('#CampaignGoal1').html(CGoal);
-                $('#CampaignIncome1').html(CInc);
-                $('#CampaignName1').html(CName);
-                $('#CampaignAuth1').html(CAuth);
+                document.getElementById('CampaignAim1').innerHTML = CAim;
+                document.getElementById('CampaignGoal1').innerHTML = CGoal;
+                document.getElementById('CampaignIncome1').innerHTML = CInc;
+                document.getElementById('CampaignName1').innerHTML = CName;
+                document.getElementById('CampaignAuth1').innerHTML = CAuth;
+                // $('#CampaignAim1').html(CAim);
+                // $('#CampaignGoal1').html(CGoal);
+                // $('#CampaignIncome1').html(CInc);
+                // $('#CampaignName1').html(CName);
+                // $('#CampaignAuth1').html(CAuth);
                 var progress = (CInc*100)/CGoal;
                 if(progress>0){
                 document.getElementById('prog1').value = progress;
@@ -43,11 +48,11 @@
 
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
-                $('#CampaignAim3').html(CAim);
-                $('#CampaignGoal3').html(CGoal);
-                $('#CampaignIncome3').html(CInc);
-                $('#CampaignName3').html(CName);
-                $('#CampaignAuth3').html(CAuth);
+                document.getElementById('CampaignAim3').innerHTML = CAim;
+                document.getElementById('CampaignGoal3').innerHTML = CGoal;
+                document.getElementById('CampaignIncome3').innerHTML = CInc;
+                document.getElementById('CampaignName3').innerHTML = CName;
+                document.getElementById('CampaignAuth3').innerHTML = CAuth;
                 var progress = (CInc*100)/CGoal;
                 if(progress>0){
                 document.getElementById('prog3').value = progress;
@@ -65,11 +70,11 @@
                 
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
-                $('#CampaignAim2').html(CAim);
-                $('#CampaignGoal2').html(CGoal);
-                $('#CampaignIncome2').html(CInc);
-                $('#CampaignName2').html(CName);
-                $('#CampaignAuth2').html(CAuth);
+                document.getElementById('CampaignAim2').innerHTML = CAim;
+                document.getElementById('CampaignGoal2').innerHTML = CGoal;
+                document.getElementById('CampaignIncome2').innerHTML = CInc;
+                document.getElementById('CampaignName2').innerHTML = CName;
+                document.getElementById('CampaignAuth2').innerHTML = CAuth;
                 var progress = (CInc*100)/CGoal;
                 if(progress>0){
                 document.getElementById('prog2').value = progress;

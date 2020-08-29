@@ -440,28 +440,39 @@
                 //add the individual order html to the end of the allOrdersHtml list
                 //allOrdersHtml = allOrdersHtml + individialOrderHtml;
             });
-            $('#CampaignSummary')(CSummary);
-            $('#CampaignAim')(CAim);
-            $('#CampaignGoal')(CGoal);
-            $('#CampaignIncome')(CInc);
-            $('#CampaignAddn')(CAddn);
-            $('#CampaignName')(CName);
-            $('#CampaignEndDate')(CEDate);
-            $('#CampaignStartDate')(CSDate);
-            $('#CampaignAuth')(CAuth);
-            $('#CampaignPhone')(CPhone);
+            //$('#CampaignSummary')(CSummary);
+            document.getElementById('CampaignAim').innerHTML = CAim;
+            document.getElementById('CampaignSummary').innerHTML = CSummary;
+            document.getElementById('CampaignGoal').innerHTML = CGoal;
+            document.getElementById('CampaignIncome').innerHTML = CInc;
+            //document.getElementById('CampaignAddn').innerHTML = CAddn;
+            document.getElementById('CampaignName').innerHTML = CName;
+            document.getElementById('CampaignEndDate').innerHTML = CEDate;
+            document.getElementById('CampaignStartDate').innerHTML = CSDate;
+            document.getElementById('CampaignAuth').innerHTML = CAuth;
+            //document.getElementById('CampaignPhone').innerHTML = CPhone;
+            // $('#CampaignAim')(CAim);
+            // $('#CampaignGoal')(CGoal);
+            // $('#CampaignIncome')(CInc);
+            // $('#CampaignAddn')(CAddn);
+            // $('#CampaignName')(CName);
+            // $('#CampaignEndDate')(CEDate);
+            // $('#CampaignStartDate')(CSDate);
+            // $('#CampaignAuth')(CAuth);
+            // $('#CampaignPhone')(CPhone);
             var progress = (CInc*100)/CGoal
             document.getElementById('file').value = progress;
 
-            $('#CampaignSummaryM')(CSummary);
-            $('#CampaignAimM')(CAim);
-            $('#CampaignGoalM')(CGoal);
-            $('#CampaignIncomeM')(CInc);
-            $('#CampaignAddnM')(CAddn);
-            $('#CampaignNameM')(CName);
-            $('#CampaignEndDateM')(CEDate);
-            $('#CampaignStartDateM')(CSDate);
-            $('#CampaignAuthM')(CAuth);            
+            document.getElementById('CampaignAimM').innerHTML = CAim;
+            document.getElementById('CampaignSummaryM').innerHTML = CSummary;
+            document.getElementById('CampaignGoalM').innerHTML = CGoal;
+            document.getElementById('CampaignIncomeM').innerHTML = CInc;
+            //document.getElementById('CampaignAddn').innerHTML = CAddn;
+            document.getElementById('CampaignNameM').innerHTML = CName;
+            document.getElementById('CampaignEndDateM').innerHTML = CEDate;
+            document.getElementById('CampaignStartDateM').innerHTML = CSDate;
+            document.getElementById('CampaignAuthM').innerHTML = CAuth;
+            //document.getElementById('CampaignPhone').innerHTML = CPhone; 
             document.getElementById('fileM').value = progress;
         });            
 </script>
