@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	<link rel="icon" href="img/top.png">
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+</head>
+<body onload="login()">
+
+			<p id="C1">Loading....</p>
+			<input type="number" id="C1Inc" value="123" >
+
+			<p id="C2">Loading....</p>
+			<input type="number" id="C2Inc" value="123">
+
+			<p id="C3">Loading....</p>
+			<input type="number" id="C3Inc" value="123">
+
+			<button onclick="Edit()">Click here</button>
+
+<script type="text/javascript">
+  var config = {
+    apiKey: "AIzaSyBCLcEoVKqDfDXxeMxOvPeXAb9A4PA53fw",
+    authDomain: "helping-panda.firebaseapp.com",
+    databaseURL: "https://helping-panda.firebaseio.com",
+    projectId: "helping-panda",
+    storageBucket: "helping-panda.appspot.com",
+    messagingSenderId: "546878085356",
+    appId: "1:546878085356:web:dad9843ec075ac0f41adc9",
+    measurementId: "G-DN8V0MNE82"
+  };
+
+
+function login(){
+  var person = prompt("Please enter your name:", "Harry Potter");
+  if (person != "AlanTuring19") {
+    txt = "User cancelled the prompt.";
+    location.replace("https://helpingpanda.in");
+  } 
+}
+
+//initialize your firebase
+firebase.initializeApp(config);
+const auth = firebase.auth();
+const database = firebase.database();
+
+
+		var firebaseOrdersCollection = database.ref().child('Campaigns/');  
+        //create a 'listener' which waits for changes to the values inside the firebaseOrdersCollection 
+        firebaseOrdersCollection.on('value',function(orders){
+            
+            //create an empty string that will hold our new HTML
+            var CName,CGoal,CAim,CAuth,CInc, order;
+            
+            //this is saying foreach order do the following function...
+            orders.forEach(function(firebaseOrderReference){
+                //this gets the actual data (JSON) for the order.
+                order = firebaseOrderReference.val();
+                //console.log(order); //check your console to see it!
+                 //create html for the individual order
+                //note: this is hard to make look pretty! Be sure to keep your indents nice :-)
+                //IMPORTANT: we use ` here instead of ' (notice the difference?) That allows us to use enters
+                if(order.ID=='mnUHlMrhhbVTi7Ky5T1Tosc8SED2'){
+                CAuth =     ``+order.CampaignAuthName+``
+                CInc = ``+order.CampaignIncome+``
+                document.getElementById('C1Inc').value = CInc;
+                document.getElementById('C1').innerHTML = CAuth;
+            	}
+                else
+                if(order.ID=='Sb7QRB55GvXucB5q7DjITb2zteN2'){
+                CAuth =     ``+order.CampaignAuthName+``
+                CInc = ``+order.CampaignIncome+``
+                document.getElementById('C2Inc').value = CInc;
+                document.getElementById('C2').innerHTML = CAuth;
+              	}
+                else
+                if(order.ID=='OikaE0fWx0SJclH5ta3bRDMrREN2'){
+                CAuth =     ``+order.CampaignAuthName+``
+                CInc = ``+order.CampaignIncome+``
+                document.getElementById('C3Inc').value = CInc;
+                document.getElementById('C3').innerHTML = CAuth;
+                }
+            });
+        });            
+
+function Edit() {
+
+
+            var c1 = database.ref('Campaigns/'+'mnUHlMrhhbVTi7Ky5T1Tosc8SED2');  
+            c1.update({ CampaignIncome: document.getElementById('C1Inc').value });   
+
+			var c2 = database.ref('Campaigns/'+'Sb7QRB55GvXucB5q7DjITb2zteN2');  
+            c2.update({ CampaignIncome: document.getElementById('C2Inc').value });   
+
+			var c3 = database.ref('Campaigns/'+'OikaE0fWx0SJclH5ta3bRDMrREN2');  
+            c3.update({ CampaignIncome: document.getElementById('C3Inc').value });   
+
+            
+            //location.replace("./campaign.html");
+            alert("Done!! ");
+            //location.replace("https://helpingpanda.in/");
+        };
+
+</script>
+</body>
+</html>
