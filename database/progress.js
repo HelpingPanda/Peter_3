@@ -17,7 +17,7 @@
                 CName =   ``+order.CampaignName+``
                 CGoal =    ``+order.CampaignGoal+``
                 CAim =     ``+order.CampaignAim+``
-                CAuth =     ``+order.CampaignAuthName+``
+                CAuth =     ``+order.NGOName+``
                 CAddn =     ``+order.CampaignAddn+``
                 CInc = ``+order.CampaignIncome+``
                 //add the individual order html to the end of the allOrdersHtml list
@@ -42,7 +42,7 @@
                 CName =   ``+order.CampaignName+``
                 CGoal =    ``+order.CampaignGoal+``
                 CAim =     ``+order.CampaignAim+``
-                CAuth =     ``+order.CampaignAuthName+``
+                CAuth =     ``+order.NGOName+``
                 CAddn =     ``+order.CampaignAddn+``
                 CInc = ``+order.CampaignIncome+``
 
@@ -64,7 +64,7 @@
                 CName =   ``+order.CampaignName+``
                 CGoal =    ``+order.CampaignGoal+``
                 CAim =     ``+order.CampaignAim+``
-                CAuth =     ``+order.CampaignAuthName+``
+                CAuth =     ``+order.NGOName+``
                 CAddn =     ``+order.CampaignAddn+``
                 CInc = ``+order.CampaignIncome+``
                 
@@ -78,6 +78,28 @@
                 var progress = (CInc*100)/CGoal;
                 if(progress>0){
                 document.getElementById('prog2').value = progress;
+                    }
+                }
+
+                else
+                if(order.ID=='IjZ49zsO3TRh8QYGuvqJDJQ8aiw1'){
+                CName =   ``+order.CampaignName+``
+                CGoal =    ``+order.CampaignGoal+``
+                CAim =     ``+order.CampaignAim+``
+                CAuth =     ``+order.NGOName+``
+                CAddn =     ``+order.CampaignAddn+``
+                CInc = ``+order.CampaignIncome+``
+                
+                //add the individual order html to the end of the allOrdersHtml list
+                //allOrdersHtml = allOrdersHtml + individialOrderHtml;
+                document.getElementById('CampaignAim4').innerHTML = CAim;
+                document.getElementById('CampaignGoal4').innerHTML = CGoal;
+                document.getElementById('CampaignIncome4').innerHTML = CInc;
+                document.getElementById('CampaignName4').innerHTML = CName;
+                document.getElementById('CampaignAuth4').innerHTML = CAuth;
+                var progress = (CInc*100)/CGoal;
+                if(progress>0){
+                document.getElementById('prog4').value = progress;
                     }
                 }
             });
