@@ -102,6 +102,27 @@
                 document.getElementById('prog4').value = progress;
                     }
                 }
+                else
+                if(order.ID=='D47mWEE0AaV7ugwBVvkmhUBOoyg2'){
+                CName =   ``+order.CampaignName+``
+                CGoal =    ``+order.CampaignGoal+``
+                CAim =     ``+order.CampaignAim+``
+                CAuth =     ``+order.NGOName+``
+                CAddn =     ``+order.CampaignAddn+``
+                CInc = ``+order.CampaignIncome+``
+                
+                //add the individual order html to the end of the allOrdersHtml list
+                //allOrdersHtml = allOrdersHtml + individialOrderHtml;
+                document.getElementById('CampaignAim5').innerHTML = CAim;
+                document.getElementById('CampaignGoal5').innerHTML = CGoal;
+                document.getElementById('CampaignIncome5').innerHTML = CInc;
+                document.getElementById('CampaignName5').innerHTML = CName;
+                document.getElementById('CampaignAuth5').innerHTML = CAuth;
+                var progress = (CInc*100)/CGoal;
+                if(progress>0){
+                document.getElementById('prog5').value = progress;
+                    }
+                }
             });
             // $('#CampaignSummaryM').html(CSummary);
             // $('#CampaignAimM').html(CAim);

@@ -19,6 +19,9 @@
 			<p id="C3">Loading....</p>
 			<input type="number" id="C3Inc" value="123">
 
+            <p id="C4">Loading....</p>
+            <input type="number" id="C4Inc" value="123">
+
 			<button onclick="Edit()">Click here</button>
 
 <script type="text/javascript">
@@ -83,6 +86,13 @@ const database = firebase.database();
                 document.getElementById('C3Inc').value = CInc;
                 document.getElementById('C3').innerHTML = CAuth;
                 }
+                else
+                if(order.ID=='IjZ49zsO3TRh8QYGuvqJDJQ8aiw1'){
+                CAuth =     ``+order.CampaignAuthName+``
+                CInc = ``+order.CampaignIncome+``
+                document.getElementById('C4Inc').value = CInc;
+                document.getElementById('C4').innerHTML = CAuth;
+                }
             });
         });            
 
@@ -96,7 +106,10 @@ function Edit() {
             c2.update({ CampaignIncome: document.getElementById('C2Inc').value });   
 
 			var c3 = database.ref('Campaigns/'+'OikaE0fWx0SJclH5ta3bRDMrREN2');  
-            c3.update({ CampaignIncome: document.getElementById('C3Inc').value });   
+            c3.update({ CampaignIncome: document.getElementById('C3Inc').value }); 
+
+            var c4 = database.ref('Campaigns/'+'IjZ49zsO3TRh8QYGuvqJDJQ8aiw1');  
+            c4.update({ CampaignIncome: document.getElementById('C4Inc').value });  
 
             
             //location.replace("./campaign.html");
