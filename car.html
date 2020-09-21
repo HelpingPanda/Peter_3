@@ -21,11 +21,13 @@
         rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f13fc6e5806bd00192206db&product=inline-share-buttons' async='async'></script>
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f13fc6e5806bd00192206db&product=inline-share-buttons' async='async'></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./database/data.js"></script>
     <script src="./database/progress.js"></script>
 
@@ -49,29 +51,6 @@
             <a href="#"><img src="img/logobar.png" alt=""></a>
         </div>
         <nav class="offcanvas__menu mobile-menu">
-            <ul>
-            <li class="active">
-                <li><a href="./edit" class="hero__text primary-btn inactive" style="padding: 5px;">Start a Campaign</a></li>
-                <li><a href="./hiw">How it works</a></li>
-                <li><a>Categories</a>
-                <ul class="dropdown">
-                    <li><a href="campaigns/NGO">NGO/Charity</a></li>
-                    <li><a href="campaigns/Medical">Medical</a></li>
-                    <li><a href="./404">Education</a></li>
-                    <li><a href="./404">Animals</a></li>
-                    <li><a href="campaigns/Disaster">Natural Disasters</a></li>
-                    <li><a href="./404">Covid Relief</a></li>
-                    <li><a href="campaigns/Food">Food Distribution</a></li>
-                </ul>
-            </li>
-            <li><a href="./faq">Pricing</a></li>
-            <li><a href="./about">About us</a></li>
-            <li><a href="#">More</a>
-                <ul class="dropdown">
-                    <li><a href="https://helpingpandablog.wordpress.com/">Blog</a></li>
-                    <li><a href="./contact">Contact Us</a></li>   
-                </ul>
-            </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__auth">
@@ -156,35 +135,8 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__logo">
-                        <a href="./index"><br><br><br><img src="img/logobar.png"></a>
-                    </div>
-                </div>
                 <div class="col-lg-9 col-md-9">
                     <nav class="header__menu">
-                        <ul>
-                        <li class="active">
-                            <li><a href="./edit" class="hero__text primary-btn inactive" style="padding: 10px;">Start a Campaign</a></li>
-                            <li><a href="./hiw">How it works</a></li>
-		                <li><a>Categories</a>
-		                <ul class="dropdown">
-		                    <li><a href="campaigns/NGO">NGO/Charity</a></li>
-                            <li><a href="campaigns/Medical">Medical</a></li>
-                            <li><a href="./404">Education</a></li>
-                            <li><a href="./404">Animals</a></li>
-                            <li><a href="campaigns/Disaster">Natural Disasters</a></li>
-                            <li><a href="./404">Covid Relief</a></li>
-                            <li><a href="campaigns/Food">Food Distribution</a></li>
-                        </ul>
-                        </li>
-                        <li><a href="./faq">Pricing</a></li>
-                        <li><a href="#">More</a>
-                            <ul class="dropdown">
-                                <li><a href="./about">About us</a></li>
-                                <li><a href="./contact">Contact Us</a></li>
-                                <li><a href="https://helpingpandablog.wordpress.com/">Blog</a></li>   
-                            </ul>
                         </ul>
                     </nav>
                 </div>
@@ -196,163 +148,6 @@
     </header>
     <!-- Header End -->
 
-<div class="mob1">
-	<section class="hero-section">
-        <div class="hero__slider owl-carousel">
-            <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="hero__text">
-                                <h2 style="font-size: 20px;">All our dreams can come true, if we have the courage to pursue them.</h2>
-                                <a href="./edit" class="primary-btn">Start a campaign</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="hero__img">
-                                <img src="img/hero/panda2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-
-
-    <!-- Hero Section Begin -->
-   <div class="desk">
-    <section class="hero-section">
-        <div class="hero__slider owl-carousel">
-            <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="hero__text" >
-                                <h5>Helping Panda</h5>
-                                <h2>All our dreams come true, if we have the courage to pursue them.</h2>
-                                <a href="./edit" class="primary-btn">Start a campaign</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="hero__img">
-                                <img src="img/hero/panda2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__item set-bg" data-setbg="img/hero/9.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="hero__text" style="display: inline">
-                                <h5>Helping Panda</h5>
-                                <h2>The lowest commission on the market: 0%</h2>
-                                <a href="./edit" class="primary-btn">Start a campaign</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__item set-bg" data-setbg="img/hero/10.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="hero__text" style="display: inline">
-                                <h5>Helping Panda</h5>
-                                <h2>We help & support you throughout your campaign.</h2>
-                                <a href="./edit" class="primary-btn">Start a campaign</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__item set-bg" data-setbg="img/hero/4.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="hero__text" style="display: inline">
-                                <h5>Helping Panda</h5>
-                                <h2>We are here to help each other and in that way bring about a change in the World.</h2>
-                                <a href="./edit" class="primary-btn">Start a campaign</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </div>
-    <!-- Hero Section End -->
-    <!-- Register Domain Section Begin -->
-<style type="text/css">
-.bullet{
-width: 40px; 
-height: 40px;
-}
-.size{
-	font-size: 15px;
-}
-</style>
-    <section class="register-domain spad desk">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-8">
-                    <div class="register__text">
-                        <div class="section-title">
-                            <h3>What is Helping Panda ??</h3>
-                        </div>
-                        <p style="font-size: 18px;"><b>Helping Panda</b> is the cheapest and most personalised <b>Crowdfunding Platform</b> on the market at present. <br>We help you raise money for you need and guide you along during the process of it. We offer individual campaign managers, so that you are not lost in the woods.<br> We guide you through each step until you reach your Campaign Goal.</p><br><br>
-                        <h3>Simple steps to raise money:</h3><br>
-                            <ul>
-                            	<p class="size"><img src="./img/top.png" class="bullet"/><b> Start a campaign</b></p><p>Provide us a few details and start a campaign. It will take you less than 5min.</p>
-                            	<p class="size"><img src="./img/top.png" class="bullet"/><b> Share your campaign</b></p><p>Once your campaign is hosted, a personal Camapaign Manager will get in touch with you. Share your campaign with your friends & family, raise money.</p>
-                            	<p class="size"><img src="./img/top.png" class="bullet"/><b> Fund transfer</b></p><p>After the campaign is over, we will transfer the money immediately.</p>
-                            </ul><!--
-                            <a href="./hiw" class="primary-btn text" class="btn" align="center">Go</a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-        <center>
-<iframe class=desk width=40% height="315" src="https://www.youtube.com/embed/0QwIePXnXts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-    </section>
-    </section>
-    <!-- Register Domain Section End -->
-    <br>
-     <!-- Register Domain Section Begin -->
-    <section class="register-domain spad mob1">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-8">
-                    <div class="register__text">
-                        <div class="section-title">
-                            <h3>How To Get Started</h3>
-                        </div>
-                        <p style="font-size: 20px;"><b>Crowdfunding</b> is the practice of funding a project or venture by raising small amounts of money from a large number of people, typically via the Internet.</p>
-                            <br><br>
-                            <p style="font-size: 18px;">Start your own campaign in 3 easy steps:</p><br>
-                            <ul>
-                                <li><p style="font-size: 15px;"><b>Need Money ?</b></p><p>Do you want to raise money for a good cause ???Falling short of funds ?</p></li>
-                                <li><p style="font-size: 15px;"><b>Start a campaign</b></p><p>Start a campaign and give us the necessary details.</p></li>
-                                <li><p style="font-size: 15px;"><b>Share</b></p><p>Once the campaign is hosted. Share it with your friends and family !! Raise money !!</p></li>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <section>
-        <br><br>
-        <center>
-<iframe width=90% height="315" src="https://www.youtube.com/embed/0QwIePXnXts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-    </section>
-    </section>
-    <!-- Register Domain Section End -->
-    <!-- Services Section Begin -->
 <a href="#Camp">
     <section class="services-section spad">
         <div class="container">
@@ -364,7 +159,14 @@ height: 40px;
                 </div>
             </div>
             <div class="row">
-
+            	<script>
+			      $(".slider").owlCarousel({
+			        loop: true,
+			        autoplay: true,
+			        autoplayTimeout: 3000, //2000ms = 2s;
+			        autoplayHoverPause: true,
+			      });
+			    </script>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="card radius shadowDepth1">
                 <div class="card__image border-tlr-radius">
@@ -680,507 +482,312 @@ We put in our everything to give you the best service, and we'd appreciate it if
                     <div class="card__author">
                         <img src="img/team/4.png" alt="user">
                         <div class="card__author-content">
-                            By <b><a id="CampaignAuth5">User</p></b>
+                            By <b><a id="CampaignAuth5">User</a></b>
                         </div>
                     </div>
                 </div>
                 </div>
                 </div>
+    </div>
 
             </div>
         </div>
+       </section>
     </section>
 </a>
-    <!-- Achievement Section Begin -->
-    <section style="background-color: #eeeffb" class="achievement-section set-bg spad desk" data-setbg="img/footer-bg.png">
 
-    </section>
-
-    <!-- Achievement Section End -->
-    <!-- Work Section Begin -->
-<div class="footer__text set-bg desk" data-setbg="img/footer-bg.png"> 
-    <section class="work-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                      <h3>Categories</h3>
-                    </div>
+<div class="slider owl-carousel">
+<div class="col-lg-4 col-md-4 col-sm-6 card_c">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="./campaigns/images/Muskan_1/bd2.jpg" alt="image" class="border-tlr-radius">
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+<a class="share-icon paw" href="whatsapp://send?text=
 
-<style type="text/css">
-.cards-list {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+Campaign Title - To provide and help the homeless around the Bangalore region with blankets%0D%0A
 
-.card1 {
-  margin: 30px;
-  width: 250px;
-  height: 250px;
-  border-radius: 40px;
-box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-  cursor: pointer;
-  transition: 0.4s;
-}
+Campaign Story - I’m a student who’s studying in Bishop Cotton Girls College in Bangalore. I was recently passing through Hebbal where I saw couple of the homeless people sleeping under the flyover who were very cold due to the weather. This caught my eye and I thought of doing something about it. So I donated couple of the blankets we had in our house but then I noticed that more and more people face this issue. Eventually I thought of having a blanket distribution drive.%0D%0A One Blanket will cost between 322-379 rupees. With this amount we plan to distribute 50 blankets throughout Bangalore to the homeless people. %0D%0A There are many homeless people that don’t have shelter during the current situation and it’s very cold outside lately. So seeing this I thought that I can contribute blankets to keep them warm during these cold nights of winter. I need your financial help to reach my goal of 50 blankets and help them keep them warm. These are the homeless who have no one. I request and urge you to donate as much as possible.%0D%0A
 
-.card1 .card_image {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-}
+Read more: https://helpingpanda.in/campaigns/muskan_1 %0D%0A
+Please Contribute here: https://pages.razorpay.com/pl_FV37u0geDxbTIT/view %0D%0A
 
-.card1 .card_image img {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-  object-fit: cover;
-}
+Do share this campaign with your family and friends. Campaigns shared on WhatsApp are likely to raise 2X more! %0D%0A
 
-.card1 .card_title {
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-}
+We put in our everything to give you the best service, and we'd appreciate it if you can spread the word about us out there! %0D%0A
 
-.card1:hover {
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
-}
+Share this message on WhatsApp!" data-action="share/whatsapp/share" title="Share on whatsapp"><span class="fa fa-whatsapp"></span></a>
+                        
+<a class="share-icon link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://helpingpanda.in/muskan_1&title=Check out my campaign and support it !!!&summary=Campaign Story - Ration Box Drive
 
-.title-white {
-  color: white;
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-}
+Read more: https://helpingpanda.in/campaigns/muskan_1
+Please Contribute here: https://pages.razorpay.com/pl_FV37u0geDxbTIT/view
 
-.white {
-  color: white;
-  background-color: black;
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-}
+Do share this campaign with your family and friends. Campaigns shared on WhatsApp are likely to raise 2X more!
 
-@media all and (max-width: 500px) {
-  .card-list {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
-}
-</style>
+We put in our everything to give you the best service, and we'd appreciate it if you can spread the word about us out there!
 
-<div class="cards-list">
+*Share this message on WhatsApp!*&source=Chillyfacts"><span class="fa fa-linkedin"></span></a>
 
-<a href="campaigns/NGO" >
-<div class="card1 4">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/xT0xeAHbxtwb3OASUU/giphy.gif" />
+<a class="share-icon instagram" href="https://www.instagram.com/p/CEeeSsOhTL5/?utm_source=ig_web_button_share_sheet"><span class="fa fa-instagram"></span></a>
+                    </div>
+                    <div class="card__meta">
+                        <h4>Campaign #3
+                        <time><br>27th August 2020</time> -<time>27th September 2020</time></h4>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+            <progress style="width:80%; height: 40px;"id="prog3" value="0" max="100"></progress><br>
+
+                    <p style="margin: 0; display: inline;"><b>Goal: &nbsp;&nbsp;&#8377; &nbsp;</b></p><p style="margin: 0; display: inline;" id="CampaignIncome3"></p><p style="font-size: 18px;margin: 0; display: inline;">&nbsp;/&nbsp;</p><p style="margin: 0; display: inline;" id="CampaignGoal3"></p><br>
+                    </div>
+                     <article class="card__article">
+                        <h2><a id="CampaignName3" href="campaigns/muskan_1">Ration Box</a></h2>
+
+                        <p id="CampaignAim3">Raising money to finance ration Boxes for people BPL</p>
+                    </article>                
+                    <a href="campaigns/muskan_1" class="primary-btn w3-blue" style="text-transform: capitalize;">Learn More</a>
     </div>
-  <div class="card_title title-black">
-    <p class="white">NGO/Charity</p>
-  </div>
-  </div>
-</a>
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="img/team/4.png" alt="user">
+                        <div class="card__author-content">
+                            By <b><a id="CampaignAuth3">User</p></b>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
 
-<a href="./campaigns/Medical" >
-<div class="card1 1">
-  <div class="card_image"> <img src="https://media.giphy.com/media/xUA7biF7n8LcAqh4bK/source.gif" />
-   </div>
-  <div class="card_title title-white">
-    <p class="white">Medical</p>
-  </div>
-</div>
-</a>
 
-<a href="./404" >
-  <div class="card1 2">
-  <div class="card_image">
-    <img href="404" src="https://media.giphy.com/media/ZSLylZ1DYIVws/source.gif">
+                <div class="col-lg-4 col-md-4 col-sm-6 card_c">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="./campaigns/images/Muskan_1/bd2.jpg" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+<a class="share-icon paw" href="whatsapp://send?text=
+
+Campaign Title - To provide and help the homeless around the Bangalore region with blankets%0D%0A
+
+Campaign Story - I’m a student who’s studying in Bishop Cotton Girls College in Bangalore. I was recently passing through Hebbal where I saw couple of the homeless people sleeping under the flyover who were very cold due to the weather. This caught my eye and I thought of doing something about it. So I donated couple of the blankets we had in our house but then I noticed that more and more people face this issue. Eventually I thought of having a blanket distribution drive.%0D%0A One Blanket will cost between 322-379 rupees. With this amount we plan to distribute 50 blankets throughout Bangalore to the homeless people. %0D%0A There are many homeless people that don’t have shelter during the current situation and it’s very cold outside lately. So seeing this I thought that I can contribute blankets to keep them warm during these cold nights of winter. I need your financial help to reach my goal of 50 blankets and help them keep them warm. These are the homeless who have no one. I request and urge you to donate as much as possible.%0D%0A
+
+Read more: https://helpingpanda.in/campaigns/muskan_1 %0D%0A
+Please Contribute here: https://pages.razorpay.com/pl_FV37u0geDxbTIT/view %0D%0A
+
+Do share this campaign with your family and friends. Campaigns shared on WhatsApp are likely to raise 2X more! %0D%0A
+
+We put in our everything to give you the best service, and we'd appreciate it if you can spread the word about us out there! %0D%0A
+
+Share this message on WhatsApp!" data-action="share/whatsapp/share" title="Share on whatsapp"><span class="fa fa-whatsapp"></span></a>
+                        
+<a class="share-icon link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://helpingpanda.in/muskan_1&title=Check out my campaign and support it !!!&summary=Campaign Story - Ration Box Drive
+
+Read more: https://helpingpanda.in/campaigns/muskan_1
+Please Contribute here: https://pages.razorpay.com/pl_FV37u0geDxbTIT/view
+
+Do share this campaign with your family and friends. Campaigns shared on WhatsApp are likely to raise 2X more!
+
+We put in our everything to give you the best service, and we'd appreciate it if you can spread the word about us out there!
+
+*Share this message on WhatsApp!*&source=Chillyfacts"><span class="fa fa-linkedin"></span></a>
+
+<a class="share-icon instagram" href="https://www.instagram.com/p/CEeeSsOhTL5/?utm_source=ig_web_button_share_sheet"><span class="fa fa-instagram"></span></a>
+                    </div>
+                    <div class="card__meta">
+                        <h4>Campaign #3
+                        <time><br>27th August 2020</time> -<time>27th September 2020</time></h4>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+            <progress style="width:80%; height: 40px;"id="prog3" value="0" max="100"></progress><br>
+
+                    <p style="margin: 0; display: inline;"><b>Goal: &nbsp;&nbsp;&#8377; &nbsp;</b></p><p style="margin: 0; display: inline;" id="CampaignIncome3"></p><p style="font-size: 18px;margin: 0; display: inline;">&nbsp;/&nbsp;</p><p style="margin: 0; display: inline;" id="CampaignGoal3"></p><br>
+                    </div>
+                     <article class="card__article">
+                        <h2><a id="CampaignName3" href="campaigns/muskan_1">Ration Box</a></h2>
+
+                        <p id="CampaignAim3">Raising money to finance ration Boxes for people BPL</p>
+                    </article>                
+                    <a href="campaigns/muskan_1" class="primary-btn w3-blue" style="text-transform: capitalize;">Learn More</a>
     </div>
-  <div class="card_title title-white">
-    <p class="white">Education</p>
-  </div>
-</div>
-</a>
-
-<a href="./404" >
-<div class="card1 3">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/L0NBGdEtE8tUP6MVwH/source.gif" />
-  </div>
-  <div class="card_title">
-    <p class="white">Animals</p>
-  </div>
-</div>
-</a>
-
-<a href="campaigns/Disaster" >
-<div class="card1 3">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/xTk9ZPSV1TLrKjONO0/giphy.gif" />
-  </div>
-  <div class="card_title">
-    <p class="white">Natural Disasters</p>
-  </div>
-</div>
-</a>
-
-<a href="./404" >
-<div class="card1 3">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/dVuyBgq2z5gVBkFtDc/giphy.gif" />
-  </div>
-  <div class="card_title">
-    <p class="white">Covid Relief</p>
-  </div>
-</div>
-</a>
-
-<a href="campaigns/Food" >
-<div class="card1 3">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/l378xhLNDFzO5o6KQ/giphy.gif" />
-  </div>
-  <div class="card_title">
-    <p class="white">Food Distribution</p>
-  </div>
-</div>
-</a>
-</div>
-
-<div class="contact-form spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h3 style="color: white">Subscribe to our Newsletter</h3>
-                    <form method="post" action="//submit.form" onSubmit="return validateForm();">
-                        <div class="input-list">
-                            <input name="data_2" type="text" placeholder="Name">
-                            <input name="data_4" type="text" placeholder="Email">
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="img/team/4.png" alt="user">
+                        <div class="card__author-content">
+                            By <b><a id="CampaignAuth3">User</p></b>
                         </div>
-                        <div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email" style="color: #120851">form to email</a></div>
-              <input class="site-btn" name="skip_Submit" type="submit" value="Submit" />
-            <script src="https://www.100forms.com/js/FORMKEY:6FZSBAXRMC4L/SEND:helpingpandaofficial@gmail.com" type="text/javascript">
-            	alert("You have been subscribed");
-            </script>
-                    </form>
+                    </div>
                 </div>
-            </div>
-        </div>
+                </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 ">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="./campaigns/images/Muskan_1/bd2.jpg" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+<a class="share-icon paw" href="whatsapp://send?text=
+
+Campaign Title - To provide and help the homeless around the Bangalore region with blankets%0D%0A
+
+Campaign Story - I’m a student who’s studying in Bishop Cotton Girls College in Bangalore. I was recently passing through Hebbal where I saw couple of the homeless people sleeping under the flyover who were very cold due to the weather. This caught my eye and I thought of doing something about it. So I donated couple of the blankets we had in our house but then I noticed that more and more people face this issue. Eventually I thought of having a blanket distribution drive.%0D%0A One Blanket will cost between 322-379 rupees. With this amount we plan to distribute 50 blankets throughout Bangalore to the homeless people. %0D%0A There are many homeless people that don’t have shelter during the current situation and it’s very cold outside lately. So seeing this I thought that I can contribute blankets to keep them warm during these cold nights of winter. I need your financial help to reach my goal of 50 blankets and help them keep them warm. These are the homeless who have no one. I request and urge you to donate as much as possible.%0D%0A
+
+Read more: https://helpingpanda.in/campaigns/muskan_1 %0D%0A
+Please Contribute here: https://pages.razorpay.com/pl_FV37u0geDxbTIT/view %0D%0A
+
+Do share this campaign with your family and friends. Campaigns shared on WhatsApp are likely to raise 2X more! %0D%0A
+
+We put in our everything to give you the best service, and we'd appreciate it if you can spread the word about us out there! %0D%0A
+
+Share this message on WhatsApp!" data-action="share/whatsapp/share" title="Share on whatsapp"><span class="fa fa-whatsapp"></span></a>
+                        
+<a class="share-icon link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://helpingpanda.in/muskan_1&title=Check out my campaign and support it !!!&summary=Campaign Story - Ration Box Drive
+
+Read more: https://helpingpanda.in/campaigns/muskan_1
+Please Contribute here: https://pages.razorpay.com/pl_FV37u0geDxbTIT/view
+
+Do share this campaign with your family and friends. Campaigns shared on WhatsApp are likely to raise 2X more!
+
+We put in our everything to give you the best service, and we'd appreciate it if you can spread the word about us out there!
+
+*Share this message on WhatsApp!*&source=Chillyfacts"><span class="fa fa-linkedin"></span></a>
+
+<a class="share-icon instagram" href="https://www.instagram.com/p/CEeeSsOhTL5/?utm_source=ig_web_button_share_sheet"><span class="fa fa-instagram"></span></a>
+                    </div>
+                    <div class="card__meta">
+                        <h4>Campaign #3
+                        <time><br>27th August 2020</time> -<time>27th September 2020</time></h4>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+            <progress style="width:80%; height: 40px;"id="prog3" value="0" max="100"></progress><br>
+
+                    <p style="margin: 0; display: inline;"><b>Goal: &nbsp;&nbsp;&#8377; &nbsp;</b></p><p style="margin: 0; display: inline;" id="CampaignIncome3"></p><p style="font-size: 18px;margin: 0; display: inline;">&nbsp;/&nbsp;</p><p style="margin: 0; display: inline;" id="CampaignGoal3"></p><br>
+                    </div>
+                     <article class="card__article">
+                        <h2><a id="CampaignName3" href="campaigns/muskan_1">Ration Box</a></h2>
+
+                        <p id="CampaignAim3">Raising money to finance ration Boxes for people BPL</p>
+                    </article>                
+                    <a href="campaigns/muskan_1" class="primary-btn w3-blue" style="text-transform: capitalize;">Learn More</a>
     </div>
-</div>
-
-    <!-- Achievement Section Begin -->
-    <section style="background-color: #eeeffb" class="achievement-section set-bg spad mob2" data-setbg="img/footer-bg1.png">
-
-    </section>
-
-    <!-- Achievement Section End -->
-    <!-- Work Section Begin -->
-
-<div class="footer__text set-bg mob2" data-setbg="img/footer-bg1.png"> 
-    <section class="work-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                      <h3>Categories</h3>
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="img/team/4.png" alt="user">
+                        <div class="card__author-content">
+                            By <b><a id="CampaignAuth3">User</p></b>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                </div>
+                </div>
 
-<style type="text/css">
-.cards-list {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 
-.card1 {
-  margin: 30px;
-  width: 250px;
-  height: 250px;
-  border-radius: 40px;
-box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-  cursor: pointer;
-  transition: 0.4s;
-}
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="./campaigns/images/Muskan_1/bd2.jpg" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+<a class="share-icon paw" href="whatsapp://send?text=
 
-.card1 .card_image {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-}
+Campaign Title - To provide and help the homeless around the Bangalore region with blankets%0D%0A
 
-.card1 .card_image img {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-  object-fit: cover;
-}
+Campaign Story - I’m a student who’s studying in Bishop Cotton Girls College in Bangalore. I was recently passing through Hebbal where I saw couple of the homeless people sleeping under the flyover who were very cold due to the weather. This caught my eye and I thought of doing something about it. So I donated couple of the blankets we had in our house but then I noticed that more and more people face this issue. Eventually I thought of having a blanket distribution drive.%0D%0A One Blanket will cost between 322-379 rupees. With this amount we plan to distribute 50 blankets throughout Bangalore to the homeless people. %0D%0A There are many homeless people that don’t have shelter during the current situation and it’s very cold outside lately. So seeing this I thought that I can contribute blankets to keep them warm during these cold nights of winter. I need your financial help to reach my goal of 50 blankets and help them keep them warm. These are the homeless who have no one. I request and urge you to donate as much as possible.%0D%0A
 
-.card1 .card_title {
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-}
+Read more: https://helpingpanda.in/campaigns/muskan_1 %0D%0A
+Please Contribute here: https://pages.razorpay.com/pl_FV37u0geDxbTIT/view %0D%0A
 
-.card1:hover {
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
-}
+Do share this campaign with your family and friends. Campaigns shared on WhatsApp are likely to raise 2X more! %0D%0A
 
-.title-white {
-  color: white;
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-}
+We put in our everything to give you the best service, and we'd appreciate it if you can spread the word about us out there! %0D%0A
 
-.white {
-  color: white;
-  background-color: black;
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-}
+Share this message on WhatsApp!" data-action="share/whatsapp/share" title="Share on whatsapp"><span class="fa fa-whatsapp"></span></a>
+                        
+<a class="share-icon link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://helpingpanda.in/muskan_1&title=Check out my campaign and support it !!!&summary=Campaign Story - Ration Box Drive
 
-@media all and (max-width: 500px) {
-  .card-list {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
-}
-</style>
+Read more: https://helpingpanda.in/campaigns/muskan_1
+Please Contribute here: https://pages.razorpay.com/pl_FV37u0geDxbTIT/view
 
-<div class="cards-list">
+Do share this campaign with your family and friends. Campaigns shared on WhatsApp are likely to raise 2X more!
 
-<a href="campaigns/NGO" >
-<div class="card1 4">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/xT0xeAHbxtwb3OASUU/giphy.gif" />
+We put in our everything to give you the best service, and we'd appreciate it if you can spread the word about us out there!
+
+*Share this message on WhatsApp!*&source=Chillyfacts"><span class="fa fa-linkedin"></span></a>
+
+<a class="share-icon instagram" href="https://www.instagram.com/p/CEeeSsOhTL5/?utm_source=ig_web_button_share_sheet"><span class="fa fa-instagram"></span></a>
+                    </div>
+                    <div class="card__meta">
+                        <h4>Campaign #3
+                        <time><br>27th August 2020</time> -<time>27th September 2020</time></h4>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+            <progress style="width:80%; height: 40px;"id="prog3" value="0" max="100"></progress><br>
+
+                    <p style="margin: 0; display: inline;"><b>Goal: &nbsp;&nbsp;&#8377; &nbsp;</b></p><p style="margin: 0; display: inline;" id="CampaignIncome3"></p><p style="font-size: 18px;margin: 0; display: inline;">&nbsp;/&nbsp;</p><p style="margin: 0; display: inline;" id="CampaignGoal3"></p><br>
+                    </div>
+                     <article class="card__article">
+                        <h2><a id="CampaignName3" href="campaigns/muskan_1">Ration Box</a></h2>
+
+                        <p id="CampaignAim3">Raising money to finance ration Boxes for people BPL</p>
+                    </article>                
+                    <a href="campaigns/muskan_1" class="primary-btn w3-blue" style="text-transform: capitalize;">Learn More</a>
     </div>
-  <div class="card_title title-black">
-    <p class="white">NGO/Charity</p>
-  </div>
-  </div>
-</a>
-
-<a href="./campaigns/Medical" >
-<div class="card1 1">
-  <div class="card_image"> 
-    <img src="https://media.giphy.com/media/xUA7biF7n8LcAqh4bK/source.gif" />
-   </div>
-  <div class="card_title title-white">
-    <p class="white">Medical</p>
-  </div>
-</div>
-</a>
-
-<a href="./404" >
-  <div class="card1 2">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/ZSLylZ1DYIVws/source.gif" />
-    </div>
-  <div class="card_title title-white">
-    <p class="white">Education</p>
-  </div>
-</div>
-</a>
-
-<a href="./404" >
-<div class="card1 3">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/L0NBGdEtE8tUP6MVwH/source.gif" />
-  </div>
-  <div class="card_title">
-    <p class="white">Animals</p>
-  </div>
-</div>
-</a>
-
-<a href="campaigns/Disaster" >
-<div class="card1 3">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/xTk9ZPSV1TLrKjONO0/giphy.gif" />
-  </div>
-  <div class="card_title">
-    <p class="white">Natural Disasters</p>
-  </div>
-</div>
-</a>
-
-<a href="./404" >
-<div class="card1 3">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/dVuyBgq2z5gVBkFtDc/giphy.gif" />
-  </div>
-  <div class="card_title">
-    <p class="white">Covid Relief</p>
-  </div>
-</div>
-</a>
-
-<a href="campaigns/Food" >
-<div class="card1 3">
-  <div class="card_image">
-    <img src="https://media.giphy.com/media/ELDEqBeo7k3tu/giphy.gif" />
-  </div>
-  <div class="card_title">
-    <p class="white">Food Distribution</p>
-  </div>
-</div>
-</a>
-</div>
-
-<div class="contact-form spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h3 style="color: white">Subscribe to our Newsletter</h3>
-                    <form method="post" action="//submit.form" onSubmit="return validateForm();">
-                        <div class="input-list">
-                            <input name="data_2" type="text" placeholder="Name">
-                            <input name="data_4" type="text" placeholder="Email">
-                        </div>
-                        <div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email" style="color: #120851">form to email</a></div>
-              <input class="site-btn" name="skip_Submit" type="submit" value="Submit" />
-            <script src="https://www.100forms.com/js/FORMKEY:6FZSBAXRMC4L/SEND:helpingpandaofficial@gmail.com" type="text/javascript"></script>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
-        <div class="footer__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="footer__top-call">
-                            <h5>Need Help? Call us</h5>
-                            <h2>+91 6363066715</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="footer__top-auth">
-                            <h5>Helping Panda</h5>
-                            <a href="./edit"style="color: white;"><button class="primary-btn">Start a campaign</button></a>
-                            <a href="./campaigns/all" style="color: white;"> <button class=" primary-btn sign-up" id="signOut">Donate</button></a>
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="img/team/4.png" alt="user">
+                        <div class="card__author-content">
+                            By <b><a id="CampaignAuth3">User</p></b>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="footer__text set-bg" data-setbg="img/footer-bg.png">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="footer__text-about">
-                            <div class="footer__logo">
-                                <a href="./index"><img src="img/logobar.png" alt=""></a>
-                            </div>
-                            <p>Helping Panda campaigns make ideas into reality by giving creators a platform to launch game-changing and creative products, along with other creators and investors. We help surface innovations all before they go mainstream.</p>
-                            <div class="footer__social">
-                                <a href="https://www.facebook.com/Helping-Panda-106846051046470/"><i class="fa fa-facebook"></i></a>
-                                <a href="https://www.linkedin.com/company/53192504/admin/"><i class="fa fa-linkedin"></i></a>
-                                <a href="https://www.youtube.com/channel/UCzooKsSVcRsqKVJvq4n5OJw/featured"><i class="fa fa-youtube-play"></i></a>
-                                <a href="https://www.instagram.com/helpingpanda/"><i class="fa fa-instagram"></i></a>
-                                <a href="https://twitter.com/helping_panda"><i class="fa fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                        <div class="footer__text-widget">
-                            <h5>Company</h5>
-                            <ul>
-                                <li><a href="./hiw">How it works</a></li>
-                                <li><a href="./faq">Pricing</a></li>
-                                <li><a href="./about">About Us</a></li>                                
-                                <li><a href="./campaigns/all">Campaigns</a></li>
-                                <li><a href="https://helpingpandablog.wordpress.com/">News / Blogs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                        <div class="footer__text-widget">
-                            <h5>Categories</h5>
-                        <ul>
-                            <li><a href="campaigns/NGO">NGO/Charity</a></li>
-                            <li><a href="campaigns/Medical">Medical</a></li>
-                            <li><a href="./404">Education</a></li>
-                            <li><a href="./404">Animals</a></li>
-                            <li><a href="campaigns/Disaster">Natural Disasters</a></li>
-                            <li><a href="./404">Covid Relief</a></li>
-                            <li><a href="campaigns/Food">Food Distribution</a></li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="footer__text-widget">
-                            <h5>CONTACT US</h5>
-                            <ul class="footer__widget-info">
-                                <li><span class="fa fa-map-marker"></span><a href="https://goo.gl/maps/6dNtTey4YbZnMA1D7" target="_blank"> 1821,24th cross, 5th B Main Rd, B Block, Sahakar Nagar, Bengaluru, Karnataka 560092, India</li>
-                                <li><span class="icon_phone"></span><a class="mail"> +91 6363066715</a></li>
-                                <li><span class="fa fa-envelope"></span><a class="mail" href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com
-                    </div>
                 </div>
-                 <div class="footer__text-copyright">
-                    <p>
-  					<a href="./database/docs/pp.pdf" target="_blank" class="button1">Privacy Policy</a>|<a href="./database/docs/tc.pdf" target="_blank" class="button1">Terms & Conditions</a>
-  					</p>
                 </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
 
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+
+<!-- <div class="card">
+        <div class="img">
+<img src="profile-2.jpeg" alt=""></div>
+<div class="content">
+          <div class="title">
+Pricilla Preez</div>
+<div class="sub-title">
+Web Developer</div>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
+<div class="btn">
+            <button>Read more</button>
+          </div>
+</div>
+</div> -->
+<!-- <div class="card">
+        <div class="img">
+<img src="profile-3.jpeg" alt=""></div>
+<div class="content">
+          <div class="title">
+Eliana Maia</div>
+<div class="sub-title">
+App Developer</div>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
+<div class="btn">
+            <button>Read more</button>
+          </div>
+</div>
+</div> -->
+</div>
+
 </body>
 
 </html>
