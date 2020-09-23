@@ -23,6 +23,7 @@
                 Email: user.email,
                 CampaignName: $('#CampaignName').val(), //another way you could write is $('#myForm [name="fullname"]').
                 NGOName: $('#NGOName').val(),
+                NGOStory: $('#NGOStory').val(),
                 CampaignGoal: $('#CampaignGoal').val(), //another way you could write is $('#myForm [name="fullname"]').
                 CampaignStartDate: $('#CampaignStartDate').val(),
                 CampaignEndDate: $('#CampaignEndDate').val(),
@@ -66,7 +67,7 @@
         firebaseOrdersCollection.on('value',function(orders){
             
             //create an empty string that will hold our new HTML
-            var CName, NGO, CGoal, CSDate, CEDate, CAim, CSummary, CVideo, CAuth, CAddn,CWeb,CPlan,CFund,CPhone;
+            var CName, NGO, NGOS, CGoal, CSDate, CEDate, CAim, CSummary, CVideo, CAuth, CAddn,CWeb,CPlan,CFund,CPhone;
             
             //this is saying foreach order do the following function...
             orders.forEach(function(firebaseOrderReference){
@@ -79,6 +80,7 @@
                 if(order.ID==user.uid){
                 CName =   ``+order.CampaignName+``
                 NGO =  ``+order.NGOName+``
+                NGOS = ``+order.NGOStory+``
                 CGoal =    ``+order.CampaignGoal+``
                 CSDate =     ``+order.CampaignStartDate+``
                 CEDate =     ``+order.CampaignEndDate+``
@@ -99,6 +101,7 @@
             //actaull put the html on the page inside the element with the id PreviousOrders
             $('#CName').html(CName);
             $('#NGO').html(NGO);
+            $('#NGOS').html(NGOS);
             $('#CGoal').html(CGoal);
             $('#CSDate').html(CSDate);
             $('#CEDate').html(CEDate);
@@ -114,6 +117,7 @@
 
             document.getElementById('CampaignName').value = CName;
             document.getElementById('NGOName').value = NGO; 
+            document.getElementById('NGOStory').value = NGOS; 
             document.getElementById('CampaignGoal').value = CGoal; 
             document.getElementById('CampaignStartDate').value = CSDate; 
             document.getElementById('CampaignEndDate').value = CEDate; 
