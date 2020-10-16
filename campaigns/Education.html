@@ -3,20 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Deerhost Template">
-    <meta name="keywords" content="Deerhost, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Helping Panda</title>
     <link rel="icon" href="img/top.png">
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap"
@@ -27,15 +25,57 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
-<!--     <script src="./js/web.js"></script>
- -->    <script src="./database/data.js"></script>
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f13fc6e5806bd00192206db&product=inline-share-buttons' async='async'></script>
+    <script src="../database/data.js"></script>
 </head>
 <body>
+<script type="text/javascript">
+    var firebaseOrdersCollection = database.ref().child('Campaigns/');  
+        //create a 'listener' which waits for changes to the values inside the firebaseOrdersCollection 
+        firebaseOrdersCollection.on('value',function(orders){
+            
+            //create an empty string that will hold our new HTML
+            var CName,CGoal,CAim,CAuth,CInc, order;
+            
+            //this is saying foreach order do the following function...
+            orders.forEach(function(firebaseOrderReference){
+                //this gets the actual data (JSON) for the order.
+                order = firebaseOrderReference.val();
+                //console.log(order); //check your console to see it!
+                 //create html for the individual order
+                //note: this is hard to make look pretty! Be sure to keep your indents nice :-)
+                //IMPORTANT: we use ` here instead of ' (notice the difference?) That allows us to use enters
+                if(order.ID=='yC3fg4PN0pTiSyXpoBl1e91roAX2'){
+                CName =   ``+order.CampaignName+``
+                CGoal =    ``+order.CampaignGoal+``
+                CAim =     ``+order.CampaignAim+``
+                CAuth =     ``+order.NGOName+``
+                CAddn =     ``+order.CampaignAddn+``
+                CInc = ``+order.CampaignIncome+``
+                
+                //add the individual order html to the end of the allOrdersHtml list
+                //allOrdersHtml = allOrdersHtml + individialOrderHtml;
+                document.getElementById('CampaignAim6').innerHTML = CAim;
+                document.getElementById('CampaignGoal6').innerHTML = CGoal;
+                document.getElementById('CampaignIncome6').innerHTML = CInc;
+                document.getElementById('CampaignName6').innerHTML = CName;
+                document.getElementById('CampaignAuth6').innerHTML = CAuth;
+                var progress = (CInc*100)/CGoal;
+                if(progress>0){
+                document.getElementById('prog6').value = progress;
+                    }
+                }
+        });
+        });            
+</script>
+
+
     <!-- Page Preloder -->
 <!--     <div id="preloder">
         <div class="loader"></div>
-    </div> -->
+    </div>
 
+ -->
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas__menu__overlay"></div>
     <div class="offcanvas__menu__wrapper">
@@ -43,25 +83,25 @@
             <span class="fa fa-times-circle-o"></span>
         </div>
         <div class="offcanvas__logo">
-            <a href="#"><img src="img/logobar.png" alt=""></a>
+            <a href="https://helpingpanda.in"><img src="img/logobar.png" alt=""></a>
         </div>
         <nav class="offcanvas__menu mobile-menu">
             <ul>
             <li class="active">
-                <li><a href="./hiw">How it works</a></li>
+                <li><a href="../hiw">How it works</a></li>
                 <li><a href="#">Categories</a>
-                        <ul class="dropdown">
-                            <li><a href="campaigns/NGO">NGO/Charity</a></li>
-                            <li><a href="campaigns/Medical">Medical</a></li>
-                            <li><a href="campaigns/Education">Education</a></li>
-                            <li><a href="./404">Animals</a></li>
-                            <li><a href="campaigns/Disaster">Natural Disasters</a></li>
-                            <li><a href="./404">Covid Relief</a></li>
-                            <li><a href="./404">Food Distribution</a></li>
-                        </ul>
+                <ul class="dropdown">
+                                <li><a href="../campaigns/NGO">NGO/Charity</a></li>
+                                <li><a href="../campaigns/Medical">Medical</a></li>
+                                <li><a href="../campaigns/Education">Education</a></li>
+                                <li><a href="./404">Animals</a></li>
+                                <li><a href="../campaigns/Disaster">Natural Disasters</a></li>
+                                <li><a href="./404">Covid Relief</a></li>
+                                <li><a href="../campaigns/Food">Food Distribution</a></li>
+                </ul>
             </li>
-            <li><a href="./faq">Pricing</a></li>
-            <li><a href="./about">About us</a></li>
+            <li><a href="../faq">Pricing</a></li>
+            <li><a href="../about">About us</a></li>
             <li><a href="#">More</a>
                 <ul class="dropdown">
                     <li><a href="https://helpingpandablog.wordpress.com/">Blog</a></li>
@@ -71,11 +111,11 @@
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__auth">
-                <ul>
+            <ul>
                     <li><button class="button1" onclick="openFormMob()" id="authoffmob">Sign In</button></li>
                     <li><button class="button1" onclick="myFunction2()" id="authonmob">More</button>
                         <ul class="dropdown" id="myDIVMob" style="display: none">
-                            <li class="active"><a href="./campaign" style="color: white">Campaign</a></li>
+                            <li class="active"><a href="../campaign" style="color: white">Campaign</a></li>
                             <li class="active"><a href=" " style="color: white" onclick="signOut()">Sign Out</a></li>
                         </ul>
                     </li>
@@ -92,10 +132,10 @@
 
                        <button type="button" class="btn" onclick="signin()">Sign In</button>
                         <button type="button" class="btn cancel" onclick="closeFormMob()">Close</button>
-                        <p>New here ???<a style="color: blue" href="./SignUp/SignUp">Click here</a> to Sign Up</p>
+                        <p>New here ???<a style="color: blue" href="../SignUp/SignUp">Click here</a> to Sign Up</p>
                       </form>
-                    </section>          
-                 </ul>
+                    </section>
+            </ul>
         </div>
         <div class="offcanvas__info">
             <ul>
@@ -121,11 +161,11 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="header__info-right">
-                           <ul>
+                            <ul>
                             <li><button class="button1" onclick="openForm()" id="authoff">Sign In</button></li>
                             <li><button class="button1" onclick="myFunction()" id="authon">More</button>
                                 <ul class="dropdown" id="myDIV" style="display: none">
-                                    <li class="active"><a href="./campaign" style="color: white">Campaign</a></li>
+                                    <li class="active"><a href="../campaign" style="color: white">Campaign</a></li>
                                     <li class="active"><a href=" " style="color: white" onclick="signOut()">Sign Out</a></li>
                                 </ul>
                             </li>
@@ -142,7 +182,7 @@
 
                                <button type="button" class="btn" onclick="sign()">Sign In</button>
                                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                                <p>New here ???<a style="color: blue" href="./SignUp/SignUp">Click here</a> to Sign Up</p>
+                                <p>New here ???<a style="color: blue" href="../SignUp/SignUp">Click here</a> to Sign Up</p>
                               </form>
                             </section>          
                             </ul>
@@ -155,31 +195,31 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index"><img src="img/logobar.png" alt=""></a>
+                        <a href="https://helpingpanda.in"><img src="img/logobar.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <nav class="header__menu">
                         <ul>
                         <li class="active">
-                            <li><a href="./hiw">How it works</a></li>
+                            <li><a href="../hiw">How it works</a></li>
                             <li><a href="#">Categories</a>
-                        <ul class="dropdown">
-                            <li><a href="campaigns/NGO">NGO/Charity</a></li>
-                            <li><a href="campaigns/Medical">Medical</a></li>
-                            <li><a href="campaigns/Education">Education</a></li>
-                            <li><a href="./404">Animals</a></li>
-                            <li><a href="campaigns/Disaster">Natural Disasters</a></li>
-                            <li><a href="./404">Covid Relief</a></li>
-                            <li><a href="./404">Food Distribution</a></li>
-                        </ul>
+                            <ul class="dropdown">
+                                <li><a href="../campaigns/NGO">NGO/Charity</a></li>
+                                <li><a href="../campaigns/Medical">Medical</a></li>
+                                <li><a href="../campaigns/Education">Education</a></li>
+                                <li><a href="./404">Animals</a></li>
+                                <li><a href="../campaigns/Disaster">Natural Disasters</a></li>
+                                <li><a href="./404">Covid Relief</a></li>
+                                <li><a href="../campaigns/Food">Food Distribution</a></li>
+                            </ul>
                         </li>
-                        <li><a href="./faq">Pricing</a></li>
-                        <li><a href="./about">About us</a></li>
+                        <li><a href="../faq">Pricing</a></li>
+                        <li><a href="../about">About us</a></li>
                         <li><a href="#">More</a>
                             <ul class="dropdown">
                                 <li><a href="https://helpingpandablog.wordpress.com/">Blog</a></li>
-                                <li><a href="./contact">Contact Us</a></li>   
+                                <li><a href="../contact">Contact Us</a></li>   
                             </ul>
                         </ul>
                     </nav>
@@ -191,49 +231,88 @@
         </div>
     </header>
     <!-- Header End -->
-
-    <!-- Breadcrumb Begin
-    <div class="breadcrumb-section">
+    <!-- Services Section Begin -->
+<a href="#Camp">
+    <section class="services-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="breadcrumb__option">
-                        <a href="./index"><span class="fa fa-home"></span> Home</a>
-                        <span>Contact</span>
+                    <div class="section-title">
+                        <h3>natural Disasters</h3>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-     Breadcrumb End -->
-
-    <!-- 404 Section Begin -->
-    <section class="section-404 spad">
-        <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="text__404">
-                        <img src="img/construction.png" alt="">
-                        <h3>Pardon our dust, this page is under construction.<br></h3>
-                        <p>Check in with us later. For any queries write to <a href="mailto:helpingpandaofficial@gmail.com">helpingpandaofficial@gmail.com</a> </p>
-                        <!-- <form action="#">
-                            <input type="text" placeholder="Enter your keyword">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form> -->
-                        <script type="text/javascript">
-                            function home() {
-                                // body...
-                            location.replace("https://helpingpanda.in/");
-                            }
-                        </script>
-                        <a class="primary-btn" style="color: white;" onclick="home()">Homepage</a>
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="../img/campaign/army.jpg" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+
+<a class="share-icon paw" href="whatsapp://send?text=
+
+Campaign Title - SUPPORT THE MARTYRS %0D%0A
+
+Campaign Story - Helping the families of soldiers who lost their lives fighting bravely for our better tomorrows. The campaign provides for the education of martyr's kids, the family's health and for other basic necessities. %0D%0A
+
+Read more: https://helpingpanda.in/campaigns/Martyrs_6
+Please Contribute here: https://pages.razorpay.com/pl_FonKsQGyjrK4iI/view
+
+Do share this campaign with your family and friends. Campaigns shared on WhatsApp are likely to raise 2X more! %0D%0A
+
+We put in our everything to give you the best service, and we'd appreciate it if you can spread the word about us out there! %0D%0A
+
+*Share this message on WhatsApp!*" data-action="share/whatsapp/share" title="Share on whatsapp"><span class="fa fa-whatsapp"></span></a>
+                        
+<a class="share-icon link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://helpingpanda.in/campaigns/Martyrs_6&title=Check out my campaign and support it !!!&summary=Campaign Story - SUPPORT THE MARTYRS
+
+Read more: https://helpingpanda.in/campaigns/Martyrs_6
+Please Contribute here: https://pages.razorpay.com/pl_FonKsQGyjrK4iI/view
+
+Do share this campaign with your family and friends. Campaigns shared on WhatsApp are likely to raise 2X more!
+
+We put in our everything to give you the best service, and we'd appreciate it if you can spread the word about us out there!
+
+&source=Chillyfacts"><span class="fa fa-linkedin"></span></a>
+
+<a class="share-icon instagram" href="https://www.instagram.com/p/CEefeWSha3xr/?utm_source=ig_web_button_share_sheet"><span class="fa fa-instagram"></span></a>
+                    </div>
+                    <div class="card__meta">
+                        <h4>Campaign #6
+                        <time><br>26th October 2020</time> -<time>5th August 2021</time></h4><br>
+                    </div>
+                    <div>
+                    <br><label for="file">Campaign progress:</label><br>
+            <progress style="width:80%; height: 40px;"id="prog6" value="0" max="100"></progress><br>
+
+                    <p style="margin: 0; display: inline;"><b>Goal: &nbsp;&nbsp;&#8377; &nbsp;</b></p><p style="margin: 0; display: inline;" id="CampaignIncome6"></p><p style="font-size: 18px;margin: 0; display: inline;">&nbsp;/&nbsp;</p><p style="margin: 0; display: inline;" id="CampaignGoal6"></p><br>
+                    </div>
+                     <article class="card__article">
+                        <h2><a id="CampaignName6" href="Martyrs_6">Loading...</a></h2>
+
+                        <p id="CampaignAim6">Loading...</p>
+                    </article>                
+                    <a href="Martyrs_6" class="primary-btn w3-blue" style="text-transform: capitalize;">Learn More</a>
+    </div>
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="img/team/4.png" alt="user">
+                        <div class="card__author-content">
+                            By <b><a id="CampaignAuth6">User</p></b>
+                        </div>
                     </div>
                 </div>
+                </div>
+                </div>
+
             </div>
         </div>
     </section>
-    <!-- 404 Section End -->
-
+</a>
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="footer__top">
@@ -248,8 +327,8 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="footer__top-auth">
                             <h5>Helping Panda</h5>
-                            <a href="./edit"style="color: white;"><button class="primary-btn">Start a campaign</button></a>
-                            <a href="./campaigns/all" style="color: white;"> <button class=" primary-btn sign-up" id="signOut">Donate</button></a>
+                            <a href="../edit"style="color: white;"><button class="primary-btn">Start a campaign</button></a>
+                            <a href="../campaigns/all" style="color: white;"> <button class=" primary-btn sign-up" id="signOut">Donate</button></a>
                         </div>
                     </div>
                 </div>
@@ -261,7 +340,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer__text-about">
                             <div class="footer__logo">
-                                <a href="./index"><img src="img/logobar.png" alt=""></a>
+                                <a href="https://helpingpanda.in"><img src="img/logobar.png" alt=""></a>
                             </div>
                             <p>Helping Panda campaigns make ideas into reality by giving creators a platform to launch game-changing and creative products, along with other creators and investors. We help surface innovations all before they go mainstream.</p>
                             <div class="footer__social">
@@ -270,7 +349,6 @@
                                 <a href="https://www.youtube.com/channel/UCzooKsSVcRsqKVJvq4n5OJw/featured"><i class="fa fa-youtube-play"></i></a>
                                 <a href="https://www.instagram.com/helpingpanda/"><i class="fa fa-instagram"></i></a>
                                 <a href="https://twitter.com/helping_panda"><i class="fa fa-twitter"></i></a>
-
                             </div>
                         </div>
                     </div>
@@ -290,14 +368,14 @@
                         <div class="footer__text-widget">
                             <h5>Categories</h5>
                             <ul>
-                            <li><a href="campaigns/NGO">NGO/Charity</a></li>
-                            <li><a href="campaigns/Medical">Medical</a></li>
-                            <li><a href="campaigns/Education">Education</a></li>
-                            <li><a href="./404">Animals</a></li>
-                            <li><a href="campaigns/Disaster">Natural Disasters</a></li>
-                            <li><a href="./404">Covid Relief</a></li>
-                            <li><a href="./404">Food Distribution</a></li>
-                        </ul>
+                                <li><a href="../campaigns/NGO">NGO/Charity</a></li>
+                                <li><a href="../campaigns/Medical">Medical</a></li>
+                                <li><a href="../campaigns/Education">Education</a></li>
+                                <li><a href="./404">Animals</a></li>
+                                <li><a href="../campaigns/Disaster">Natural Disasters</a></li>
+                                <li><a href="./404">Covid Relief</a></li>
+                                <li><a href="./404">Food Distribution</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
@@ -311,7 +389,7 @@
                 </div>
                  <div class="footer__text-copyright">
                     <p>
-                    <a href="./database/docs/pp.pdf" target="_blank" class="button1">Privacy Policy</a>|<a href="./database/docs/tc.pdf" target="_blank" class="button1">Terms & Conditions</a>
+                    <a href="../database/docs/pp.pdf" target="_blank" class="button1">Privacy Policy</a>|<a href="../database/docs/tc.pdf" target="_blank" class="button1">Terms & Conditions</a>
                     </p>
                 </div>
             </div>
@@ -320,11 +398,11 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.slicknav.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

@@ -123,6 +123,27 @@
                 document.getElementById('prog5').value = progress;
                     }
                 }
+                else
+                if(order.ID=='yC3fg4PN0pTiSyXpoBl1e91roAX2'){
+                CName =   ``+order.CampaignName+``
+                CGoal =    ``+order.CampaignGoal+``
+                CAim =     ``+order.CampaignAim2+``
+                CAuth =     ``+order.NGOName+``
+                CAddn =     ``+order.CampaignAddn+``
+                CInc = ``+order.CampaignIncome+``
+                
+                //add the individual order html to the end of the allOrdersHtml list
+                //allOrdersHtml = allOrdersHtml + individialOrderHtml;
+                document.getElementById('CampaignAim6').innerHTML = CAim;
+                document.getElementById('CampaignGoal6').innerHTML = CGoal;
+                document.getElementById('CampaignIncome6').innerHTML = CInc;
+                document.getElementById('CampaignName6').innerHTML = CName;
+                document.getElementById('CampaignAuth6').innerHTML = CAuth;
+                var progress = (CInc*100)/CGoal;
+                if(progress>0){
+                document.getElementById('prog6').value = progress;
+                    }
+                }
             });
             // $('#CampaignSummaryM').html(CSummary);
             // $('#CampaignAimM').html(CAim);
