@@ -37,27 +37,27 @@
                 document.getElementById('prog1').value = progress;
                     }
                 }
-                // else
-                // if(order.ID=='Sb7QRB55GvXucB5q7DjITb2zteN2'){
-                // CName =   ``+order.CampaignName+``
-                // CGoal =    ``+order.CampaignGoal+``
-                // CAim =     ``+order.CampaignAim+``
-                // CAuth =     ``+order.NGOName+``
-                // CAddn =     ``+order.CampaignAddn+``
-                // CInc = ``+order.CampaignIncome+``
+                else
+                if(order.ID=='LbHNlQ3FlDdHsGY8BIt8BUwb2xO2'){
+                CName =   ``+order.CampaignName+``
+                CGoal =    ``+order.CampaignGoal+``
+                CAim =     ``+order.CampaignAim+``
+                CAuth =     ``+order.NGOName+``
+                CAddn =     ``+order.CampaignAddn+``
+                CInc = ``+order.CampaignIncome+``
 
-                // //add the individual order html to the end of the allOrdersHtml list
-                // //allOrdersHtml = allOrdersHtml + individialOrderHtml;
-                // document.getElementById('CampaignAim3').innerHTML = CAim;
-                // document.getElementById('CampaignGoal3').innerHTML = CGoal;
-                // document.getElementById('CampaignIncome3').innerHTML = CInc;
-                // document.getElementById('CampaignName3').innerHTML = CName;
-                // document.getElementById('CampaignAuth3').innerHTML = CAuth;
-                // var progress = (CInc*100)/CGoal;
-                // if(progress>0){
-                // document.getElementById('prog3').value = progress;
-                //     }
-                // }
+                //add the individual order html to the end of the allOrdersHtml list
+                //allOrdersHtml = allOrdersHtml + individialOrderHtml;
+                document.getElementById('CampaignAim3').innerHTML = CAim;
+                document.getElementById('CampaignGoal3').innerHTML = CGoal;
+                document.getElementById('CampaignIncome3').innerHTML = CInc;
+                document.getElementById('CampaignName3').innerHTML = CName;
+                document.getElementById('CampaignAuth3').innerHTML = CAuth;
+                var progress = (CInc*100)/CGoal;
+                if(progress>0){
+                document.getElementById('prog3').value = progress;
+                    }
+                }
 
                 // else
                 // if(order.ID=='OikaE0fWx0SJclH5ta3bRDMrREN2'){
