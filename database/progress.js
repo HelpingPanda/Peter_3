@@ -127,7 +127,7 @@
                 if(order.ID=='yC3fg4PN0pTiSyXpoBl1e91roAX2'){
                 CName =   ``+order.CampaignName+``
                 CGoal =    ``+order.CampaignGoal+``
-                CAim =     ``+order.CampaignAim2+``
+                CAim =     ``+order.CampaignAim+``
                 CAuth =     ``+order.NGOName+``
                 CAddn =     ``+order.CampaignAddn+``
                 CInc = ``+order.CampaignIncome+``
