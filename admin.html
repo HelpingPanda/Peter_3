@@ -28,6 +28,9 @@
             <p id="C6">Loading....</p>
             <input type="number" id="C6Inc" value="123">
 
+            <p id="C7">Loading....</p>
+            <input type="number" id="C7Inc" value="123">
+
 			<button onclick="Edit()">Click here</button>
 
 <script type="text/javascript">
@@ -78,13 +81,6 @@ const database = firebase.database();
                 document.getElementById('C1Inc').value = CInc;
                 document.getElementById('C1').innerHTML = CAim;
             	}
-               //  else
-               //  if(order.ID=='Sb7QRB55GvXucB5q7DjITb2zteN2'){
-               //  CAim =     ``+order.CampaignName+``
-               //  CInc = ``+order.CampaignIncome+``
-               //  document.getElementById('C2Inc').value = CInc;
-               //  document.getElementById('C2').innerHTML = CAim;
-              	// }
                 else
                 if(order.ID=='LbHNlQ3FlDdHsGY8BIt8BUwb2xO2'){
                 CAim =     ``+order.CampaignName+``
@@ -113,6 +109,13 @@ const database = firebase.database();
                 document.getElementById('C6Inc').value = CInc;
                 document.getElementById('C6').innerHTML = CAim;
                 }
+                else
+                if(order.ID=='3GXOI8yXW3RH5tKjpQrAaFAHkyk2'){
+                CAim =     ``+order.CampaignName+``
+                CInc = ``+order.CampaignIncome+``
+                document.getElementById('C7Inc').value = CInc;
+                document.getElementById('C7').innerHTML = CAim;
+                }
             });
         });            
 
@@ -135,7 +138,10 @@ function Edit() {
             c5.update({ CampaignIncome: document.getElementById('C5Inc').value });
 
             var c6= database.ref('Campaigns/'+'yC3fg4PN0pTiSyXpoBl1e91roAX2');  
-            c6.update({ CampaignIncome: document.getElementById('C6Inc').value });            
+            c6.update({ CampaignIncome: document.getElementById('C6Inc').value }); 
+
+            var c7= database.ref('Campaigns/'+'3GXOI8yXW3RH5tKjpQrAaFAHkyk2');  
+            c7.update({ CampaignIncome: document.getElementById('C7Inc').value });            
             //location.replace("./campaign.html");
             alert("Done!! ");
             //location.replace("https://helpingpanda.in/");
