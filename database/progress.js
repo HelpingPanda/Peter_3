@@ -13,31 +13,31 @@
                  //create html for the individual order
                 //note: this is hard to make look pretty! Be sure to keep your indents nice :-)
                 //IMPORTANT: we use ` here instead of ' (notice the difference?) That allows us to use enters
-                if(order.ID=='mnUHlMrhhbVTi7Ky5T1Tosc8SED2'){
-                CName =   ``+order.CampaignName+``
-                CGoal =    ``+order.CampaignGoal+``
-                CAim =     ``+order.CampaignAim+``
-                CAuth =     ``+order.NGOName+``
-                CAddn =     ``+order.CampaignAddn+``
-                CInc = ``+order.CampaignIncome+``
-                //add the individual order html to the end of the allOrdersHtml list
-                //allOrdersHtml = allOrdersHtml + individialOrderHtml;
-                document.getElementById('CampaignAim1').innerHTML = CAim;
-                document.getElementById('CampaignGoal1').innerHTML = CGoal;
-                document.getElementById('CampaignIncome1').innerHTML = CInc;
-                document.getElementById('CampaignName1').innerHTML = CName;
-                document.getElementById('CampaignAuth1').innerHTML = CAuth;
-                // $('#CampaignAim1').html(CAim);
-                // $('#CampaignGoal1').html(CGoal);
-                // $('#CampaignIncome1').html(CInc);
-                // $('#CampaignName1').html(CName);
-                // $('#CampaignAuth1').html(CAuth);
-                var progress = (CInc*100)/CGoal;
-                if(progress>0){
-                document.getElementById('prog1').value = progress;
-                    }
-                }
-                else
+                // if(order.ID=='mnUHlMrhhbVTi7Ky5T1Tosc8SED2'){
+                // CName =   ``+order.CampaignName+``
+                // CGoal =    ``+order.CampaignGoal+``
+                // CAim =     ``+order.CampaignAim+``
+                // CAuth =     ``+order.NGOName+``
+                // CAddn =     ``+order.CampaignAddn+``
+                // CInc = ``+order.CampaignIncome+``
+                // //add the individual order html to the end of the allOrdersHtml list
+                // //allOrdersHtml = allOrdersHtml + individialOrderHtml;
+                // document.getElementById('CampaignAim1').innerHTML = CAim;
+                // document.getElementById('CampaignGoal1').innerHTML = CGoal;
+                // document.getElementById('CampaignIncome1').innerHTML = CInc;
+                // document.getElementById('CampaignName1').innerHTML = CName;
+                // document.getElementById('CampaignAuth1').innerHTML = CAuth;
+                // // $('#CampaignAim1').html(CAim);
+                // // $('#CampaignGoal1').html(CGoal);
+                // // $('#CampaignIncome1').html(CInc);
+                // // $('#CampaignName1').html(CName);
+                // // $('#CampaignAuth1').html(CAuth);
+                // var progress = (CInc*100)/CGoal;
+                // if(progress>0){
+                // document.getElementById('prog1').value = progress;
+                //     }
+                // }
+                // else
                 if(order.ID=='LbHNlQ3FlDdHsGY8BIt8BUwb2xO2'){
                 CName =   ``+order.CampaignName+``
                 CGoal =    ``+order.CampaignGoal+``
